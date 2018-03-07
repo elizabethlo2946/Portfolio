@@ -28,7 +28,7 @@ nav {
    flex: 1 1 auto;
 }
 nav a {
-   padding: 1rem 0;
+   padding: 1.5rem;
    text-decoration: none;
    color: var(--font-colour);
 
@@ -47,9 +47,6 @@ nav a:focus {
 }
 .nav-right {
    justify-content: flex-end;
-}
-.nav-right a {
-   padding: 1rem;
 }
 /*
 ---------------------------------------------------
@@ -79,3 +76,25 @@ h3 {
    font-size: 1.5rem;
    text-transform: uppercase;
 }
+/*
+---------------------------------------------------
+GENERAL STYLING END
+---------------------------------------------------
+*/
+
+
+
+/*
+---------------------------------------------------
+STYLE GUIDE SPECIFIC
+---------------------------------------------------
+*/
+.h2-styleguide, .h3-styleguide {
+   background-color: #ddd;
+   text-align: center;
+}
+/*
+---------------------------------------------------
+STYLE GUIDE SPECIFIC END
+---------------------------------------------------
+*/

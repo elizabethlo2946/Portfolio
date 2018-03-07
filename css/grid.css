@@ -1,4 +1,41 @@
+/*
+---------------------------------------------------
+ONE COLUMN:
+to contain all elements inside in order to keep a clean view across all devices
+---------------------------------------------------
+*/
+
+/* mobile view */
 .grid-row {
-   width: 80%;
-   margin-left: 10%;
+   width: 90%;
+   margin-left: 5%;
+}
+/* desktop view */
+@media (min-width:37.75em) {
+   .grid-row {
+      width: 70%;
+      margin-left: 15%;
+   }
+}
+/*
+---------------------------------------------------
+TWO COLUMNS
+---------------------------------------------------
+*/
+/* mobile view */
+.grid-row-twos {
+   display: block;
+}
+.grid-row-twos .col {
+   width: 100%;
+}
+/* desktop view */
+@media (min-width: 70em) {
+   .grid-row-twos {
+      display: flex;
+      justify-content: space-between;
+   }
+   .grid-row-twos .col {
+      width: 50%;
+   }
 }
