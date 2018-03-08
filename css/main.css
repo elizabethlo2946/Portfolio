@@ -4,12 +4,22 @@
    https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
    add the colour and real value before submitting the final file in order to support older browsers (just in case)
    */
+   --background-colour: #f8f8f8;
    --font-colour: #444;
-   --font-colour-hover: #ddd;
+
+   --primary-colour: rgb(246, 166, 178);
+   --primary-colour-hover: rgb(236, 64, 122);
+   --primary-colour-light: rgb(249, 220, 226);
+
+   --secondary-colour: rgb(247, 194, 151);
+   --secondary-colour-hover: rgb(244, 81, 30);
+   --secondary-colour-light: rgb(255, 233, 217);
+
+   --placeholder-grey:#ddd;
 }
 *, *::before, *::after {
    box-sizing: border-box;
-   background-color: #f8f8f8;
+   background-color: var(--background-colour);
 }
 body {
    font-family: 'Assistant', 'Roboto', sans-serif;
@@ -31,22 +41,42 @@ nav a {
    padding: 1.5rem;
    text-decoration: none;
    color: var(--font-colour);
+   letter-spacing: 0.03rem;
+   border-bottom: solid 0.08rem var(--primary-colour-light);
 
-   -webkit-transition: all ease 0.3s;
-   -moz-transition: all ease 0.3s;
-   transition: all ease 0.3s;
+   -webkit-transition: all linear 0.2s;
+   -moz-transition: all linear 0.2s;
+   transition: all linear 0.2s;
 }
 nav a:active,
 nav a:hover,
 nav a:focus {
-   color: var(--font-colour-hover);
-   background-color: #333;
+   color: #fff;
+   background-color: var(--primary-colour);
 }
 .nav-left {
    justify-content: flex-start;
 }
 .nav-right {
    justify-content: flex-end;
+}
+
+/*
+.hvr-sweep-to-bottom taken from:
+https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
+*/
+.hvr-sweep-to-bottom {
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, var(--background-colour) 50%, var(--primary-colour) 50%);
+
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.hvr-sweep-to-bottom:active,
+.hvr-sweep-to-bottom:hover,
+.hvr-sweep-to-bottom:focus {
+    background-position: 0 -100%;
 }
 /*
 ---------------------------------------------------
@@ -66,8 +96,27 @@ h1, h2, h3 {
    font-weight: normal;
 }
 h1 {
-   margin-bottom: 0;
-   font-size: 5rem;
+   margin-bottom: 1rem;
+   font-size: 4rem;
+}
+.name {
+   display: flex;
+   justify-content: center;
+}
+@media (min-width:31.25em) {
+   .name {
+      display: static;
+      /* margin-left: 40%; */
+   }
+}
+@media (min-width:78.2em) {
+   h1 {
+      font-size: 8rem;
+   }
+   .name {
+      margin-left: 40%;
+      letter-spacing: 0.08rem;
+   }
 }
 h2 {
    font-size: 3rem;
@@ -76,9 +125,53 @@ h3 {
    font-size: 1.5rem;
    text-transform: uppercase;
 }
+p {
+   font-size: 0.9rem;
+}
 /*
 ---------------------------------------------------
 GENERAL STYLING END
+---------------------------------------------------
+*/
+
+
+/*
+---------------------------------------------------
+TOOL CIRCLES
+---------------------------------------------------
+*/
+/* .circle-container{
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+  background: -webkit-linear-gradient(left top, crimson 0%, #f90 100%);
+  padding: 0.25rem;
+}
+
+.circle {
+  background-color: #fff;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+
+  align-items: center;
+  text-align: center;
+} */
+/* .circle { */
+   /* width: 5rem;
+   height: 5rem;
+
+   font-size: 1em;
+   text-align: center;
+   align-items: center;
+
+   border: solid 0.1rem black;
+   border-radius: 50%; */
+/* } */
+/*
+---------------------------------------------------
+TOOL CIRCLES END
 ---------------------------------------------------
 */
 
@@ -89,9 +182,18 @@ GENERAL STYLING END
 STYLE GUIDE SPECIFIC
 ---------------------------------------------------
 */
+section code {
+   display: block;
+   padding: 2rem;
+   padding-right: 0;
+   color: var(--font-colour);
+   background-color: var(--placeholder-grey);
+   border-radius: 0.2rem;
+}
 .h2-styleguide, .h3-styleguide {
-   background-color: #ddd;
+   background-color: var(--secondary-colour);
    text-align: center;
+   border-radius: 0.2rem;
 }
 /*
 ---------------------------------------------------
