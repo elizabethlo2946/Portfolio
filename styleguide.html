@@ -6,18 +6,223 @@
    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
    <link rel="stylesheet" href="css/normalize.css" />
+   <link rel="stylesheet" href="css/main.css" />
+   <link rel="stylesheet" href="css/grid.css" />
+
+   <!-- loading fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Assistant|Roboto|Playfair+Display" rel="stylesheet">
 </head>
 
-<body>
+<body class="grid-row">
    <header>
       <nav>
-         <h1>
-            <a href="#">Lizzie Lo</a>
-         </h1>
-         <a href="#">Work</a>
-         <a href="#">About</a>
-         <a href="#">Contact</a>
+         <a href="#" class="nav-left hvr-sweep-to-bottom">Lizzie Lo</a>
+         <div class="nav-right">
+            <a href="#text-styling" class="hvr-sweep-to-bottom">Text Styling</a>
+            <a href="#content" class="hvr-sweep-to-bottom">Content</a>
+            <a href="#" class="hvr-sweep-to-bottom">Contact</a>
+         </div>
       </nav>
    </header>
+
+   <section id="text-styling">
+      <h2 class="h2-styleguide">Text Styling</h1>
+      <h1 class="name">Lizzie Lo</h1>
+      <div class="row-twos-static">
+         <div class="col"></div>
+         <div class="col">
+            <p>
+               Or, Elizabeth if you prefer.<br />UX/UI designer for web and apps.
+            </p>
+            <p>
+               4 months of HTML/CSS practice on a near-daily basis, and you’re looking at the result: a responsive website built for device accessibility.
+            </p>
+         </div>
+      </div>
+      <h2>Heading 2: Project names</h2>
+      <h3>Heading 3: Sections in projects</h3>
+      <div class="row-twos">
+         <div class="col">
+            <p>
+               Taken from <a href="http://www.catipsum.com/index.php">http://www.catipsum.com/index.php</a><br />
+               Russian blue Gate keepers of hell hate dog, for small kitty warm kitty little balls of fur yet the dog smells bad so sleep on dog bed, force dog to sleep on floor cats making all the muffins. Purr stare at the wall, play with food and get confused by dust pet my belly, you know you want to; seize the hand and shred it!. Roll over and sun my belly fooled again thinking the dog likes me kitty power relentlessly pursues moth for make meme, make cute face.
+            </p>
+            <ul>
+               <li>My unordered list</li>
+               <li>Item 2</li>
+               <li>Item 3</li>
+            </ul>
+            <ol>
+               <li>My ordered list</li>
+               <li>Item 2</li>
+               <li>Item 3</li>
+            </ol>
+         </div>
+         <div class="col">
+            <h3 class="h3-styleguide">CSS Selectors for Headers</h3>
+            <ul>
+               <li>h1</li>
+               <li>.name</li>
+               <li>h2</li>
+               <li>h3</li>
+               <li>p</li>
+               <li>ul</li>
+               <li>ol</li>
+            </ul>
+         </div>
+      </div>
+      <h3 class="h3-styleguide">HTML code for text styling</h3>
+      <code>
+         &lt;h1&gt;Lizzie Lo&lt;/h1&gt;<br />&lt;p&gt;<br />Or, Elizabeth if you prefer.&lt;br /&gt;UX/UI designer for web and apps.<br />&lt;/p&gt;<br />&lt;h2&gt;Heading 2: Project names&lt;/h2&gt;<br />&lt;h3&gt;Heading 3: Sections in projects&lt;/h3&gt;<br />&lt;p&gt;&lt;/p&gt;&lt;ul&gt;<br />&lt;li&gt;My unordered list&lt;/li&gt;<br />&lt;li&gt;Item 2&lt;/li&gt;<br />&lt;li&gt;Item 3&lt;/li&gt;<br />&lt;/ul&gt;<br />&lt;ol&gt;<br />&lt;li&gt;My ordered list&lt;/li&gt;<br />&lt;li&gt;Item 2&lt;/li&gt;<br />&lt;li&gt;Item 3&lt;/li&gt;<br />&lt;/ol&gt;
+      </code>
+   </section>
+
+
+   <section id="content">
+      <h2 class="h2-styleguide">Content</h2>
+      <h2>Project 1: LAMPS</h2>
+      <h3>Responsive web design</h3>
+      <h4>Team</h4>
+      <ul>
+         <li>
+            Abel Abraham
+         </li>
+      </ul>
+      <p>
+         A fictional lighting company’s website, created to help solidify concepts of building an accessible website across multiple devices and browsers.
+      </p>
+      <h3>Context</h3>
+      <p>
+         This is my first time coding a website that implements design and functionality together. Within 4 weeks, my partner and I were able to go through an initial style guide, a site map, and an additive process of iteration to completion.
+      </p>
+      <h3>Role</h3>
+      <p>
+         I created the visual style of the website, starting with the home page menu, then the grid structure for the rest of the page. I also designed the cart, about, rating pages and the footer, which follow grid structures that can be found on the home page. This includes responsiveness and functionality of all buttons, hover states, and JavaScript of the collapsible menu.
+      </p>
+      <p>
+         I also did the style guide to hold all of the visual elements for the website and a quick citations page. You can check the Github for more specific details on contributions.
+      </p>
+      <h3>take-aways</h3>
+      <p>
+         Naming conventions are useful for those who did not create the document. Although I created most of the class and ID names, they could have been named more clearly for my partner to iterate and work with as he started his pages after me and had to follow my naming conventions. I did not receive any complaints about naming, but I think that it would have been a much quicker process for my partner if it was more intuitive.
+      </p>
+
+
+      <h2>Project 2: Android application development</h2>
+      <h3>Project brief</h3>
+      <p>
+         An informational app on Stanley Park, designed for locals and tourists who want to know the meanings behind particular landmarks or art pieces from a First Nations perspective.
+      </p>
+      <p>
+         The current City of Vancouver Website (as of Fall 2017) only explains what each landmark and art piece is, but does not explain why it is important to First Nations People.
+      </p>
+      <h3>context</h3>
+      <p>
+         Over the semester, we explored use cases of Android Studio such as intents, sensor access, saving user information, and implementation of Google Maps. As this was an individual project, I was able to create my app in a month.
+      </p>
+      <h3>role</h3>
+      <p>
+         Most of my planning was done through site maps and listing out the concepts in order to carry out the functionality to link to other events.<br />
+         I planned out my UI through Illustrator to help visualize the basic user experience of how people are taken through the app
+      </p>
+      <h3>take-aways</h3>
+      <p>
+         I was able to learn basic Android functionality of an app and how to interact with different screens and other apps. The theoretical part of Android is quite simple, but the actual implementation is quite difficult using Android Studio (for me, anyways).
+      </p>
+      <h3>difficulties</h3>
+      <ul>
+         <li>
+            Learning Android Studio’s syntax was difficult as a beginner, even with previous Java experience. Because it has so many built in strings that perform legitimate tasks, I had to resort to searching a lot of basic questions online. Without the help of existing code from class, it would have taken me much longer to implement all functionality such as the Recycler and Card View, and the user log-in details.
+         </li>
+         <li>
+            After the 2nd milestone of implementing all functionality of the app, I decided to relocate my image folder and remove some previous images. My app still worked, but no images would show, and undoing the relocation did not help the cause. I ended up redoing the entire process, by using a Card View tutorial online for the home page and salvaging code from my 2nd milestone. That was not a delightful experience.
+         </li>
+      </ul>
+
+
+   <section>
+      <h2 class="h2-styleguide">Combined elements</h2>
+      <h3 class="h3-styleguide">Typeface and colours: to be coded before the end of the project</h3>
+      <div class="row-twos">
+         <div class="col">
+            <figure>
+               <a href="#"><img src="img/typeface_dark.png" srcset="img/typeface_dark.png 2x, img/typeface_dark.png 3x" alt="Primary typeface on a black background." class="responsive-image"/></a>
+               <figcaption>
+                  <p>
+                     Primary type face
+                  </p>
+               </figcaption>
+            </figure>
+         </div>
+         <div class="col">
+            <figure>
+               <a href="#"><img src="img/typeface_light.png" srcset="img/typeface_light.png 2x, img/typeface_light.png 3x" alt="Secondary typeface on a white background." class="responsive-image"/></a>
+               <figcaption>
+                  <p>
+                     Secondary type face
+                  </p>
+               </figcaption>
+            </figure>
+         </div>
+      </div>
+   </section>
+
+
+   <section>
+      <div class="row-twos">
+         <div class="col">
+            <h3 class="h3-styleguide">CSS Nav seleciton</h3>
+            <ul>
+               <li>nav</li>
+               <li>nav a</li>
+               <li>nav a:actve, nav a:hover, nav a:focus</li>
+               <li>nav-left</li>
+               <li>nav-right</li>
+            </ul>
+         </div>
+         <div class="col">
+            <h3 class="h3-styleguide">HTML code for Nav</h3>
+            <code>
+               &lt;header&gt;<br />&lt;nav&gt;<br />&lt;a href="#" class="nav-left hvr-sweep-to-bottom"&gt;Lizzie Lo&lt;/a&gt;<br />&lt;div class="nav-right"&gt;<br />&lt;a href="#text-styling" class="hvr-sweep-to-bottom"&gt;Text Styling&lt;/a&gt;<br />&lt;a href="#" class="hvr-sweep-to-bottom"&gt;About&lt;/a&gt;<br />&lt;a href="#" class="hvr-sweep-to-bottom"&gt;Contact&lt;/a&gt;<br />&lt;/div&gt;<br />&lt;/nav&gt;<br />&lt;/header&gt;
+            </code>
+         </div>
+      </div>
+   </section>
+
+   <section>
+      <h2 class="h2-styleguide">Tools icons: preview</h2>
+      <div class="row-fours">
+         <div class="col">
+            <img src="img/icon_androidStudio.png" srcset="img/icon_androidStudio.png 2x, img/icon_androidStudio.png 3x" alt="Android Studio custom icon." class="responsive-image"/>
+         </div>
+         <div class="col">
+            <img src="img/icon_htmlcss.png" srcset="img/icon_htmlcss.png 2x, img/icon_htmlcss.png 3x" alt="HTML, CSS custom icon." class="responsive-image"/>
+         </div>
+         <div class="col">
+            <img src="img/icon_js.png" srcset="img/icon_js.png 2x, img/icon_js.png 3x" alt="Javascript custom icon." class="responsive-image"/>
+         </div>
+         <div class="col">
+            <img src="img/icon_pr.png" srcset="img/icon_pr.png 2x, img/icon_pr.png 3x" alt="Premiere Pro custom icon." class="responsive-image"/>
+         </div>
+      </div>
+      <div class="row-fours">
+         <div class="col">
+            <img src="img/icon_ai.png" srcset="img/icon_ai.png 2x, img/icon_ai.png 3x" alt="Adobe Illustrator custom icon." class="responsive-image"/>
+         </div>
+         <div class="col">
+            <img src="img/icon_ps.png" srcset="img/icon_ps.png 2x, img/icon_ps.png 3x" alt="Photoshop custom icon." class="responsive-image"/>
+         </div>
+         <div class="col">
+            <img src="img/icon_id.png" srcset="img/icon_id.png 2x, img/icon_id.png 3x" alt="In Design custom icon." class="responsive-image"/>
+         </div>
+         <div class="col">
+            <div class="circle">
+               <p>
+                  Ai
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
 </body>
 </html>

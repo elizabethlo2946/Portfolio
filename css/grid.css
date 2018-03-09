@@ -1,0 +1,83 @@
+/*
+---------------------------------------------------
+ONE COLUMN:
+to contain all elements inside in order to keep a clean view across all devices
+---------------------------------------------------
+*/
+
+/* mobile view */
+.grid-row {
+   width: 90%;
+   margin-left: 5%;
+}
+/* desktop view */
+@media (min-width:37.75em) {
+   .grid-row {
+      width: 70%;
+      margin-left: 15%;
+   }
+}
+/*
+---------------------------------------------------
+TWO COLUMNS
+---------------------------------------------------
+*/
+/* mobile view */
+.row-twos {
+   display: block;
+}
+.row-twos .col {
+   width: 100%;
+}
+.row-twos-static {
+   display: block;
+}
+.row-twos-static .col{
+   width: 80%;
+   margin-left: 5%;
+}
+/* desktop view */
+@media (min-width:31.25em) {
+   .row-twos-static {
+      display: flex;
+      justify-content: space-between;
+   }
+   .row-twos-static .col {
+      width: 50%;
+      margin-left: 0;
+   }
+}
+@media (min-width: 60.9em) {
+   .row-twos {
+      display: flex;
+      justify-content: space-between;
+   }
+   .row-twos .col {
+      width: 50%;
+   }
+}
+
+
+.row-fours {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.row-fours .col {
+   width: 25%;
+}
+
+/*Please note that .resposnive-image is also found in flexbox.css for grid sizing.
+*/
+.responsive-image {
+   max-width: 100%;
+   margin-bottom: 1rem;
+   display: block;
+
+   -webkit-transition: all ease 0.3s;
+   -moz-transition: all ease 0.3s;
+   transition: all ease 0.3s;
+}
+a .responsive-image:hover {
+   opacity: 0.6;
+}
