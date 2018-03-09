@@ -57,6 +57,16 @@ TWO COLUMNS
    }
 }
 
+
+.row-fours {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.row-fours .col {
+   width: 25%;
+}
+
 /*Please note that .resposnive-image is also found in flexbox.css for grid sizing.
 */
 .responsive-image {

@@ -106,7 +106,6 @@ h1 {
 @media (min-width:31.25em) {
    .name {
       display: static;
-      /* margin-left: 40%; */
    }
 }
 @media (min-width:78.2em) {
@@ -125,6 +124,11 @@ h3 {
    font-size: 1.5rem;
    text-transform: uppercase;
 }
+h4 {
+   margin: 0;
+   padding: 0;
+   font-size: 1rem;
+}
 p {
    font-size: 0.9rem;
 }
@@ -140,35 +144,21 @@ GENERAL STYLING END
 TOOL CIRCLES
 ---------------------------------------------------
 */
-/* .circle-container{
-  width: 5rem;
-  height: 5rem;
-
-  border-radius: 50%;
-  background: -webkit-linear-gradient(left top, crimson 0%, #f90 100%);
-  padding: 0.25rem;
-}
-
 .circle {
-  background-color: #fff;
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 50%;
-
-  align-items: center;
-  text-align: center;
-} */
-/* .circle { */
-   /* width: 5rem;
+   width: 5rem;
    height: 5rem;
 
-   font-size: 1em;
-   text-align: center;
    align-items: center;
 
-   border: solid 0.1rem black;
-   border-radius: 50%; */
-/* } */
+   border: solid 0.1rem var(--primary-colour);
+   border-radius: 50%;
+}
+.circle p {
+   font-size: 1.5rem;
+   color: var(--primary-colour);
+   text-align: center;
+   background-color: rgba(0,0,0,0);
+}
 /*
 ---------------------------------------------------
 TOOL CIRCLES END
@@ -191,7 +181,7 @@ section code {
    border-radius: 0.2rem;
 }
 .h2-styleguide, .h3-styleguide {
-   background-color: var(--secondary-colour);
+   background-color: var(--primary-colour-light);
    text-align: center;
    border-radius: 0.2rem;
 }
