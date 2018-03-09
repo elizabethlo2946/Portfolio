@@ -17,53 +17,68 @@ to contain all elements inside in order to keep a clean view across all devices
       margin-left: 15%;
    }
 }
+
+.grid-row-6of10 {
+   display: block;
+}
+.grid-row-6of10 .col {
+   width: 60%;
+   margin-left: 40%;
+}
+.grid-row-5of10 {
+   display: block;
+}
+.grid-row-5of10 .col {
+   width: 50%;
+   margin-left: 50%;
+}
 /*
 ---------------------------------------------------
 TWO COLUMNS
 ---------------------------------------------------
 */
 /* mobile view */
-.row-twos {
+.grid-row-twos {
    display: block;
 }
-.row-twos .col {
+.grid-row-twos .col {
    width: 100%;
 }
-.row-twos-static {
+.grid-row-twos-static {
    display: block;
 }
-.row-twos-static .col{
+.grid-row-twos-static .col{
    width: 80%;
    margin-left: 5%;
 }
 /* desktop view */
 @media (min-width:31.25em) {
-   .row-twos-static {
+   .grid-row-twos-static {
       display: flex;
       justify-content: space-between;
    }
-   .row-twos-static .col {
+   .grid-row-twos-static .col {
       width: 50%;
       margin-left: 0;
    }
 }
 @media (min-width: 60.9em) {
-   .row-twos {
+   .grid-row-twos {
       display: flex;
       justify-content: space-between;
    }
-   .row-twos .col {
+   .grid-row-twos .col {
       width: 50%;
    }
 }
 
 
-.row-fours {
+.grid-row-fours {
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
-.row-fours .col {
+.grid-row-fours .col {
    width: 25%;
 }
 
