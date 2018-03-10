@@ -4,10 +4,11 @@
    https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
    add the colour and real value before submitting the final file in order to support older browsers (just in case)
    */
-   --background-colour: #f8f8f8;
+   /* --background-colour: #f8f8f8; */
+   --background-colour: #fbfbfb;
    --font-colour: #444;
 
-   --primary-colour: rgb(246, 166, 178);
+   --primary-colour: rgb(255, 145, 154);
    --primary-colour-hover: rgb(236, 64, 122);
    --primary-colour-light: rgb(249, 220, 226);
 
@@ -97,25 +98,7 @@ h1, h2, h3 {
 }
 h1 {
    margin-bottom: 1rem;
-   font-size: 4rem;
-}
-.name {
-   display: flex;
-   justify-content: center;
-}
-@media (min-width:31.25em) {
-   .name {
-      display: static;
-   }
-}
-@media (min-width:78.2em) {
-   h1 {
-      font-size: 8rem;
-   }
-   .name {
-      margin-left: 40%;
-      letter-spacing: 0.08rem;
-   }
+   font-size: 5rem;
 }
 h2 {
    font-size: 3rem;
@@ -144,20 +127,18 @@ GENERAL STYLING END
 TOOL CIRCLES
 ---------------------------------------------------
 */
-.circle {
-   width: 5rem;
-   height: 5rem;
+.icon-box {
+   display: inline-block;
+   width: 4rem;
+   height: 4rem;
+   line-height: 4rem; /*line height must be same as height*/
 
-   align-items: center;
-
-   border: solid 0.1rem var(--primary-colour);
-   border-radius: 50%;
-}
-.circle p {
-   font-size: 1.5rem;
-   color: var(--primary-colour);
+   font-size: 1rem;
    text-align: center;
+   vertical-align: center;
+   color: var(--primary-colour);
    background-color: rgba(0,0,0,0);
+   border: solid 0.1rem var(--primary-colour);
 }
 /*
 ---------------------------------------------------

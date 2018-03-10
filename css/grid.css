@@ -18,19 +18,26 @@ to contain all elements inside in order to keep a clean view across all devices
    }
 }
 
-.grid-row-6of10 {
-   display: block;
+
+
+.grid-row-6of10 .name{
+   /* display: block; */
+   display: flex;
+   justify-content: flex-end;
 }
-.grid-row-6of10 .col {
+.grid-row-6of10 .col .name{
    width: 60%;
    margin-left: 40%;
 }
+
+
+
 .grid-row-5of10 {
-   display: block;
+   display: flex;
 }
 .grid-row-5of10 .col {
    width: 50%;
-   margin-left: 50%;
+   /* margin-left: 50%; */
 }
 /*
 ---------------------------------------------------
@@ -40,6 +47,7 @@ TWO COLUMNS
 /* mobile view */
 .grid-row-twos {
    display: block;
+   margin: 2rem 0;
 }
 .grid-row-twos .col {
    width: 100%;
@@ -80,11 +88,15 @@ TWO COLUMNS
 }
 .grid-row-fours .col {
    width: 25%;
+   /* background-color: var(--placeholder-grey); */
 }
 
 /*Please note that .resposnive-image is also found in flexbox.css for grid sizing.
 */
-.responsive-image {
+.name img {
+   max-width: 100%;
+}
+.img-responsive {
    max-width: 100%;
    margin-bottom: 1rem;
    display: block;
