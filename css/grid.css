@@ -1,49 +1,18 @@
-/*
----------------------------------------------------
-ONE COLUMN:
-to contain all elements inside in order to keep a clean view across all devices
----------------------------------------------------
-*/
-
 /* mobile view */
 .grid-row {
-   width: 90%;
-   margin-left: 5%;
+   /* width: 80%;
+   margin-left: 10%; */
+   width: 70%;
+   margin-left: 15%;
 }
 /* desktop view */
-@media (min-width:37.75em) {
+/* @media (min-width:37.75em) {
    .grid-row {
       width: 70%;
       margin-left: 15%;
    }
-}
+} */
 
-
-
-.grid-row-6of10 .name{
-   /* display: block; */
-   display: flex;
-   justify-content: flex-end;
-}
-.grid-row-6of10 .col .name{
-   width: 60%;
-   margin-left: 40%;
-}
-
-
-
-.grid-row-5of10 {
-   display: flex;
-}
-.grid-row-5of10 .col {
-   width: 50%;
-   /* margin-left: 50%; */
-}
-/*
----------------------------------------------------
-TWO COLUMNS
----------------------------------------------------
-*/
 /* mobile view */
 .grid-row-twos {
    display: block;
@@ -51,24 +20,6 @@ TWO COLUMNS
 }
 .grid-row-twos .col {
    width: 100%;
-}
-.grid-row-twos-static {
-   display: block;
-}
-.grid-row-twos-static .col{
-   width: 80%;
-   margin-left: 5%;
-}
-/* desktop view */
-@media (min-width:31.25em) {
-   .grid-row-twos-static {
-      display: flex;
-      justify-content: space-between;
-   }
-   .grid-row-twos-static .col {
-      width: 50%;
-      margin-left: 0;
-   }
 }
 @media (min-width: 60.9em) {
    .grid-row-twos {
@@ -91,7 +42,8 @@ TWO COLUMNS
    /* background-color: var(--placeholder-grey); */
 }
 
-/*Please note that .resposnive-image is also found in flexbox.css for grid sizing.
+/*
+Please note that .resposnive-image is also found in flexbox.css for grid sizing.
 */
 .name img {
    max-width: 100%;

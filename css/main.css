@@ -122,6 +122,80 @@ GENERAL STYLING END
 */
 
 
+
+/*
+---------------------------------------------------
+ABOUT ME
+---------------------------------------------------
+*/
+.about-me {
+   display: block;
+}
+.about-me-img {
+   background-image: url("../img/name.png");
+   background-position: center;
+   background-size: 70%;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 9rem;
+   margin: 3rem 0;
+   opacity: 0.8;
+
+   order: 1;
+}
+.about-me p {
+   position: relative;
+
+   order: 2;
+}
+@media(min-width:26em) {
+   .about-me-img {
+      height: 13rem;
+   }
+}
+/* @media(min-width:26em) { */
+@media(min-width:41.87em) {
+   .about-me-img {
+      height: 35vh;
+   }
+}
+@media(min-width:48.75em) {
+   .about-me {
+      display: flex;
+      /* margin-top: 10vh; */
+   }
+   .about-me p {
+      position: absolute;
+      top: 70vh;
+      width: 35%;
+      margin: 0;
+
+      z-index: 10;
+   }
+   .about-me-img {
+      background-size: 100%;
+      width: 60%;
+      height: 40vh;
+      margin: 0;
+      margin-top: 10%;
+      margin-left: 40%;
+
+      z-index: 9;
+   }
+}
+@media(min-width:87.5em) {
+   .about-me-img {
+      height: 100vh;
+   }
+}
+/*
+---------------------------------------------------
+ABOUT ME END
+---------------------------------------------------
+*/
+
+
+
 /*
 ---------------------------------------------------
 TOOL CIRCLES
