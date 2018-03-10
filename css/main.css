@@ -21,10 +21,10 @@
 }
 *, *::before, *::after {
    box-sizing: border-box;
-   background-color: var(--background-colour);
 }
 body {
    font-family: 'Assistant', 'Roboto', sans-serif;
+   background-color: var(--background-colour);
    color: var(--font-colour);
 }
 /*
@@ -44,7 +44,7 @@ nav a {
    text-decoration: none;
    color: var(--font-colour);
    letter-spacing: 0.03rem;
-   border-bottom: solid 0.08rem var(--primary-colour-light);
+   /* border-bottom: solid 0.08rem var(--primary-colour-light); */
 
    -webkit-transition: all linear 0.2s;
    -moz-transition: all linear 0.2s;
@@ -53,8 +53,8 @@ nav a {
 nav a:active,
 nav a:hover,
 nav a:focus {
-   color: #fff;
-   background-color: var(--primary-colour);
+   /* color: #fff;
+   background-color: var(--primary-colour); */
 }
 .nav-left {
    justify-content: flex-start;
@@ -80,6 +80,53 @@ https://stackoverflow.com/questions/20751937/transition-background-color-via-sli
 .hvr-sweep-to-bottom:focus {
     background-position: 0 -100%;
 }
+
+/*
+---------------------------------------------------
+START OF CREDIT: adapted from https://codepen.io/andrewwierzba/pen/JorzzV
+*/
+.hvr-snake-border {
+  margin: 2rem 0;
+  line-height: 4rem;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+svg rect {
+  fill: none;
+  /* stroke: #4274D3; */
+  stroke: var(--primary-colour);
+  stroke-width: 0.1rem;
+}
+.hvr-snake-border:hover svg rect {
+  /* stroke: #4274D3; */
+  stroke: var(--primary-colour);
+}
+svg rect {
+   /* total number of pixels that create the "length" of the line */
+   stroke-dasharray: 400, 0;
+   -webkit-transition: all 0.8s ease-in-out;
+   -moz-transition: all 0.8s ease-in-out;
+   -ms-transition: all 0.8s ease-in-out;
+   -o-transition: all 0.8s ease-in-out;
+   transition: all 0.8s ease-in-out;
+}
+.hvr-snake-border:hover svg rect {
+  stroke-width: 0.3rem;
+  /* length of underline */
+  stroke-dasharray: 35, 245;
+  /* position of underline */
+  stroke-dashoffset: 70;
+}
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
 /*
 ---------------------------------------------------
 NAV END
