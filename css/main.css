@@ -35,26 +35,26 @@ NAV
 nav {
    width: 100%;
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
    flex: 1 1 auto;
 }
 nav a {
+   position: relative;
    padding: 1.5rem;
    text-decoration: none;
    color: var(--font-colour);
    letter-spacing: 0.03rem;
-   /* border-bottom: solid 0.08rem var(--primary-colour-light); */
 
-   -webkit-transition: all linear 0.2s;
-   -moz-transition: all linear 0.2s;
-   transition: all linear 0.2s;
+   -webkit-transition: all linear 0.3s;
+   -moz-transition: all linear 0.3s;
+   -ms-transition: all linear 0.3s;
+   -o-transition: all linear 0.3s;
+   transition: all linear 0.3s;
 }
-nav a:active,
-nav a:hover,
-nav a:focus {
-   /* color: #fff;
-   background-color: var(--primary-colour); */
+nav a:hover {
+   color: var(--primary-colour);
 }
 .nav-left {
    justify-content: flex-start;
@@ -64,23 +64,43 @@ nav a:focus {
 }
 
 /*
-.hvr-sweep-to-bottom taken from:
-https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
+---------------------------------------------------
+START OF CREDIT: taken from
+https://stackoverflow.com/questions/40242378/underline-from-left-to-right-on-hover-in-and-out
 */
-.hvr-sweep-to-bottom {
-    background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, var(--background-colour) 50%, var(--primary-colour) 50%);
-
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    transition: all ease 0.3s;
+.hvr-sweep-to-right {
+  position: relative;
+  overflow: hidden;
 }
-.hvr-sweep-to-bottom:active,
-.hvr-sweep-to-bottom:hover,
-.hvr-sweep-to-bottom:focus {
-    background-position: 0 -100%;
-}
+.hvr-sweep-to-right:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
 
+  bottom: -0.1rem;
+  background-color: var(--primary-colour);
+  height: 0.2rem;
+
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+.hvr-sweep-to-right:hover:after,
+.hvr-sweep-to-right:focus:after,
+.hvr-sweep-to-right:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+  color: var(--primary-colour);
+}
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
 /*
 ---------------------------------------------------
 START OF CREDIT: adapted from https://codepen.io/andrewwierzba/pen/JorzzV
@@ -91,6 +111,9 @@ START OF CREDIT: adapted from https://codepen.io/andrewwierzba/pen/JorzzV
   text-align: center;
   position: relative;
   cursor: pointer;
+}
+.hvr-snake-border a {
+   color: var(--primary-colour);
 }
 svg {
   position: absolute;
@@ -116,7 +139,9 @@ svg rect {
    -o-transition: all 0.8s ease-in-out;
    transition: all 0.8s ease-in-out;
 }
-.hvr-snake-border:hover svg rect {
+.hvr-snake-border:hover svg rect,
+.hvr-snake-border:focus svg rect,
+.hvr-snake-border:active svg rect{
   stroke-width: 0.3rem;
   /* length of underline */
   stroke-dasharray: 35, 245;
@@ -214,77 +239,6 @@ taken from a classmate: Jordan Yep via jordanyep.com */
 /* end of Jordan Yep credits */
 
 
-
-
-/*
----------------------------------------------------
-ABOUT ME
----------------------------------------------------
-*/
-
-/* .about-me {
-   display: block;
-}
-.about-me-img {
-   background-image: url("../img/name.png");
-   background-position: center;
-   background-size: 70%;
-   background-repeat: no-repeat;
-   width: 100%;
-   height: 9rem;
-   margin: 3rem 0;
-   opacity: 0.8;
-
-   order: 1;
-}
-.about-me p {
-   position: relative;
-
-   order: 2;
-}
-@media(min-width:26em) {
-   .about-me-img {
-      height: 13rem;
-   }
-}
-@media(min-width:41.87em) {
-   .about-me-img {
-      height: 35vh;
-   }
-}
-@media(min-width:48.75em) {
-   .about-me {
-      display: flex;
-   }
-   .about-me p {
-      position: absolute;
-      top: 70vh;
-      width: 35%;
-      margin: 0;
-
-      z-index: 10;
-   }
-   .about-me-img {
-      background-size: 100%;
-      width: 60%;
-      height: 40vh;
-      margin: 0;
-      margin-top: 10%;
-      margin-left: 40%;
-
-      z-index: 9;
-   }
-}
-@media(min-width:87.5em) {
-   .about-me-img {
-      height: 100vh;
-   }
-} */
-/*
----------------------------------------------------
-ABOUT ME END
----------------------------------------------------
-*/
 
 
 

@@ -38,11 +38,11 @@
    width: 25%;
 }
 
-.bio {
+.grid-row-5of10 {
    width: 100%;
 }
 @media(min-width:511px) {
-   .bio {
+   .grid-row-5of10 {
       width: 50%;
    }
 }
