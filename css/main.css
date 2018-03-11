@@ -198,7 +198,8 @@ h1 {
    }
 }
 h2 {
-   font-size: 3rem;
+   font-size: 2rem;
+   text-align: center;
 }
 h3 {
    font-size: 1.5rem;
@@ -208,6 +209,12 @@ h4 {
    margin: 0;
    padding: 0;
    font-size: 1rem;
+   letter-spacing: 0.1rem;
+}
+h5 {
+   margin: 0;
+   padding: 0;
+   font-weight: normal;
 }
 p {
    font-size: 0.9rem;
@@ -251,12 +258,15 @@ TOOL CIRCLES
 ---------------------------------------------------
 */
 .icon-box {
-   display: inline-block;
-   width: 4rem;
-   height: 4rem;
-   line-height: 4rem; /*line height must be same as height*/
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   /* width: 4rem; */
+   /* height: 4rem; */
+   padding: 1rem 0;
+   margin: 0 0.2rem;
 
-   font-size: 1rem;
+   font-size: 0.8rem;
    text-align: center;
    vertical-align: center;
    color: var(--primary-colour);
