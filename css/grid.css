@@ -3,6 +3,13 @@
    margin-left: 15%;
 }
 
+
+
+/*
+---------------------------------------------------
+2 column
+---------------------------------------------------
+*/
 .grid-row-twos {
    display: block;
    margin: 2rem 0;
@@ -21,15 +28,68 @@
 }
 
 
+
+/*
+---------------------------------------------------
+3 column
+---------------------------------------------------
+*/
+.grid-row-threes {
+   display: block;
+   margin: 1rem;
+}
+.grid-row-threes .col {
+   width: 50%;
+}
+@media(min-width:820px) {
+   .grid-row-threes {
+      display: flex;
+      justify-content: space-between;
+   }
+   .grid-row-threes .col {
+      width: 33%;
+   }
+}
+
+
+
+/*
+---------------------------------------------------
+4 column
+---------------------------------------------------
+*/
 .grid-row-fours {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
 }
 .grid-row-fours .col {
-   width: 25%;
+   width: 100%;
+}
+@media(min-width:127px) {
+   .grid-row-fours .col {
+      width: 50%;
+   }
+}
+@media(min-width:403px) {
+   .grid-row-fours .col {
+      width: 33%;
+   }
+}
+@media(min-width:480px) {
+   .grid-row-fours .col {
+      width: 25%;
+   }
 }
 
+
+
+/*
+---------------------------------------------------
+half a page
+---------------------------------------------------
+*/
 .grid-row-5of10 {
    width: 100%;
 }
@@ -44,6 +104,16 @@
    }
 }
 
+
+
+/*
+---------------------------------------------------
+other general grid rules
+---------------------------------------------------
+*/
+.grid-row-icon {
+   margin: 0.5rem 0;
+}
 .img-responsive {
    max-width: 100%;
    margin-bottom: 1rem;

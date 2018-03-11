@@ -216,6 +216,9 @@ h5 {
    padding: 0;
    font-weight: normal;
 }
+h6 {
+   font-weight: normal;
+}
 p {
    font-size: 0.9rem;
 }
@@ -261,17 +264,15 @@ TOOL CIRCLES
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   /* width: 4rem; */
-   /* height: 4rem; */
-   padding: 1rem 0;
-   margin: 0 0.2rem;
+   padding: 0.5rem 1rem;
+   margin: 0.1rem 0.1rem;
 
    font-size: 0.8rem;
    text-align: center;
    vertical-align: center;
    color: var(--primary-colour);
    background-color: rgba(0,0,0,0);
-   border: solid 0.1rem var(--primary-colour);
+   border: solid 0.05rem var(--primary-colour);
 }
 /*
 ---------------------------------------------------
