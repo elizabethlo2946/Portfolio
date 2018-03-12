@@ -72,12 +72,12 @@
       width: 50%;
    }
 }
-@media(min-width:403px) {
+@media(min-width:450px) {
    .grid-row-fours .col {
       width: 33%;
    }
 }
-@media(min-width:480px) {
+@media(min-width:620px) {
    .grid-row-fours .col {
       width: 25%;
    }
@@ -116,13 +116,14 @@ other general grid rules
 }
 .img-responsive {
    max-width: 100%;
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
    display: block;
+   vertical-align: top;
 
    -webkit-transition: all linear 0.3s;
    -moz-transition: all linear 0.3s;
    transition: all linear 0.3s;
 }
 a .img-responsive:hover {
-   opacity: 0.6;
+   opacity: 0.5;
 }
