@@ -209,8 +209,8 @@ h3 {
 h4 {
    margin: 0;
    padding: 0;
-   font-size: 1rem;
-   letter-spacing: 0.1rem;
+   font-size: 1.2rem;
+   letter-spacing: 0.2rem;
 }
 h4 a {
    text-decoration: none;
@@ -221,7 +221,7 @@ h4 a:hover {
    color: var(--primary-colour);
 }
 h5 {
-   margin: 0;
+   margin: 0.5rem 0;
    padding: 0;
    font-weight: normal;
 }
@@ -243,8 +243,11 @@ GENERAL STYLING END
 
 
 
-/* Start of Jordan Yep credits
-taken from a classmate: Jordan Yep via jordanyep.com */
+/*
+---------------------------------------------------
+START OF CREDIT: adapted from
+jordanyep.com
+*/
 .landing-img {
    background-image: url(../img/background_landing.png);
    background-size: cover;
@@ -258,7 +261,10 @@ taken from a classmate: Jordan Yep via jordanyep.com */
    margin-left: 10%;
    /* opacity: 0.3; */
 }
-/* end of Jordan Yep credits */
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
 
 
 
@@ -270,16 +276,52 @@ TOOL CIRCLES
 ---------------------------------------------------
 */
 .card {
-   padding: 1rem;
+   /* padding: 1rem; */
    background-color: #fff;
    box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2);
    /* border-radius: 0 0 0.5rem 0.5rem; */
 
    transition: all ease 0.3s;
+   z-index: 9;
 }
 .card:hover {
-   box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.3);
+   box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,0.3);
 }
+.card-description {
+   padding: 1.5rem 2rem;
+}
+
+/*
+---------------------------------------------------
+START OF CREDIT from
+https://stackoverflow.com/questions/18322548/black-transparent-overlay-on-image-hover-with-only-css
+*/
+.photo {
+   position: relative;
+   /* box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2); */
+   z-index: 10;
+}
+.photo img {
+   width: 100%;
+   vertical-align: top;
+}
+.photo:after {
+   content: '\A';
+   position: absolute;
+   width: 100%; height:100%;
+   top:0; left:0;
+   background:rgba(0,0,0,0.5);
+   opacity: 0;
+   transition: all 1s;
+   -webkit-transition: all 1s;
+}
+.photo:hover:after {
+   opacity: 0.7;
+}
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
 .icon-box {
    display: flex;
    flex-wrap: wrap;

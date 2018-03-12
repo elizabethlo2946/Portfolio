@@ -116,14 +116,11 @@ other general grid rules
 }
 .img-responsive {
    max-width: 100%;
-   margin-bottom: 1.5rem;
+   /* margin-bottom: 1.5rem; */
    display: block;
    vertical-align: top;
 
    -webkit-transition: all linear 0.3s;
    -moz-transition: all linear 0.3s;
    transition: all linear 0.3s;
-}
-a .img-responsive:hover {
-   opacity: 0.5;
 }
