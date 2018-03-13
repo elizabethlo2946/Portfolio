@@ -63,6 +63,10 @@ nav a:hover {
 .nav-left {
    justify-content: flex-start;
 }
+.nav-left svg {
+   display: static;
+   position: absolute;
+}
 .nav-right {
    display:none;
 }
