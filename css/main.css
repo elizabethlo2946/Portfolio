@@ -7,7 +7,7 @@
    alternatively, create a .scss (SASS) file to solve these variable shenanigans
    */
    /* --background-colour: #fbfbfb; */
-   --background-colour: #f4f4f4;
+   --background-colour: #f8f8f8;
    --font-colour: #444;
 
    --primary-colour: rgb(255, 145, 154);
@@ -64,7 +64,20 @@ nav a:hover {
    justify-content: flex-start;
 }
 .nav-right {
+   display:none;
+}
+#nav-toggle {
+   display: flex;
    justify-content: flex-end;
+}
+@media (min-width:675px) {
+   .nav-right {
+      display: flex;
+      justify-content: flex-end;
+   }
+   #nav-toggle {
+      display: none;
+   }
 }
 
 /*
@@ -209,16 +222,8 @@ h3 {
 h4 {
    margin: 0;
    padding: 0;
-   font-size: 1.2rem;
-   letter-spacing: 0.2rem;
-}
-h4 a {
-   text-decoration: none;
-   color: var(--font-colour);
-   transition: all ease 0.5s;
-}
-h4 a:hover {
-   color: var(--primary-colour);
+   font-size: 1rem;
+   letter-spacing: 0.1rem;
 }
 h5 {
    margin: 0.5rem 0;
@@ -261,6 +266,10 @@ jordanyep.com
    margin-left: 10%;
    /* opacity: 0.3; */
 }
+.landing-img-text-layer {
+   position: absolute;
+   z-index: 10;
+}
 /*
 END OF CREDIT
 ---------------------------------------------------
@@ -276,7 +285,7 @@ TOOL CIRCLES
 ---------------------------------------------------
 */
 .card {
-   /* padding: 1rem; */
+   margin: 1rem 0;
    background-color: #fff;
    box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2);
    /* border-radius: 0 0 0.5rem 0.5rem; */
@@ -289,6 +298,10 @@ TOOL CIRCLES
 }
 .card-description {
    padding: 1.5rem 2rem;
+}
+.card a {
+   text-decoration: none;
+   color: var(--font-colour);
 }
 
 /*

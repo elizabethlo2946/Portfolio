@@ -10,23 +10,35 @@
    <link rel="stylesheet" href="css/grid.css" />
 </head>
 <body class="grid-row">
-   <nav>
-      <p>
-         Insert nav here once figured out
-      </p>
-   </nav>
+   <header>
+      <nav>
+         <div class="nav-left hvr-snake-border">
+            <a href="#">Lizzie Lo</a>
+            <!-- START OF CREDIT: adapted from https://codepen.io/andrewwierzba/pen/JorzzV -->
+            <svg width="110" height="60" viewBox="0 0 110 60" xmlns="http://www.w3.org/2000/svg">
+               <rect x='0' y='0' fill='none' width='110' height='60'/>
+            </svg>
+            <!-- END OF CREDIT -->
+         </div>
+         <div class="nav-right">
+            <a href="work.html" class="hvr-sweep-to-right">Work</a>
+            <a href="#" class="hvr-sweep-to-right">Contact</a>
+         </div>
+         <button id="nav-toggle" class="hidden" aria-hidden="true" aria-controls="nav-items">ME<br />NU</button>
+      </nav>
+   </header>
 
    <h2>Work</h2>
 
    <div class="grid-row-twos">
          <div class="col">
-            <section class="card">
-               <a href="home.html"><div class="photo">
-                  <img src="img/339_displays.png" srcset="img/339_displays.png 2x, 339_displays.png.jpg 3x" alt="Display of web and mobile views for a fictional website" class="img-responsive">
-               </div></a>
+            <section class="card"><a href="#">
+               <div class="photo">
+                  <img src="img/339_displays4.png" srcset="img/339_displays4.png 2x, 339_displays4.png 3x" alt="Display of web and mobile views for a fictional website created in Spring 2018" class="img-responsive">
+               </div>
                <section class="card-description">
-                  <h4><a href="#">LAMPS</a></h4>
-                  <h5>web design and development</h5>
+                  <h4>LAMPS</h4>
+                  <h5>UX + UI web design and development</h5>
                      <!-- <div class="grid-row-fours grid-row-icon">
                         <div class="col">
                            <h6 class="icon-box">HTML CSS</h6>
@@ -40,9 +52,31 @@
                         <div class="col"></div>
                      </div> -->
                </section>
-            </section>
+            </a></section>
          </div>
-         <div class="col"></div>
+         <div class="col">
+            <section class="card"><a href="#">
+               <div class="photo">
+                  <img src="img/359_displays_1.png" srcset="img/359_displays_1.png 2x, 359_displays_1.png 3x" alt="Display of android mobile application created in Fall 2017" class="img-responsive">
+               </div>
+               <section class="card-description">
+                  <h4>Stanley Park</h4>
+                  <h5>android UI design and development</h5>
+                     <!-- <div class="grid-row-fours grid-row-icon">
+                        <div class="col">
+                           <h6 class="icon-box">HTML CSS</h6>
+                        </div>
+                        <div class="col">
+                           <h6 class="icon-box">Java script</h6>
+                        </div>
+                        <div class="col">
+                           <h6 class="icon-box">Git Kraken</h6>
+                        </div>
+                        <div class="col"></div>
+                     </div> -->
+               </section>
+            </a></section>
+         </div>
    </div>
 </body>
 </html>

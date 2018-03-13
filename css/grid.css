@@ -17,13 +17,13 @@
 .grid-row-twos .col {
    width: 100%;
 }
-@media (min-width: 480px) {
+@media (min-width: 675px) {
    .grid-row-twos {
       display: flex;
       justify-content: space-between;
    }
    .grid-row-twos .col {
-      width: 50%;
+      width: 47%;
    }
 }
 
