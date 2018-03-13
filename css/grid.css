@@ -105,6 +105,14 @@ half a page
 }
 
 
+.grid-row-7of10 {
+   width: 100%;
+}
+@media (min-width: 675px) {
+   .grid-row-7of10 {
+      width: 80%;
+   }
+}
 
 /*
 ---------------------------------------------------
