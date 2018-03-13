@@ -1,9 +1,9 @@
 // following same structure as 339 Lecture 7
 "use strict";
-console.log("JavaScript running");
+console.log("START UP: JavaScript running");
 
 var width = window.innerWidth;
-console.log("Current window width: "+width+"px");
+console.log("START UP: Current window width: "+width+"px");
 
 var navToggle = document.querySelector("#nav-toggle");
 var navItems = document.querySelector("#nav-items");
@@ -14,7 +14,7 @@ window.onload = resetNavBarMobile;
 
 navToggle.addEventListener("click",
    function() {
-      console.log("menu button clicked");
+      // console.log("menu button clicked");
 
       if(navItems.classList.contains("hidden")) {
          console.log("showing #nav-items");
@@ -40,7 +40,7 @@ navToggle.addEventListener("click",
 
 function resetNavBarMobile() {
    if (width < 675) {
-      console.log("Collapsing Menu @ breakpoint");
+      console.log("START UP: Collapsing Menu @ breakpoint");
 
       // make the menu button visible
       navToggle.classList.remove("hidden");
@@ -58,6 +58,6 @@ function resetNavBarMobile() {
 
       // show the nav items
       navItems.classList.remove("hidden");
-      navItems.setAttribute("aria=hidden", "false");
+      navItems.setAttribute("aria-hidden", "false");
    }
 }
