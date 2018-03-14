@@ -68,17 +68,22 @@ nav a:hover {
    color: var(--primary-colour);
    background-color: var(--background-colour);
    border: 0.05rem solid var(--primary-colour);
+
+   -webkit-transition: all linear 0.3s;
+   -moz-transition: all linear 0.3s;
+   -ms-transition: all linear 0.3s;
+   -o-transition: all linear 0.3s;
+   transition: all linear 0.3s;
+}
+#nav-toggle:active,
+#nav-toggle:hover,
+#nav-toggle:focus {
+    background-color: var(--primary-colour-light);
+    color: #fff;
 }
 #nav-items a {
    visibility: visible;
 }
-
-    #nav-toggle:active,
-    #nav-toggle:hover,
-    #nav-toggle:focus {
-        background-color: var(--primary-colour-light);
-        color: #fff;
-    }
 #nav-toggle.hidden, #nav-items.hidden {
    visibility: hidden;
    display: none;
@@ -173,7 +178,7 @@ svg rect {
   /* length of underline */
   stroke-dasharray: 35, 245;
   /* position of underline */
-  stroke-dashoffset: 70;
+  stroke-dashoffset: 75;
 }
 /*
 END OF CREDIT
@@ -200,7 +205,9 @@ h1 {
    display: flex;
    justify-content: flex-end;
    text-align: right;
-   margin: 3rem 0;
+   /* margin: 3rem 0; */
+   margin-right: 10%;
+   /* line-height: 2rem; */
 
    font-weight: bolder;
    letter-spacing: 0.2rem;
@@ -213,12 +220,13 @@ h1 {
 }
 @media(min-width:792px) {
    h1 {
-      font-size: 8rem
+      font-size: 8rem;
+      line-height: 5rem;
    }
 }
 @media(min-width:1083px) {
    h1 {
-      font-size: 10rem;
+      font-size: 9rem;
    }
 }
 h2 {
@@ -247,6 +255,26 @@ h6 {
 }
 p {
    font-size: 0.9rem;
+   margin-right: 10%;
+}
+a {
+   color: var(--primary-colour);
+   text-decoration: none;
+}
+.title-lamps a {
+   color: var(--font-colour);
+   -webkit-transition: all ease-out 0.3s;
+   -moz-transition: all ease-out 0.3s;
+   -ms-transition: all ease-out 0.3s;
+   -o-transition: all ease-out 0.3s;
+   transition: all ease-out 0.3s;
+}
+.title-lamps-visit {
+   text-align: center;
+   margin-bottom: 3rem;
+}
+.title-lamps a:hover {
+   color: var(--primary-colour);
 }
 ul {
    margin: 0;
@@ -256,6 +284,9 @@ ul {
 ol {
    margin: 0;
    padding: 0;
+}
+li {
+   padding: 0.3rem 0;
 }
 em {
    font-style: normal;
@@ -296,11 +327,20 @@ END OF CREDIT
 ---------------------------------------------------
 */
 #img-lamps {
+   background-color: #9aabb9;
    background-image: url(../img/339_displays4.png);
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
-   /* background-attachment: fixed; */
+   width: 100%;
+   height: 50vh;
+}
+#img-stanleyPark {
+   background-color: #c0ccce;
+   background-image: url(../img/359_displays_1.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
    width: 100%;
    height: 50vh;
 }
@@ -389,6 +429,9 @@ START OF 1 WORK
 .role strong {
    color: var(--primary-colour);
 }
+.role a {
+   text-decoration: underline;
+}
 @media (min-width: 675px) {
    .role {
       text-align: left;
@@ -415,6 +458,15 @@ START OF 1 WORK
 END OF 1 WORK
 ---------------------------------------------------
 */
+
+
+footer {
+   padding: 3rem 0;
+   text-align: center;
+}
+footer a {
+   padding: 1rem;
+}
 
 
 

@@ -34,14 +34,14 @@
 3 column
 ---------------------------------------------------
 */
-.grid-row-threes {
+/* .grid-row-threes {
    display: block;
    margin: 1rem;
 }
 .grid-row-threes .col {
    width: 50%;
-}
-@media(min-width:820px) {
+} */
+/* @media(min-width:820px) { */
    .grid-row-threes {
       display: flex;
       justify-content: space-between;
@@ -49,7 +49,7 @@
    .grid-row-threes .col {
       width: 33%;
    }
-}
+/* } */
 
 
 
