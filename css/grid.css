@@ -1,83 +1,130 @@
-/*
----------------------------------------------------
-ONE COLUMN:
-to contain all elements inside in order to keep a clean view across all devices
----------------------------------------------------
-*/
-
-/* mobile view */
 .grid-row {
-   width: 90%;
-   margin-left: 5%;
+   width: 70%;
+   margin-left: 15%;
 }
-/* desktop view */
-@media (min-width:37.75em) {
-   .grid-row {
-      width: 70%;
-      margin-left: 15%;
-   }
-}
+
+
+
 /*
 ---------------------------------------------------
-TWO COLUMNS
+2 column
 ---------------------------------------------------
 */
-/* mobile view */
-.row-twos {
+.grid-row-twos {
    display: block;
+   margin: 2rem 0;
 }
-.row-twos .col {
+.grid-row-twos .col {
    width: 100%;
 }
-.row-twos-static {
+@media (min-width: 675px) {
+   .grid-row-twos {
+      display: flex;
+      justify-content: space-between;
+   }
+   .grid-row-twos .col {
+      width: 47%;
+   }
+}
+
+
+
+/*
+---------------------------------------------------
+3 column
+---------------------------------------------------
+*/
+/* .grid-row-threes {
    display: block;
+   margin: 1rem;
 }
-.row-twos-static .col{
-   width: 80%;
-   margin-left: 5%;
-}
-/* desktop view */
-@media (min-width:31.25em) {
-   .row-twos-static {
+.grid-row-threes .col {
+   width: 50%;
+} */
+/* @media(min-width:820px) { */
+   .grid-row-threes {
       display: flex;
       justify-content: space-between;
    }
-   .row-twos-static .col {
-      width: 50%;
-      margin-left: 0;
+   .grid-row-threes .col {
+      width: 33%;
    }
-}
-@media (min-width: 60.9em) {
-   .row-twos {
-      display: flex;
-      justify-content: space-between;
-   }
-   .row-twos .col {
-      width: 50%;
-   }
-}
+/* } */
 
 
-.row-fours {
+
+/*
+---------------------------------------------------
+4 column
+---------------------------------------------------
+*/
+.grid-row-fours {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
 }
-.row-fours .col {
-   width: 25%;
+.grid-row-fours .col {
+   width: 100%;
+}
+@media(min-width:127px) {
+   .grid-row-fours .col {
+      width: 50%;
+   }
+}
+@media(min-width:450px) {
+   .grid-row-fours .col {
+      width: 33%;
+   }
+}
+@media(min-width:620px) {
+   .grid-row-fours .col {
+      width: 25%;
+   }
 }
 
-/*Please note that .resposnive-image is also found in flexbox.css for grid sizing.
+
+
+/*
+---------------------------------------------------
+half a page
+---------------------------------------------------
 */
-.responsive-image {
-   max-width: 100%;
-   margin-bottom: 1rem;
-   display: block;
-
-   -webkit-transition: all ease 0.3s;
-   -moz-transition: all ease 0.3s;
-   transition: all ease 0.3s;
+.grid-row-5of10 {
+   width: 100%;
 }
-a .responsive-image:hover {
-   opacity: 0.6;
+@media(min-width:511px) {
+   .grid-row-5of10 {
+      width: 70%;
+   }
+}
+@media(min-width:792px) {
+   .grid-row-5of10 {
+      width: 50%
+   }
+}
+
+
+.grid-row-7of10 {
+   width: 100%;
+}
+@media (min-width: 675px) {
+   .grid-row-7of10 {
+      width: 80%;
+   }
+}
+
+/*
+---------------------------------------------------
+other general grid rules
+---------------------------------------------------
+*/
+.grid-row-icon {
+   margin: 0.5rem 0;
+}
+.img-responsive {
+   max-width: 100%;
+   /* margin-bottom: 1.5rem; */
+   display: block;
+   vertical-align: top;
 }

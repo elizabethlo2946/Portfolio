@@ -3,26 +3,24 @@
    note to self: refer to
    https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
    add the colour and real value before submitting the final file in order to support older browsers (just in case)
+
+   alternatively, create a .scss (SASS) file to solve these variable shenanigans
    */
    --background-colour: #f8f8f8;
    --font-colour: #444;
 
-   --primary-colour: rgb(246, 166, 178);
+   --primary-colour: rgb(255, 82, 82);
+   --primary-colour-light: rgb(255, 168, 168);
    --primary-colour-hover: rgb(236, 64, 122);
-   --primary-colour-light: rgb(249, 220, 226);
 
-   --secondary-colour: rgb(247, 194, 151);
-   --secondary-colour-hover: rgb(244, 81, 30);
-   --secondary-colour-light: rgb(255, 233, 217);
-
-   --placeholder-grey:#ddd;
+   --placeholder-grey:#eee;
 }
 *, *::before, *::after {
    box-sizing: border-box;
-   background-color: var(--background-colour);
 }
 body {
    font-family: 'Assistant', 'Roboto', sans-serif;
+   background-color: var(--background-colour);
    color: var(--font-colour);
 }
 /*
@@ -33,51 +31,159 @@ NAV
 nav {
    width: 100%;
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
    flex: 1 1 auto;
 }
 nav a {
+   position: relative;
    padding: 1.5rem;
    text-decoration: none;
    color: var(--font-colour);
    letter-spacing: 0.03rem;
-   border-bottom: solid 0.08rem var(--primary-colour-light);
 
-   -webkit-transition: all linear 0.2s;
-   -moz-transition: all linear 0.2s;
-   transition: all linear 0.2s;
+   -webkit-transition: all linear 0.3s;
+   -moz-transition: all linear 0.3s;
+   -ms-transition: all linear 0.3s;
+   -o-transition: all linear 0.3s;
+   transition: all linear 0.3s;
 }
-nav a:active,
-nav a:hover,
-nav a:focus {
-   color: #fff;
-   background-color: var(--primary-colour);
+nav a:hover {
+   color: var(--primary-colour);
 }
 .nav-left {
    justify-content: flex-start;
 }
-.nav-right {
+#nav-toggle {
+   display: flex;
    justify-content: flex-end;
+   padding: 0.5rem 0.75rem;
+
+   font-weight: lighter;
+   line-height: 1rem;
+   letter-spacing: 0.2rem;
+   text-transform: uppercase;
+
+   color: var(--primary-colour);
+   background-color: var(--background-colour);
+   border: 0.05rem solid var(--primary-colour);
+
+   -webkit-transition: all linear 0.3s;
+   -moz-transition: all linear 0.3s;
+   -ms-transition: all linear 0.3s;
+   -o-transition: all linear 0.3s;
+   transition: all linear 0.3s;
 }
+#nav-toggle:active,
+#nav-toggle:hover,
+#nav-toggle:focus {
+    background-color: var(--primary-colour-light);
+    color: #fff;
+}
+#nav-items a {
+   visibility: visible;
+}
+#nav-toggle.hidden, #nav-items.hidden {
+   visibility: hidden;
+   display: none;
+}
+/* @media (min-width:675px) {
+   .nav-right {
+      display: flex;
+      justify-content: flex-end;
+   }
+   #nav-toggle {
+      display: none;
+      visibility: hidden;
+   }
+} */
 
 /*
-.hvr-sweep-to-bottom taken from:
-https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-up-animation
+---------------------------------------------------
+START OF CREDIT: taken from
+https://stackoverflow.com/questions/40242378/underline-from-left-to-right-on-hover-in-and-out
 */
-.hvr-sweep-to-bottom {
-    background-size: 100% 200%;
-    background-image: linear-gradient(to bottom, var(--background-colour) 50%, var(--primary-colour) 50%);
+.hvr-sweep-to-right {
+  position: relative;
+  overflow: hidden;
+}
+.hvr-sweep-to-right:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  width: 0;
 
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    transition: all ease 0.3s;
+  bottom: -0.1rem;
+  background-color: var(--primary-colour);
+  height: 0.2rem;
+
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
 }
-.hvr-sweep-to-bottom:active,
-.hvr-sweep-to-bottom:hover,
-.hvr-sweep-to-bottom:focus {
-    background-position: 0 -100%;
+.hvr-sweep-to-right:hover:after,
+.hvr-sweep-to-right:focus:after,
+.hvr-sweep-to-right:active:after {
+  left: 0;
+  right: auto;
+  width: 100%;
+  color: var(--primary-colour);
 }
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
+/*
+---------------------------------------------------
+START OF CREDIT: adapted from https://codepen.io/andrewwierzba/pen/JorzzV
+*/
+.hvr-snake-border {
+  margin: 2rem 0;
+  line-height: 4rem;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.hvr-snake-border a {
+   color: var(--primary-colour);
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+svg rect {
+  fill: none;
+  /* stroke: #4274D3; */
+  stroke: var(--primary-colour);
+  stroke-width: 0.1rem;
+}
+svg rect {
+   /* total number of pixels that create the "length" of the line */
+   stroke-dasharray: 400, 0;
+   -webkit-transition: all 0.8s ease-in-out;
+   -moz-transition: all 0.8s ease-in-out;
+   -ms-transition: all 0.8s ease-in-out;
+   -o-transition: all 0.8s ease-in-out;
+   transition: all 0.8s ease-in-out;
+}
+.hvr-snake-border:hover svg rect,
+.hvr-snake-border:focus svg rect,
+.hvr-snake-border:active svg rect{
+  stroke-width: 0.3rem;
+  /* length of underline */
+  stroke-dasharray: 35, 245;
+  /* position of underline */
+  stroke-dashoffset: 75;
+}
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
 /*
 ---------------------------------------------------
 NAV END
@@ -96,29 +202,38 @@ h1, h2, h3 {
    font-weight: normal;
 }
 h1 {
-   margin-bottom: 1rem;
+   display: flex;
+   justify-content: flex-end;
+   text-align: right;
+   /* margin: 3rem 0; */
+   margin-right: 10%;
+   /* line-height: 2rem; */
+
+   font-weight: bolder;
+   letter-spacing: 0.2rem;
    font-size: 4rem;
 }
-.name {
-   display: flex;
-   justify-content: center;
-}
-@media (min-width:31.25em) {
-   .name {
-      display: static;
+@media(min-width:511px) {
+   h1 {
+      font-size: 5rem
    }
 }
-@media (min-width:78.2em) {
+@media(min-width:792px) {
    h1 {
       font-size: 8rem;
+      line-height: 5rem;
    }
-   .name {
-      margin-left: 40%;
-      letter-spacing: 0.08rem;
+}
+@media(min-width:1083px) {
+   h1 {
+      font-size: 9rem;
    }
 }
 h2 {
-   font-size: 3rem;
+   font-size: 2rem;
+   text-align: center;
+   text-transform: uppercase;
+   letter-spacing: 0.1rem;
 }
 h3 {
    font-size: 1.5rem;
@@ -128,9 +243,60 @@ h4 {
    margin: 0;
    padding: 0;
    font-size: 1rem;
+   letter-spacing: 0.1rem;
+}
+h5 {
+   margin: 0.5rem 0;
+   padding: 0;
+   font-weight: normal;
+}
+h6 {
+   font-weight: normal;
 }
 p {
    font-size: 0.9rem;
+   margin-right: 10%;
+}
+a {
+   color: var(--primary-colour);
+   text-decoration: none;
+}
+.title-lamps a {
+   color: var(--font-colour);
+   -webkit-transition: all ease-out 0.3s;
+   -moz-transition: all ease-out 0.3s;
+   -ms-transition: all ease-out 0.3s;
+   -o-transition: all ease-out 0.3s;
+   transition: all ease-out 0.3s;
+}
+.title-lamps-visit {
+   text-align: center;
+   margin-bottom: 3rem;
+}
+.title-lamps a:hover {
+   color: var(--primary-colour);
+}
+figcaption {
+   font-size: 0.9rem;
+   text-align: center;
+   color: #888;
+   padding:1rem;
+}
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+ol {
+   margin: 0;
+   padding: 0;
+}
+li {
+   padding: 0.3rem 0;
+}
+em {
+   font-style: normal;
+   color: var(--primary-colour);
 }
 /*
 ---------------------------------------------------
@@ -139,31 +305,178 @@ GENERAL STYLING END
 */
 
 
+
 /*
 ---------------------------------------------------
-TOOL CIRCLES
+START OF CREDIT: adapted from
+jordanyep.com
+*/
+.landing-img {
+   background-image: url(../img/background_landing.png);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   width: 60%;
+   height: 70vh;
+
+   position: absolute;
+   margin-left: 10%;
+   /* opacity: 0.3; */
+}
+.landing-img-text-layer {
+   position: absolute;
+   z-index: 10;
+}
+/*
+END OF CREDIT
 ---------------------------------------------------
 */
-.circle {
-   width: 5rem;
-   height: 5rem;
-
+#img-lamps {
+   background-color: #9aabb9;
+   background-image: url(../img/339_displays4.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 50vh;
+}
+#img-stanleyPark {
+   background-color: #c0ccce;
+   background-image: url(../img/359_displays_1.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 50vh;
+}
+.img-gifs {
+   margin-left: 4.5rem;
    align-items: center;
+}
 
-   border: solid 0.1rem var(--primary-colour);
-   border-radius: 50%;
-}
-.circle p {
-   font-size: 1.5rem;
-   color: var(--primary-colour);
-   text-align: center;
-   background-color: rgba(0,0,0,0);
-}
+
+
+
+
 /*
 ---------------------------------------------------
-TOOL CIRCLES END
+CARD STYLING
 ---------------------------------------------------
 */
+.card {
+   margin: 1rem 0;
+   background-color: #fff;
+   box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2);
+   /* border-radius: 0 0 0.5rem 0.5rem; */
+
+   transition: all ease 0.3s;
+   z-index: 9;
+}
+.card:active,
+.card:hover,
+.card:focus {
+   box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,0.3);
+}
+.card-description {
+   padding: 1.5rem 2rem;
+}
+.card a {
+   text-decoration: none;
+   color: var(--font-colour);
+}
+
+/*
+---------------------------------------------------
+START OF CREDIT from
+https://stackoverflow.com/questions/18322548/black-transparent-overlay-on-image-hover-with-only-css
+*/
+.photo {
+   position: relative;
+   /* box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2); */
+   z-index: 10;
+}
+.photo img {
+   width: 100%;
+   vertical-align: top;
+}
+.photo:after {
+   content: '\A';
+   position: absolute;
+   width: 100%; height:100%;
+   top:0; left:0;
+   background:rgba(0,0,0,0.5);
+   opacity: 0;
+   transition: all 1s;
+   -webkit-transition: all 1s;
+}
+.photo:active:after,
+.photo:hover:after,
+.photo:focus:after {
+   opacity: 0.7;
+}
+/*
+END OF CREDIT
+& CARD STYLING
+---------------------------------------------------
+*/
+/*
+---------------------------------------------------
+START OF 1 WORK
+*/
+.role {
+   margin: 2rem 0;
+   padding: 2rem;
+   text-align: center;
+   background-color: var(--placeholder-grey);
+}
+.role span {
+   font-size: 3.5rem;
+   font-weight: lighter;
+   line-height: 1.3rem;
+   color: var(--primary-colour);
+}
+.role strong {
+   color: var(--primary-colour);
+}
+.role a {
+   text-decoration: underline;
+}
+@media (min-width: 675px) {
+   .role {
+      text-align: left;
+   }
+   .role ul {
+      margin: 2rem 0;
+   }
+}
+.icon-box {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 0.5rem 1rem;
+   margin: 0.1rem 0.1rem;
+
+   font-size: 0.7rem;
+   text-align: center;
+   vertical-align: center;
+   color: var(--primary-colour);
+   background-color: rgba(0,0,0,0);
+   border: solid 0.05rem var(--primary-colour);
+}
+/*
+END OF 1 WORK
+---------------------------------------------------
+*/
+
+
+footer {
+   padding: 3rem 0;
+   text-align: center;
+}
+footer a {
+   padding: 1rem;
+}
 
 
 
