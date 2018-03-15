@@ -276,6 +276,12 @@ a {
 .title-lamps a:hover {
    color: var(--primary-colour);
 }
+figcaption {
+   font-size: 0.9rem;
+   text-align: center;
+   color: #888;
+   padding:1rem;
+}
 ul {
    margin: 0;
    padding: 0;
@@ -343,6 +349,10 @@ END OF CREDIT
    background-position: center;
    width: 100%;
    height: 50vh;
+}
+.img-gifs {
+   margin-left: 4.5rem;
+   align-items: center;
 }
 
 

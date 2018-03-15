@@ -127,8 +127,4 @@ other general grid rules
    /* margin-bottom: 1.5rem; */
    display: block;
    vertical-align: top;
-
-   -webkit-transition: all linear 0.3s;
-   -moz-transition: all linear 0.3s;
-   transition: all linear 0.3s;
 }
