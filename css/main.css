@@ -13,7 +13,7 @@
    --primary-colour-light: rgb(255, 168, 168);
    --primary-colour-hover: rgb(236, 64, 122);
 
-   --placeholder-grey:#ddd;
+   --placeholder-grey:#eee;
 }
 *, *::before, *::after {
    box-sizing: border-box;
