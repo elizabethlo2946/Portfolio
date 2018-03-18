@@ -132,11 +132,82 @@ header input:checked ~ nav > ul > li {
 }
 /*end of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb*/
 
+.space-from-nav {
+    margin-top: 8rem;
+}
 
+.case-study {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+.cs-collapsed-title {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    margin-left: 5%;
+    white-space: nowrap;
+    
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.cs-expanded-title {
+    display: none;
+}
+.cs-expanded-title-number {
+    display: none;
+}
+.col-15 {
+    width: 5%;
+}
 .col-70 {
-    width: 70%;
-    height: 50vh;
-    margin: 5rem auto;
+    width: 90%;
+    height: 30vh;
     
     border: 1px solid black;
+}
+@media (min-width: 891px) {
+    .space-from-nav {
+        margin: 8rem;
+    }
+    .cs-collapsed-title {
+        display: none;
+    }
+    .cs-expanded-title {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 40%;
+        white-space: nowrap;
+        
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
+        
+        transform: rotate(270deg);
+        transform-origin: right top;
+    }
+    .cs-expanded-title-number {
+        display: block;
+        position: relative;
+        text-align: center;
+        
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
+    }
+    .col-15 {
+        width: 15%;
+    }
+    .col-70 {
+        width: 70%;
+        height: 60vh;
+    }
 }
