@@ -4,6 +4,10 @@
 body {
     background-color: #fbfbfb;
 }
+img {
+    max-width: 100%;
+    max-height: 100vh;
+}
 /*
 beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb
 
@@ -17,7 +21,7 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     
     font-size: 1.2rem;
     font-weight: bold;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.15rem;
     font-family: sans-serif;
     text-transform: uppercase;
 }
@@ -135,7 +139,15 @@ header input:checked ~ nav > ul > li {
 .space-from-nav {
     margin-top: 8rem;
 }
-
+.col-15 {
+    width: 5%;
+}
+.col-70 {
+    width: 90%;
+    height: 30vh;
+    
+/*    border: 1px solid black;*/
+}
 .case-study {
     display: flex;
     flex-wrap: wrap;
@@ -159,21 +171,84 @@ header input:checked ~ nav > ul > li {
 .cs-expanded-title {
     display: none;
 }
-.cs-expanded-title-number {
+.col-15 .cs-expanded-title-number {
     display: none;
 }
-.col-15 {
-    width: 5%;
-}
-.col-70 {
-    width: 90%;
+#cs-lamps {
+    background-image: url(https://cdn.shopify.com/s/files/1/1368/5523/products/corgi_forsale_minicorgi_smallcorgi_111_1024x1024.jpg?v=1479503377);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+/*    background-attachment: fixed;*/
+    width: 100%;
     height: 30vh;
-    
-    border: 1px solid black;
+    position: relative;
 }
+.overlay {
+    position: relative;
+    display: inline-block;
+}
+.overlay:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+.col-70 .cs-category-block {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0; left: 0;
+    background-color: rgba(180, 100, 200, 1);
+}
+.overlay > .cs-category-block > p {
+    display: inline-block;
+    padding: 0.5rem;
+    
+    color: white;
+    font-weight: bolder;
+    font-size: 0.7rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+.overlay-caption {
+    display: inline-block;
+    position: relative;
+    top: 0.65rem;
+    left: 35%;
+    
+    text-align: left;
+    color: black;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+/*    background-color: rgba(255,255,255, 0.5);*/
+}
+.overlay-caption h4 {
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    width: 70%;
+    line-height: 1rem;
+}
+.overlay-caption h2 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+
+
 @media (min-width: 891px) {
     .space-from-nav {
         margin: 8rem;
+    }
+    .col-15 {
+        width: 15%;
+    }
+    .col-70 {
+        width: 70%;
+        height: 60vh;
     }
     .cs-collapsed-title {
         display: none;
@@ -194,7 +269,7 @@ header input:checked ~ nav > ul > li {
         transform: rotate(270deg);
         transform-origin: right top;
     }
-    .cs-expanded-title-number {
+    .col-15 > .cs-expanded-title-number {
         display: block;
         position: relative;
         text-align: center;
@@ -203,11 +278,22 @@ header input:checked ~ nav > ul > li {
         font-size: 0.9rem;
         letter-spacing: 0.2rem;
     }
-    .col-15 {
-        width: 15%;
-    }
-    .col-70 {
-        width: 70%;
+    #cs-lamps {
         height: 60vh;
+    }
+    .overlay:after {
+        width: 50%;
+        bottom: 10%;
+    }
+    .overlay-caption {
+        left: 20%;
+        width: 30%;
+    }
+    .overlay-caption > h4 {
+        line-height: 1.5rem;
+    }
+    .overlay-caption > h2 {
+        margin-top: 7rem;
+        font-size: 4rem;
     }
 }
