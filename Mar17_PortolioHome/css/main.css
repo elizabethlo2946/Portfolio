@@ -181,7 +181,8 @@ header input:checked ~ nav > ul > li {
     background-position: center;
 /*    background-attachment: fixed;*/
     width: 100%;
-    height: 30vh;
+/*    height: 30vh;*/
+    height: 15rem;
     position: relative;
 }
 .overlay {
@@ -226,11 +227,11 @@ header input:checked ~ nav > ul > li {
 }
 .overlay-caption h4 {
     display: inline-block;
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
     font-size: 0.7rem;
     text-transform: uppercase;
-    width: 70%;
-    line-height: 1rem;
+    width: 60%;
+    line-height: 0.7rem;
 }
 .overlay-caption h2 {
     font-size: 3rem;
