@@ -28,76 +28,134 @@ body {
 NAV
 ---------------------------------------------------
 */
-nav {
-   width: 100%;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: center;
-   flex: 1 1 auto;
-}
-nav a {
-   position: relative;
-   padding: 1.5rem;
-   text-decoration: none;
-   color: var(--font-colour);
-   letter-spacing: 0.03rem;
+/*
+beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb
 
-   -webkit-transition: all linear 0.3s;
-   -moz-transition: all linear 0.3s;
-   -ms-transition: all linear 0.3s;
-   -o-transition: all linear 0.3s;
-   transition: all linear 0.3s;
+changed units of general block elements to use rems. Pixel units are kept as original for the purpose of the menu animation
+*/
+.nav-name {
+    position: fixed;
+    top: 0.75rem;
+    left: 3.5rem;
+    z-index: 6;
+    
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
 }
-nav a:hover {
-   color: var(--primary-colour);
+.nav-name > a {
+    text-decoration: none;
+    color: #444;
 }
-.nav-left {
-   justify-content: flex-start;
+.nav-name > span {
+/*    selecting all spans where .nav-name is a parent*/
+    opacity: 0.5;
+    font-weight: lighter;
+    font-size: 0.7rem;
 }
-#nav-toggle {
-   display: flex;
-   justify-content: flex-end;
-   padding: 0.5rem 0.75rem;
+.burger-icon {
+  position: fixed;
+  top: 1.5rem;
+  right: 3rem;
+  height: 1.25rem;
+  width: 1rem;
+  z-index: 5;
+}
+.burger-icon > span {
+/*    one line of the burger menu; the middle */
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    top: 50%;
+    left: 0;
+    display: block;
+    background: #020304;
+    transition: 0.5s;
+}
+header input + label span:first-child {
+    /*    + operator: selects all label elements immediately after input elements*/
+    top: 4px;
+}
+header input + label span:last-child {
+    top: 16px;
+}
+header label:hover {
+    cursor: pointer;
+}
+header input:checked + label span {
+    opacity: 0;
+    top: 50%;
+}
+header input:checked + label span:first-child {
+/*    TopLeft to BottomRight line. Should not be renamed*/
+    opacity: 1;
+    transform: rotate(405deg);
+}
+header input:checked + label span:last-child {
+/*    BottomLeft to TopRight line*/
+    opacity: 1;
+    transform: rotate(-405deg);
+}
+header input ~ nav {
+/*    selects every <input> preceded by a <nav>*/
+/*    this, otherwise, shows as the default html checkbox. Selector should not be renamed*/
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+}
+header input ~ nav > ul {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    right: 20%;
+    
+    list-style: none;
+    padding: 0;
+}
+body input ~ nav > ul > li {
+    display: none; /*my addition*/
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+header input ~ nav .nav-item { 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #444;
+    font-weight: bolder;
+    font-family: sans-serif;
+    display: block;
+    padding: 2rem;
+    
+    transition: all ease 0.5s; /*my addition*/
+}
+/*my addition*/
+.nav-item:active,
+.nav-item:hover,
+.nav-item:focus {
+    color: red;
+}
+header input:checked ~ nav {
+    height: 100%;
+    transition-delay: 0s;
+}
+header input:checked ~ nav > ul > li {
+    display: block; /*my addition*/
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+/*end of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb*/
 
-   font-weight: lighter;
-   line-height: 1rem;
-   letter-spacing: 0.2rem;
-   text-transform: uppercase;
-
-   color: var(--primary-colour);
-   background-color: var(--background-colour);
-   border: 0.05rem solid var(--primary-colour);
-
-   -webkit-transition: all linear 0.3s;
-   -moz-transition: all linear 0.3s;
-   -ms-transition: all linear 0.3s;
-   -o-transition: all linear 0.3s;
-   transition: all linear 0.3s;
-}
-#nav-toggle:active,
-#nav-toggle:hover,
-#nav-toggle:focus {
-    background-color: var(--primary-colour-light);
-    color: #fff;
-}
-#nav-items a {
-   visibility: visible;
-}
-#nav-toggle.hidden, #nav-items.hidden {
-   visibility: hidden;
-   display: none;
-}
-/* @media (min-width:675px) {
-   .nav-right {
-      display: flex;
-      justify-content: flex-end;
-   }
-   #nav-toggle {
-      display: none;
-      visibility: hidden;
-   }
-} */
 
 /*
 ---------------------------------------------------
@@ -137,53 +195,7 @@ https://stackoverflow.com/questions/40242378/underline-from-left-to-right-on-hov
 END OF CREDIT
 ---------------------------------------------------
 */
-/*
----------------------------------------------------
-START OF CREDIT: adapted from https://codepen.io/andrewwierzba/pen/JorzzV
-*/
-.hvr-snake-border {
-  margin: 2rem 0;
-  line-height: 4rem;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-}
-.hvr-snake-border a {
-   color: var(--primary-colour);
-}
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-svg rect {
-  fill: none;
-  /* stroke: #4274D3; */
-  stroke: var(--primary-colour);
-  stroke-width: 0.1rem;
-}
-svg rect {
-   /* total number of pixels that create the "length" of the line */
-   stroke-dasharray: 400, 0;
-   -webkit-transition: all 0.8s ease-in-out;
-   -moz-transition: all 0.8s ease-in-out;
-   -ms-transition: all 0.8s ease-in-out;
-   -o-transition: all 0.8s ease-in-out;
-   transition: all 0.8s ease-in-out;
-}
-.hvr-snake-border:hover svg rect,
-.hvr-snake-border:focus svg rect,
-.hvr-snake-border:active svg rect{
-  stroke-width: 0.3rem;
-  /* length of underline */
-  stroke-dasharray: 35, 245;
-  /* position of underline */
-  stroke-dashoffset: 75;
-}
-/*
-END OF CREDIT
----------------------------------------------------
-*/
+
 /*
 ---------------------------------------------------
 NAV END
@@ -201,40 +213,14 @@ h1, h2, h3 {
    font-family: 'Playfair Display', serif;
    font-weight: normal;
 }
-h1 {
-   display: flex;
-   justify-content: flex-end;
-   text-align: right;
-   /* margin: 3rem 0; */
-   margin-right: 10%;
-   /* line-height: 2rem; */
-
-   font-weight: bolder;
-   letter-spacing: 0.2rem;
-   font-size: 4rem;
-}
-@media(min-width:511px) {
-   h1 {
-      font-size: 5rem
-   }
-}
-@media(min-width:792px) {
-   h1 {
-      font-size: 8rem;
-      line-height: 5rem;
-   }
-}
-@media(min-width:1083px) {
-   h1 {
-      font-size: 9rem;
-   }
-}
+/*
 h2 {
    font-size: 2rem;
    text-align: center;
    text-transform: uppercase;
    letter-spacing: 0.1rem;
 }
+*/
 h3 {
    font-size: 1.5rem;
    text-transform: uppercase;
@@ -256,25 +242,6 @@ h6 {
 p {
    font-size: 0.9rem;
    margin-right: 10%;
-}
-a {
-   color: var(--primary-colour);
-   text-decoration: none;
-}
-.title-lamps a {
-   color: var(--font-colour);
-   -webkit-transition: all ease-out 0.3s;
-   -moz-transition: all ease-out 0.3s;
-   -ms-transition: all ease-out 0.3s;
-   -o-transition: all ease-out 0.3s;
-   transition: all ease-out 0.3s;
-}
-.title-lamps-visit {
-   text-align: center;
-   margin-bottom: 3rem;
-}
-.title-lamps a:hover {
-   color: var(--primary-colour);
 }
 figcaption {
    font-size: 0.9rem;
@@ -300,9 +267,111 @@ em {
 }
 /*
 ---------------------------------------------------
-GENERAL STYLING END
+HOME PAGE
 ---------------------------------------------------
 */
+
+
+
+
+
+.case-study {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+.cs-collapsed-title {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    margin-left: 5%;
+    white-space: nowrap;
+    
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.1rem;
+    font-family: 'Assistant', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #666;
+}
+.cs-expanded-title {
+    display: none;
+}
+.col-15 .cs-expanded-title-number {
+    display: none;
+}
+#cs-lamps {
+    background-image: url(https://cdn.shopify.com/s/files/1/1368/5523/products/corgi_forsale_minicorgi_smallcorgi_111_1024x1024.jpg?v=1479503377);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+/*    background-attachment: fixed;*/
+    width: 100%;
+/*    height: 30vh;*/
+    height: 15rem;
+    position: relative;
+}
+.overlay {
+    position: relative;
+    display: inline-block;
+}
+.overlay:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+.col-70 .cs-category-block {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0; left: 0;
+    background-color: rgba(180, 100, 200, 1);
+}
+.overlay > .cs-category-block > p {
+    display: inline-block;
+    padding: 0.5rem;
+    
+    color: white;
+    font-weight: bolder;
+    font-size: 0.7rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+.overlay-caption {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    top: 0.65rem;
+    left: 35%;
+    
+    text-align: left;
+    color: black;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+/*    background-color: rgba(255,255,255, 0.5);*/
+}
+.overlay-caption h4 {
+    display: inline-block;
+    margin: 0.7rem 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    width: 60%;
+    line-height: 0.7rem;
+}
+.overlay-caption > h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+
+
 
 
 
@@ -311,23 +380,6 @@ GENERAL STYLING END
 START OF CREDIT: adapted from
 jordanyep.com
 */
-.landing-img {
-   background-image: url(../img/background_landing.png);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   background-attachment: fixed;
-   width: 60%;
-   height: 70vh;
-
-   position: absolute;
-   margin-left: 10%;
-   /* opacity: 0.3; */
-}
-.landing-img-text-layer {
-   position: absolute;
-   z-index: 10;
-}
 /*
 END OF CREDIT
 ---------------------------------------------------
@@ -359,67 +411,9 @@ END OF CREDIT
 
 
 
-/*
----------------------------------------------------
-CARD STYLING
----------------------------------------------------
-*/
-.card {
-   margin: 1rem 0;
-   background-color: #fff;
-   box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2);
-   /* border-radius: 0 0 0.5rem 0.5rem; */
 
-   transition: all ease 0.3s;
-   z-index: 9;
-}
-.card:active,
-.card:hover,
-.card:focus {
-   box-shadow: 0 0 0.3rem 0.1rem rgba(0,0,0,0.3);
-}
-.card-description {
-   padding: 1.5rem 2rem;
-}
-.card a {
-   text-decoration: none;
-   color: var(--font-colour);
-}
 
-/*
----------------------------------------------------
-START OF CREDIT from
-https://stackoverflow.com/questions/18322548/black-transparent-overlay-on-image-hover-with-only-css
-*/
-.photo {
-   position: relative;
-   /* box-shadow: 0 0.2rem 0.5rem 0 rgba(0,0,0,0.2); */
-   z-index: 10;
-}
-.photo img {
-   width: 100%;
-   vertical-align: top;
-}
-.photo:after {
-   content: '\A';
-   position: absolute;
-   width: 100%; height:100%;
-   top:0; left:0;
-   background:rgba(0,0,0,0.5);
-   opacity: 0;
-   transition: all 1s;
-   -webkit-transition: all 1s;
-}
-.photo:active:after,
-.photo:hover:after,
-.photo:focus:after {
-   opacity: 0.7;
-}
-/*
-END OF CREDIT
-& CARD STYLING
----------------------------------------------------
-*/
+
 /*
 ---------------------------------------------------
 START OF 1 WORK
@@ -503,74 +497,3 @@ section code {
 STYLE GUIDE SPECIFIC END
 ---------------------------------------------------
 */
-
-.case-study-01 {
-    margin: 5rem 0;
-}
-.case-study-collapsed {
-    width: 100%;
-    margin-left: 11.5%;
-    display: block;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-weight: bolder;
-    color: #888;
-}
-.row {
-    text-align: right;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-weight: bolder;
-/*    make sure the text doesn't wrap*/
-    white-space: nowrap;
-}
-.case-study p {
-    display: none;
-}
-.case-number p {
-    display: none;
-}
-.case-study-thumbnail img {
-    display: block;
-}
-.case-study-thumbnail {
-    position: relative;
-    display: inline-block;
-}
-.case-study-caption {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-    background-color: rgba(100, 0, 100, 0.5);
-    top: 0;
-    left: 0;
-}
-.case-study-caption p, h2 {
-    color: white;
-    font-weight: normal;
-    font-size: 0.8rem;
-    text-align: left;
-    margin-left: 20%;
-}
-@media(min-width:511px) {
-    .case-study-collapsed {
-        display:none;
-    }
-    .case-study p {
-        display: flex;
-        position: absolute;
-        top: 0;
-        right: 50%;
-        color: #888;
-
-        transform: rotate(270deg);
-        transform-origin: right top;
-    }
-    .case-number p {
-        display: flex;
-        position: absolute;
-        right: 30%;
-    }
-}
-

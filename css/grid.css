@@ -5,26 +5,92 @@
     align-items: top;
     width: 100%;
 }
+.space-between-items {
+    margin-top: 5rem;
+}
 .col-15 {
-    width: 15%;
-    display: flex;
-    position: relative;
+    width: 5%;
 }
 .col-70 {
-    width: 100%;
-    height: 40vh;
-    border: 1px solid black;
+    width: 90%;
+    height: 30vh;
+    
+/*    border: 1px solid black;*/
 }
-@media(min-width:511px) {
+
+
+
+
+
+
+
+
+@media (min-width: 891px) {
+    .space-between-items {
+        margin: 8rem;
+    }
+    .col-15 {
+        width: 15%;
+    }
     .col-70 {
-        height: 50vh;
+        width: 70%;
+        height: 60vh;
+    }
+    .cs-collapsed-title {
+        display: none;
+    }
+    .cs-expanded-title {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 40%;
+        white-space: nowrap;
+        
+        text-align: right;
+        text-transform: uppercase;
+        font-family: 'Assistant', sans-serif;
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
+        color: #666;
+        
+        transform: rotate(270deg);
+        transform-origin: right top;
+    }
+    .col-15 > .cs-expanded-title-number {
+        display: block;
+        position: relative;
+        text-align: center;
+        
+        font-family: 'Assistant', sans-serif;
+        font-weight: bold;
+        font-size: 0.9rem;
+        letter-spacing: 0.2rem;
+        color: #666;
+    }
+    #cs-lamps {
+        height: 60vh;
+    }
+    .overlay:after {
+        width: 50%;
+        bottom: 10%;
+    }
+    .overlay-caption {
+        left: 20%;
+        width: 30%;
+    }
+    .overlay-caption > h4 {
+        line-height: 1.5rem;
+    }
+    .overlay-caption > h2 {
+        margin-top: 25%;
+        font-size: 4rem;
     }
 }
-@media(min-width:911px) {
-    .col-70 {
-        height: 70vh;
-    }
-}
+
+
+
+
 /*the old stuff.... ====================*/
 .grid-row {
    width: 70%;
@@ -113,34 +179,6 @@
 
 
 
-/*
----------------------------------------------------
-half a page
----------------------------------------------------
-*/
-.grid-row-5of10 {
-   width: 100%;
-}
-@media(min-width:511px) {
-   .grid-row-5of10 {
-      width: 70%;
-   }
-}
-@media(min-width:792px) {
-   .grid-row-5of10 {
-      width: 50%
-   }
-}
-
-
-.grid-row-7of10 {
-   width: 100%;
-}
-@media (min-width: 675px) {
-   .grid-row-7of10 {
-      width: 80%;
-   }
-}
 
 /*
 ---------------------------------------------------
