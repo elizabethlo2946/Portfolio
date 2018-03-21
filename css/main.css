@@ -39,14 +39,14 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     left: 3.5rem;
     z-index: 6;
     
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
     letter-spacing: 0.15rem;
-    font-family: sans-serif;
     text-transform: uppercase;
 }
 .nav-name > a {
+    font-family: 'Playfair Display', serif;
     text-decoration: none;
+    letter-spacing: 0.1rem;
     color: #444;
 }
 .nav-name > span {
@@ -129,13 +129,14 @@ body input ~ nav > ul > li {
     transition-delay: 0s;
 }
 header input ~ nav .nav-item { 
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #444;
-    font-weight: bolder;
-    font-family: sans-serif;
     display: block;
     padding: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Assistant', sans-serif;
+    letter-spacing: 0.15rem;
+    color: #444;
     
     transition: all ease 0.5s; /*my addition*/
 }
@@ -241,7 +242,6 @@ h6 {
 }
 p {
    font-size: 0.9rem;
-   margin-right: 10%;
 }
 figcaption {
    font-size: 0.9rem;
@@ -303,38 +303,57 @@ HOME PAGE
 .col-15 .cs-expanded-title-number {
     display: none;
 }
+.project {
+    box-shadow: 0 0.3rem 1rem #888;
+    
+    transition: all ease 0.3s;
+}
+.project:active,
+.project:hover,
+.project:focus {
+    box-shadow: 0 0.5rem 2rem #444;
+}
 #cs-lamps {
-    background-image: url(https://cdn.shopify.com/s/files/1/1368/5523/products/corgi_forsale_minicorgi_smallcorgi_111_1024x1024.jpg?v=1479503377);
-    background-size: cover;
+    background-image: url(../img/339_displays7.png);
+    background-size: contain;
+/*    background-size: cover;*/
     background-repeat: no-repeat;
     background-position: center;
 /*    background-attachment: fixed;*/
     width: 100%;
-/*    height: 30vh;*/
-    height: 15rem;
+    height: 35vh;
     position: relative;
+    z-index: 0;
 }
 .overlay {
     position: relative;
     display: inline-block;
+    background-color: white;
 }
 .overlay:after {
     position: absolute;
     content: "";
     display: block;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 255, 255, 0.5);
+/*    background: rgba(255, 255, 255, 0.5);*/
+    background-color: rgba(61, 41, 163, 0.7);
+    height: 35vh;
+    z-index: 1;
 }
 .col-70 .cs-category-block {
     position: absolute;
     width: 3rem;
     height: 3rem;
     top: 0; left: 0;
-    background-color: rgba(180, 100, 200, 1);
+    padding-top: 0.4rem;
+    padding-left: 0.1rem;
+/*    background-color: rgba(180, 100, 200, 1);*/
+    background-color: rgb(61, 41, 163);
+    z-index: 10;
 }
 .overlay > .cs-category-block > p {
-    display: inline-block;
-    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
     
     color: white;
     font-weight: bolder;
@@ -350,15 +369,16 @@ HOME PAGE
     left: 35%;
     
     text-align: left;
-    color: black;
     font-weight: bolder;
+    color: white;
     letter-spacing: 0.1rem;
-/*    background-color: rgba(255,255,255, 0.5);*/
+    z-index: 9;
 }
-.overlay-caption h4 {
+.overlay-caption > h4 {
     display: inline-block;
     margin: 0.7rem 0;
     font-size: 0.7rem;
+    font-weight: bold;
     text-transform: uppercase;
     width: 60%;
     line-height: 0.7rem;

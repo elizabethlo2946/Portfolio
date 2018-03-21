@@ -13,7 +13,7 @@
 }
 .col-70 {
     width: 90%;
-    height: 30vh;
+    height: 35vh;
     
 /*    border: 1px solid black;*/
 }
@@ -73,6 +73,7 @@
     }
     .overlay:after {
         width: 50%;
+        height: 55vh;
         bottom: 10%;
     }
     .overlay-caption {
