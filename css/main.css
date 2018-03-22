@@ -9,11 +9,9 @@
    --background-colour: #f8f8f8;
    --font-colour: #444;
 
-   --primary-colour: rgb(255, 82, 82);
-   --primary-colour-light: rgb(255, 168, 168);
-   --primary-colour-hover: rgb(236, 64, 122);
-
-   --placeholder-grey:#eee;
+   --lamp-colour: rgb(61, 41, 163);
+    --android-colour: rgb(0, 105, 92);
+    --primary-colour: rgb(255, 82, 82);
 }
 *, *::before, *::after {
    box-sizing: border-box;
@@ -26,9 +24,7 @@ body {
 /*
 ---------------------------------------------------
 NAV
----------------------------------------------------
-*/
-/*
+
 beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb
 
 changed units of general block elements to use rems. Pixel units are kept as original for the purpose of the menu animation
@@ -48,6 +44,7 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     text-decoration: none;
     letter-spacing: 0.1rem;
     color: #444;
+    color: var(--font-colour);
 }
 .nav-name > span {
 /*    selecting all spans where .nav-name is a parent*/
@@ -71,7 +68,8 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     top: 50%;
     left: 0;
     display: block;
-    background: #020304;
+    background-color: #444;
+    background-color: var(--font-colour);
     transition: 0.5s;
 }
 header input + label span:first-child {
@@ -137,6 +135,7 @@ header input ~ nav .nav-item {
     font-family: 'Assistant', sans-serif;
     letter-spacing: 0.15rem;
     color: #444;
+    color: var(--font-colour);
     
     transition: all ease 0.5s; /*my addition*/
 }
@@ -155,50 +154,9 @@ header input:checked ~ nav > ul > li {
     opacity: 1;
     transition-delay: 0.5s;
 }
-/*end of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb*/
-
-
 /*
----------------------------------------------------
-START OF CREDIT: taken from
-https://stackoverflow.com/questions/40242378/underline-from-left-to-right-on-hover-in-and-out
-*/
-.hvr-sweep-to-right {
-  position: relative;
-  overflow: hidden;
-}
-.hvr-sweep-to-right:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  width: 0;
+end of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb
 
-  bottom: -0.1rem;
-  background-color: var(--primary-colour);
-  height: 0.2rem;
-
-  -webkit-transition: all ease-out 0.3s;
-  -moz-transition: all ease-out 0.3s;
-  -ms-transition: all ease-out 0.3s;
-  -o-transition: all ease-out 0.3s;
-  transition: all ease-out 0.3s;
-}
-.hvr-sweep-to-right:hover:after,
-.hvr-sweep-to-right:focus:after,
-.hvr-sweep-to-right:active:after {
-  left: 0;
-  right: auto;
-  width: 100%;
-  color: var(--primary-colour);
-}
-/*
-END OF CREDIT
----------------------------------------------------
-*/
-
-/*
----------------------------------------------------
 NAV END
 ---------------------------------------------------
 */
@@ -214,14 +172,6 @@ h1, h2, h3 {
    font-family: 'Playfair Display', serif;
    font-weight: normal;
 }
-/*
-h2 {
-   font-size: 2rem;
-   text-align: center;
-   text-transform: uppercase;
-   letter-spacing: 0.1rem;
-}
-*/
 h3 {
    font-size: 1.5rem;
    text-transform: uppercase;
@@ -280,6 +230,7 @@ HOME PAGE
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
+    margin: 5rem 0;
     width: 100%;
 }
 .cs-collapsed-title {
@@ -304,6 +255,7 @@ HOME PAGE
     display: none;
 }
 .project {
+    background-color: white;
     box-shadow: 0 0.3rem 1rem #888;
     
     transition: all ease 0.3s;
@@ -313,24 +265,29 @@ HOME PAGE
 .project:focus {
     box-shadow: 0 0.5rem 2rem #444;
 }
-#cs-lamps {
+
+
+
+
+
+#project-lamps {
     background-image: url(../img/339_displays7.png);
     background-size: contain;
 /*    background-size: cover;*/
     background-repeat: no-repeat;
     background-position: center;
 /*    background-attachment: fixed;*/
-    width: 100%;
+/*    width: 100%;*/
     height: 35vh;
     position: relative;
     z-index: 0;
 }
-.overlay {
+.project-lamps-overlay, .project-android-overlay {
     position: relative;
     display: inline-block;
     background-color: white;
 }
-.overlay:after {
+.project-lamps-overlay:after {
     position: absolute;
     content: "";
     display: block;
@@ -340,18 +297,16 @@ HOME PAGE
     height: 35vh;
     z-index: 1;
 }
-.col-70 .cs-category-block {
+.col-70 .project-lamps-category-block {
     position: absolute;
     width: 3rem;
     height: 3rem;
     top: 0; left: 0;
-    padding-top: 0.4rem;
     padding-left: 0.1rem;
-/*    background-color: rgba(180, 100, 200, 1);*/
     background-color: rgb(61, 41, 163);
     z-index: 10;
 }
-.overlay > .cs-category-block > p {
+.project-lamps-overlay > .project-lamps-category-block > p {
     display: flex;
     justify-content: center;
     
@@ -361,6 +316,55 @@ HOME PAGE
     text-align: center;
     letter-spacing: 0.4rem;
 }
+
+
+
+#project-android {
+    background-image: url(../img/359_displays_4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+/*    background-attachment: fixed;*/
+/*    width: 100%;*/
+    height: 35vh;
+    position: relative;
+    z-index: 0;
+}
+.project-android-overlay:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 105, 92, 0.7);
+    height: 35vh;
+    z-index: 1;
+}
+.col-70 .project-android-category-block {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 0; left: 0;
+    padding-top: 0.4rem;
+    padding-left: 0.1rem;
+    background-color: rgb(0, 105, 92);
+    z-index: 10;
+}
+.project-android-overlay > .project-android-category-block > p {
+    display: flex;
+    justify-content: center;
+    
+    color: white;
+    font-weight: bolder;
+    font-size: 0.7rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+}
+
+
+
+
+
+
 .overlay-caption {
     display: inline-block;
     position: relative;

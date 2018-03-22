@@ -6,7 +6,7 @@
     width: 100%;
 }
 .space-between-items {
-    margin-top: 5rem;
+    margin-top: 5rem 0;
 }
 .col-15 {
     width: 5%;
@@ -14,8 +14,10 @@
 .col-70 {
     width: 90%;
     height: 35vh;
-    
-/*    border: 1px solid black;*/
+}
+
+#project-lamps, #project-android {
+    width: 100%;
 }
 
 
@@ -68,10 +70,10 @@
         letter-spacing: 0.2rem;
         color: #666;
     }
-    #cs-lamps {
+    #project-lamps, #project-android {
         height: 60vh;
     }
-    .overlay:after {
+    .project-lamps-overlay:after, .project-android-overlay:after {
         width: 50%;
         height: 55vh;
         bottom: 10%;
