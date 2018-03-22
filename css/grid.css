@@ -196,3 +196,6 @@ other general grid rules
    display: block;
    vertical-align: top;
 }
+.about-me {
+    height: 50vh;
+}
