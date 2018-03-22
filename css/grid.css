@@ -6,7 +6,7 @@
     width: 100%;
 }
 .space-between-items {
-    margin-top: 5rem 0;
+    margin-top: 5rem;
 }
 .col-15 {
     width: 5%;
@@ -110,6 +110,7 @@
 .grid-row-twos {
    display: block;
    margin: 2rem 0;
+    align-items: center;
 }
 .grid-row-twos .col {
    width: 100%;
@@ -129,7 +130,6 @@
 /*
 ---------------------------------------------------
 3 column
----------------------------------------------------
 */
 /* .grid-row-threes {
    display: block;
@@ -153,7 +153,6 @@
 /*
 ---------------------------------------------------
 4 column
----------------------------------------------------
 */
 .grid-row-fours {
    display: flex;

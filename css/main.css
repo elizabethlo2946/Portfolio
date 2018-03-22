@@ -1,26 +1,43 @@
 :root {
-   /*
-   note to self: refer to
-   https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
-   add the colour and real value before submitting the final file in order to support older browsers (just in case)
+    /*
+    note to self: refer to
+    https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
+    add the colour and real value before submitting the final file in order to support older browsers (just in case)
 
-   alternatively, create a .scss (SASS) file to solve these variable shenanigans
-   */
-   --background-colour: #f8f8f8;
-   --font-colour: #444;
+    alternatively, create a .scss (SASS) file to solve these variable shenanigans
+    */
+    --background-colour: #f8f8f8;
+    --font-colour: #444;
 
-   --lamp-colour: rgb(61, 41, 163);
+    --lamp-colour: rgb(61, 41, 163);
+    --lamp-colour-secondary: rgba(61, 41, 163, 0.7);
+
     --android-colour: rgb(0, 105, 92);
+    --android-colour-secondary: rgba(0, 105, 92, 0.7);
+
     --primary-colour: rgb(255, 82, 82);
 }
 *, *::before, *::after {
-   box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-   font-family: 'Assistant', 'Roboto', sans-serif;
-   background-color: var(--background-colour);
-   color: var(--font-colour);
+    font-family: 'Assistant', 'Roboto', sans-serif;
+    background-color: var(--background-colour);
+    color: var(--font-colour);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
+
+
+
+
 /*
 ---------------------------------------------------
 NAV
@@ -34,7 +51,7 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     top: 0.75rem;
     left: 3.5rem;
     z-index: 6;
-    
+
     font-size: 1rem;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
@@ -45,23 +62,33 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     letter-spacing: 0.1rem;
     color: #444;
     color: var(--font-colour);
+
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.nav-name > a:active,
+.nav-name > a:hover,
+.nav-name > a:focus {
+    color: rgb(255, 82, 82);
+    color: var(--primary-colour);
 }
 .nav-name > span {
-/*    selecting all spans where .nav-name is a parent*/
+    /*    selecting all spans where .nav-name is a parent*/
     opacity: 0.5;
     font-weight: lighter;
     font-size: 0.7rem;
 }
 .burger-icon {
-  position: fixed;
-  top: 1.5rem;
-  right: 3rem;
-  height: 1.25rem;
-  width: 1rem;
-  z-index: 5;
+    position: fixed;
+    top: 1.5rem;
+    right: 3rem;
+    height: 1.25rem;
+    width: 1rem;
+    z-index: 5;
 }
 .burger-icon > span {
-/*    one line of the burger menu; the middle */
+    /*    one line of the burger menu; the middle */
     position: absolute;
     width: 100%;
     height: 0.1rem;
@@ -70,6 +97,9 @@ changed units of general block elements to use rems. Pixel units are kept as ori
     display: block;
     background-color: #444;
     background-color: var(--font-colour);
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
     transition: 0.5s;
 }
 header input + label span:first-child {
@@ -87,18 +117,18 @@ header input:checked + label span {
     top: 50%;
 }
 header input:checked + label span:first-child {
-/*    TopLeft to BottomRight line. Should not be renamed*/
+    /*    TopLeft to BottomRight line. Should not be renamed*/
     opacity: 1;
     transform: rotate(405deg);
 }
 header input:checked + label span:last-child {
-/*    BottomLeft to TopRight line*/
+    /*    BottomLeft to TopRight line*/
     opacity: 1;
     transform: rotate(-405deg);
 }
 header input ~ nav {
-/*    selects every <input> preceded by a <nav>*/
-/*    this, otherwise, shows as the default html checkbox. Selector should not be renamed*/
+    /*    selects every <input> preceded by a <nav>*/
+    /*    this, otherwise, shows as the default html checkbox. Selector should not be renamed*/
     background-color: white;
     position: fixed;
     top: 0;
@@ -106,6 +136,9 @@ header input ~ nav {
     width: 100%;
     height: 4rem;
     z-index: 3;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
     transition: 0.5s;
     transition-delay: 0.5s;
     overflow: hidden;
@@ -116,13 +149,16 @@ header input ~ nav > ul {
     top: 35%;
     left: 20%;
     right: 20%;
-    
+
     list-style: none;
     padding: 0;
 }
 body input ~ nav > ul > li {
     display: none; /*my addition*/
     opacity: 0;
+
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
     transition: 0.5s;
     transition-delay: 0s;
 }
@@ -136,14 +172,16 @@ header input ~ nav .nav-item {
     letter-spacing: 0.15rem;
     color: #444;
     color: var(--font-colour);
-    
+
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
     transition: all ease 0.5s; /*my addition*/
 }
 /*my addition*/
 .nav-item:active,
 .nav-item:hover,
 .nav-item:focus {
-    color: red;
+    color: var(--primary-colour);
 }
 header input:checked ~ nav {
     height: 100%;
@@ -163,68 +201,87 @@ NAV END
 
 
 
+
+
+
+
+
 /*
 ---------------------------------------------------
 GENERAL STYLING
----------------------------------------------------
 */
 h1, h2, h3 {
-   font-family: 'Playfair Display', serif;
-   font-weight: normal;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
 }
-h3 {
-   font-size: 1.5rem;
-   text-transform: uppercase;
+h2, h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 h4 {
-   margin: 0;
-   padding: 0;
-   font-size: 1rem;
-   letter-spacing: 0.1rem;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
 }
 h5 {
-   margin: 0.5rem 0;
-   padding: 0;
-   font-weight: normal;
+    margin: 0.5rem 0;
+    padding: 0;
+    font-weight: normal;
 }
 h6 {
-   font-weight: normal;
+    font-weight: normal;
 }
 p {
-   font-size: 0.9rem;
+    font-size: 0.9rem;
 }
 figcaption {
-   font-size: 0.9rem;
-   text-align: center;
-   color: #888;
-   padding:1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #888;
+    padding:1rem;
 }
 ul {
-   margin: 0;
-   padding: 0;
-   list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 ol {
-   margin: 0;
-   padding: 0;
+    margin: 0;
+    padding: 0;
 }
 li {
-   padding: 0.3rem 0;
+    padding: 0.3rem 0;
 }
 em {
-   font-style: normal;
-   color: var(--primary-colour);
+    font-style: normal;
+    color: var(--primary-colour);
 }
+.project-lamps-em {
+    font-style: normal;
+    color: var(--lamp-colour-secondary);
+}
+.project-android-em {
+    font-style: normal;
+    color: var(--android-colour-secondary);
+}
+/*
+GENERAL STYLING END
+---------------------------------------------------
+*/
+
+
+
+
+
+
+
+
+
 /*
 ---------------------------------------------------
 HOME PAGE
----------------------------------------------------
 */
-
-
-
-
-
 .case-study {
     display: flex;
     flex-wrap: wrap;
@@ -239,7 +296,7 @@ HOME PAGE
     margin: 1.5rem 0;
     margin-left: 5%;
     white-space: nowrap;
-    
+
     text-transform: uppercase;
     text-align: left;
     letter-spacing: 0.1rem;
@@ -257,7 +314,9 @@ HOME PAGE
 .project {
     background-color: white;
     box-shadow: 0 0.3rem 1rem #888;
-    
+
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
     transition: all ease 0.3s;
 }
 .project:active,
@@ -269,19 +328,27 @@ HOME PAGE
 
 
 
-
+/*
+---------------------------------------------------
+START OF CREDIT: adapted from
+jordanyep.com
+*/
 #project-lamps {
     background-image: url(../img/339_displays7.png);
     background-size: contain;
-/*    background-size: cover;*/
+    /*    background-size: cover;*/
     background-repeat: no-repeat;
     background-position: center;
-/*    background-attachment: fixed;*/
-/*    width: 100%;*/
+    /*    background-attachment: fixed;*/
+    /*    width: 100%;*/
     height: 35vh;
     position: relative;
     z-index: 0;
 }
+/*
+END OF CREDIT
+---------------------------------------------------
+*/
 .project-lamps-overlay, .project-android-overlay {
     position: relative;
     display: inline-block;
@@ -292,8 +359,8 @@ HOME PAGE
     content: "";
     display: block;
     top: 0; left: 0; right: 0; bottom: 0;
-/*    background: rgba(255, 255, 255, 0.5);*/
     background-color: rgba(61, 41, 163, 0.7);
+    background-color: var(--lamp-colour-secondary);
     height: 35vh;
     z-index: 1;
 }
@@ -309,7 +376,7 @@ HOME PAGE
 .project-lamps-overlay > .project-lamps-category-block > p {
     display: flex;
     justify-content: center;
-    
+
     color: white;
     font-weight: bolder;
     font-size: 0.7rem;
@@ -324,8 +391,8 @@ HOME PAGE
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-/*    background-attachment: fixed;*/
-/*    width: 100%;*/
+    /*    background-attachment: fixed;*/
+    /*    width: 100%;*/
     height: 35vh;
     position: relative;
     z-index: 0;
@@ -336,6 +403,7 @@ HOME PAGE
     display: block;
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: rgba(0, 105, 92, 0.7);
+    background-color: var(--android-colour-secondary);
     height: 35vh;
     z-index: 1;
 }
@@ -352,7 +420,7 @@ HOME PAGE
 .project-android-overlay > .project-android-category-block > p {
     display: flex;
     justify-content: center;
-    
+
     color: white;
     font-weight: bolder;
     font-size: 0.7rem;
@@ -361,17 +429,13 @@ HOME PAGE
 }
 
 
-
-
-
-
 .overlay-caption {
     display: inline-block;
     position: relative;
     width: 100%;
     top: 0.65rem;
     left: 35%;
-    
+
     text-align: left;
     font-weight: bolder;
     color: white;
@@ -392,43 +456,30 @@ HOME PAGE
     font-weight: bold;
     margin-bottom: 0;
 }
-
-
-
-
-
-
-
 /*
----------------------------------------------------
-START OF CREDIT: adapted from
-jordanyep.com
-*/
-/*
-END OF CREDIT
+HOME PAGE END
 ---------------------------------------------------
 */
-#img-lamps {
-   background-color: #9aabb9;
-   background-image: url(../img/339_displays4.png);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   width: 100%;
-   height: 50vh;
-}
+
+
+
+
+
+
+
+
 #img-stanleyPark {
-   background-color: #c0ccce;
-   background-image: url(../img/359_displays_1.png);
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
-   width: 100%;
-   height: 50vh;
+    background-color: #c0ccce;
+    background-image: url(../img/359_displays_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
 }
 .img-gifs {
-   margin-left: 4.5rem;
-   align-items: center;
+    margin-left: 4.5rem;
+    align-items: center;
 }
 
 
@@ -440,47 +491,58 @@ END OF CREDIT
 
 /*
 ---------------------------------------------------
-START OF 1 WORK
+PROJECT PAGE
 */
+.project-lamps-title {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    background-color: var(--lamp-colour-secondary);
+}
+.project-lamps-title a {
+    color: white;
+}
+.project-lamps-img {
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
+}
 .role {
-   margin: 2rem 0;
-   padding: 2rem;
-   text-align: center;
-   background-color: var(--placeholder-grey);
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: center;
 }
 .role span {
-   font-size: 3.5rem;
-   font-weight: lighter;
-   line-height: 1.3rem;
-   color: var(--primary-colour);
+    font-size: 3.5rem;
+    font-weight: lighter;
+    line-height: 1.3rem;
+    color: var(--lamp-colour-secondary);
 }
 .role strong {
-   color: var(--primary-colour);
-}
-.role a {
-   text-decoration: underline;
+    color: var(--lamp-colour-secondary);
 }
 @media (min-width: 675px) {
-   .role {
-      text-align: left;
-   }
-   .role ul {
-      margin: 2rem 0;
-   }
+    .role {
+        /*        text-align: left;*/
+    }
+    .role ul {
+        margin: 2rem 0;
+    }
 }
 .icon-box {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   padding: 0.5rem 1rem;
-   margin: 0.1rem 0.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    margin: 0.1rem 0.1rem;
 
-   font-size: 0.7rem;
-   text-align: center;
-   vertical-align: center;
-   color: var(--primary-colour);
-   background-color: rgba(0,0,0,0);
-   border: solid 0.05rem var(--primary-colour);
+    font-size: 0.7rem;
+    text-align: center;
+    vertical-align: center;
+    color: var(--primary-colour);
+    background-color: rgba(0,0,0,0);
+    border: solid 0.05rem var(--primary-colour);
 }
 /*
 END OF 1 WORK
@@ -489,11 +551,11 @@ END OF 1 WORK
 
 
 footer {
-   padding: 3rem 0;
-   text-align: center;
+    padding: 3rem 0;
+    text-align: center;
 }
 footer a {
-   padding: 1rem;
+    padding: 1rem;
 }
 
 
@@ -504,17 +566,17 @@ STYLE GUIDE SPECIFIC
 ---------------------------------------------------
 */
 section code {
-   display: block;
-   padding: 2rem;
-   padding-right: 0;
-   color: var(--font-colour);
-   background-color: var(--placeholder-grey);
-   border-radius: 0.2rem;
+    display: block;
+    padding: 2rem;
+    padding-right: 0;
+    color: var(--font-colour);
+    background-color: var(--placeholder-grey);
+    border-radius: 0.2rem;
 }
 .h2-styleguide, .h3-styleguide {
-   background-color: var(--primary-colour-light);
-   text-align: center;
-   border-radius: 0.2rem;
+    background-color: var(--primary-colour-light);
+    text-align: center;
+    border-radius: 0.2rem;
 }
 /*
 ---------------------------------------------------
