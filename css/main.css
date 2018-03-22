@@ -508,19 +508,40 @@ PROJECT PAGE
     background-color: white;
     box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
 }
-.role {
+.project-android-title {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    background-color: var(--android-colour-secondary);
+}
+.project-android-img {
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
+}
+.role-lamps, .role-android {
     margin: 2rem 0;
     padding: 2rem;
     text-align: center;
 }
-.role span {
+.role-lamps span {
     font-size: 3.5rem;
     font-weight: lighter;
     line-height: 1.3rem;
     color: var(--lamp-colour-secondary);
 }
-.role strong {
+.role-lamps strong {
     color: var(--lamp-colour-secondary);
+}
+.role-android span {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    line-height: 1.3rem;
+    color: var(--android-colour-secondary);
+}
+.role-android strong {
+    color: var(--android-colour-secondary);
 }
 @media (min-width: 675px) {
     .role {
