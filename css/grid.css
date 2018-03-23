@@ -47,7 +47,7 @@
         top: 0;
         right: 40%;
         white-space: nowrap;
-        
+
         text-align: right;
         text-transform: uppercase;
         font-family: 'Assistant', sans-serif;
@@ -55,7 +55,7 @@
         font-size: 0.9rem;
         letter-spacing: 0.2rem;
         color: #666;
-        
+
         transform: rotate(270deg);
         transform-origin: right top;
     }
@@ -63,7 +63,7 @@
         display: block;
         position: relative;
         text-align: center;
-        
+
         font-family: 'Assistant', sans-serif;
         font-weight: bold;
         font-size: 0.9rem;
@@ -96,8 +96,8 @@
 
 /*the old stuff.... ====================*/
 .grid-row {
-   width: 70%;
-   margin-left: 15%;
+    width: 70%;
+    margin-left: 15%;
 }
 
 
@@ -108,21 +108,21 @@
 ---------------------------------------------------
 */
 .grid-row-twos {
-   display: block;
-   margin: 2rem 0;
-    align-items: center;
+    display: block;
+    margin: 2rem 0;
+/*    align-items: center;*/
 }
 .grid-row-twos .col {
-   width: 100%;
+    width: 100%;
 }
 @media (min-width: 675px) {
-   .grid-row-twos {
-      display: flex;
-      justify-content: space-between;
-   }
-   .grid-row-twos .col {
-      width: 47%;
-   }
+    .grid-row-twos {
+        display: flex;
+        justify-content: space-between;
+    }
+    .grid-row-twos .col {
+        width: 47%;
+    }
 }
 
 
@@ -132,20 +132,20 @@
 3 column
 */
 /* .grid-row-threes {
-   display: block;
-   margin: 1rem;
+display: block;
+margin: 1rem;
 }
 .grid-row-threes .col {
-   width: 50%;
+width: 50%;
 } */
 /* @media(min-width:820px) { */
-   .grid-row-threes {
-      display: flex;
-      justify-content: space-between;
-   }
-   .grid-row-threes .col {
-      width: 33%;
-   }
+.grid-row-threes {
+    display: flex;
+    justify-content: space-between;
+}
+.grid-row-threes .col {
+    width: 33%;
+}
 /* } */
 
 
@@ -155,28 +155,28 @@
 4 column
 */
 .grid-row-fours {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 .grid-row-fours .col {
-   width: 100%;
+    width: 100%;
 }
 @media(min-width:127px) {
-   .grid-row-fours .col {
-      width: 50%;
-   }
+    .grid-row-fours .col {
+        width: 50%;
+    }
 }
 @media(min-width:450px) {
-   .grid-row-fours .col {
-      width: 33%;
-   }
+    .grid-row-fours .col {
+        width: 33%;
+    }
 }
 @media(min-width:620px) {
-   .grid-row-fours .col {
-      width: 25%;
-   }
+    .grid-row-fours .col {
+        width: 25%;
+    }
 }
 
 
@@ -188,13 +188,13 @@ other general grid rules
 ---------------------------------------------------
 */
 .grid-row-icon {
-   margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 .img-responsive {
-   max-width: 100%;
-   /* margin-bottom: 1.5rem; */
-   display: block;
-   vertical-align: top;
+    max-width: 100%;
+    /* margin-bottom: 1.5rem; */
+    display: block;
+    vertical-align: top;
 }
 .about-me {
     height: 50vh;
