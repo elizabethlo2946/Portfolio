@@ -13,7 +13,8 @@
 }
 .col-70 {
     width: 90%;
-    height: 35vh;
+/*    height: 35vh;*/
+    height:45vh;
 }
 
 #project-lamps, #project-android {
@@ -26,7 +27,11 @@
 
 
 
-
+@media(min-width:478px) {
+    .col-70 {
+        height: 80;
+    }
+}
 @media (min-width: 891px) {
     .space-between-items {
         margin: 8rem;
@@ -37,57 +42,6 @@
     .col-70 {
         width: 70%;
         height: 60vh;
-    }
-    .cs-collapsed-title {
-        display: none;
-    }
-    .cs-expanded-title {
-        display: block;
-        position: relative;
-        top: 0;
-        right: 40%;
-        white-space: nowrap;
-
-        text-align: right;
-        text-transform: uppercase;
-        font-family: 'Assistant', sans-serif;
-        font-weight: bold;
-        font-size: 0.9rem;
-        letter-spacing: 0.2rem;
-        color: #666;
-
-        transform: rotate(270deg);
-        transform-origin: right top;
-    }
-    .col-15 > .cs-expanded-title-number {
-        display: block;
-        position: relative;
-        text-align: center;
-
-        font-family: 'Assistant', sans-serif;
-        font-weight: bold;
-        font-size: 0.9rem;
-        letter-spacing: 0.2rem;
-        color: #666;
-    }
-    #project-lamps, #project-android {
-        height: 60vh;
-    }
-    .project-lamps-overlay:after, .project-android-overlay:after {
-        width: 50%;
-        height: 55vh;
-        bottom: 10%;
-    }
-    .overlay-caption {
-        left: 20%;
-        width: 30%;
-    }
-    .overlay-caption > h4 {
-        line-height: 1.5rem;
-    }
-    .overlay-caption > h2 {
-        margin-top: 25%;
-        font-size: 4rem;
     }
 }
 
