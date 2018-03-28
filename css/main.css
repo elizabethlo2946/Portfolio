@@ -579,8 +579,12 @@ PROJECT PAGE
 }
 @media(min-width:675px) {
     .project-lamps-title, .project-android-title {
-/*        padding: 10rem 2rem;*/
-        padding: 23% 3%;
+        padding: 10rem 2rem;
+/*        
+        mozilla ignores percents if it's displayed on flex. discovered Mar28 :"( cries
+        https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox
+*/
+/*        padding: 23% 3%;*/
     }
 }
 .project-android-img {
