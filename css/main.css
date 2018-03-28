@@ -16,6 +16,7 @@
     --android-colour-secondary: rgba(0, 105, 92, 0.7);
 
     --primary-colour: rgb(255, 82, 82);
+    --secondary-colour: rgba(255, 82, 82, 0.5);
 }
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
@@ -242,16 +243,21 @@ figcaption {
     padding:1rem;
 }
 ul {
-    margin: 0;
-    padding: 0;
+    font-weight: bolder;
     list-style: none;
-}
-ol {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
-li {
-    padding: 0.3rem 0;
+ul li {
+    border-left: 1px solid white;
+    padding: 0.25rem 0;
+    padding-left: 0.5rem;
+    margin: 0.5rem 0;
+    font-weight: normal;
+}
+/*for styleguide*/
+.secondary-colour > ul li, .list-black > ul > li {
+    border-left: 1px solid var(--font-colour);
 }
 em, em a {
     font-style: normal;
@@ -264,6 +270,23 @@ em, em a {
 .project-android-em {
     font-style: normal;
     color: var(--android-colour-secondary);
+}
+
+.button {
+    margin: 1rem 0;
+    color: var(--primary-colour);
+    text-decoration: none;
+    border: 0.1rem solid var(--primary-colour);
+    padding: 0.75rem;
+    border-radius: 2rem;
+    
+    transition: all ease 0.3s;
+}
+.button:active,
+.button:hover,
+.button:focus {
+    color: var(--secondary-colour);
+    border: 0.1rem solid var(--secondary-colour);
 }
 /*
 GENERAL STYLING END
@@ -513,28 +536,10 @@ END OF CREDIT
         font-size: 4rem;
     }
 }
-}
 /*
 HOME PAGE END
 ---------------------------------------------------
 */
-
-
-
-
-
-
-
-
-
-.img-gifs {
-    margin-left: 4.5rem;
-    align-items: center;
-}
-
-
-
-
 
 
 
@@ -551,12 +556,6 @@ PROJECT PAGE
     background-color: var(--lamp-colour-secondary);
     align-items: center;
 }
-@media(min-width:675px) {
-    .project-lamps-title {
-/*        padding: 10rem 2rem;*/
-        padding-top: 23%;
-    }
-}
 .project-lamps-title a {
     color: white;
 }
@@ -565,6 +564,12 @@ PROJECT PAGE
     background-color: white;
     box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
 }
+.project-lamps-span {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    line-height: 1.3rem;
+    color: var(--lamp-colour-secondary);
+}
 .project-android-title {
     padding: 2rem;
     color: white;
@@ -572,15 +577,28 @@ PROJECT PAGE
     letter-spacing: 0.1rem;
     background-color: var(--android-colour-secondary);
 }
+@media(min-width:675px) {
+    .project-lamps-title, .project-android-title {
+/*        padding: 10rem 2rem;*/
+        padding: 23% 3%;
+    }
+}
 .project-android-img {
     margin: 2rem 0;
     background-color: white;
     box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
 }
-.role-lamps, .role-android {
+.project-android-span {
+    font-size: 3.5rem;
+    font-weight: lighter;
+    line-height: 1.3rem;
+    color: var(--android-colour-secondary);
+}
+.role-lamps, .role-lamps > ul > li, .role-android, .role-android > ul > li {
     margin: 2rem 0;
     padding: 2rem;
     text-align: center;
+    border: none;
 }
 .role-lamps span {
     font-size: 3.5rem;
@@ -654,27 +672,31 @@ STYLE GUIDE SPECIFIC
 */
 section code {
     display: block;
-    padding: 2rem;
+    padding: 1rem;
     padding-right: 0;
     color: var(--font-colour);
 /*    background-color: #eee;*/
     border: 0.05rem solid #ddd;
     border-radius: 0.2rem;
 }
-.h2-styleguide, .h3-styleguide {
-    padding: 1rem;
-    text-align: center;
-    background-color: rgba(255, 82, 82, 0.3);
-    border-radius: 0.2rem;
+ul > li > code {
+    border: none;
 }
-.h3-styleguide {
+.styleguide-section {
+    border-bottom: 1px solid #bbb;
+    padding: 2rem 0;
+}
+.styleguide-h3 {
     font-size: 1rem;
+    text-transform: lowercase;
 }
 .colour {
     width: 100%;
-    height: 5rem;
+    height: 8rem;
+    margin-bottom: 1rem;
     padding: 1rem;
     color: white;
+    background-color: var(--font-colour);
 }
 .primary-colour {
     background-color: rgb(255, 82, 82);

@@ -34,288 +34,208 @@
 
         <div class="space-between-items"></div>
 
-        <section id="main-nav">
-            <h2 class="h2-styleguide">Main Nav</h2>
-            <div class="grid-row-twos">
+        <section class="styleguide-section">
+            <h2>Colour Palette<br><span>-</span></h2>
+            <div class="grid-row-threes">
                 <div class="col">
-                    <h3 class="h3-styleguide">CSS selectors</h3>
-                    <ul>
-                        <li>.nav-name</li>
-                        <li>.nav-name > a</li>
-                        <li>
-                            .nav-name > a:active<br>
-                            .nav-name > a:hover<br>
-                            .nav-name > a:focus
-                        </li>
-                        <li>.nav-name > span</li>
-                        <li>.burger-icon</li>
-                        <li>.burger-icon > span</li>
-                        <li>header input + label span:first-child</li>
-                        <li>header input + label span:last-child</li>
-                        <li>header label: hover</li>
-                        <li>header input:checked + label span</li>
-                        <li>header input:checked + label-span:first-child</li>
-                        <li>header input:checked + label-span:last-child</li>
-                        <li>header input ~ nav</li>
-                        <li>header input ~ nav > ul</li>
-                        <li>body input ~ nav > ul > li</li>
-                        <li>header input ~ nav .nav-item</li>
-                        <li>
-                            .nav-item:active, <br>
-                            .nav-item:hover, <br>
-                            .nav-item:focus <br>
-                        </li>
-                        <li>header input:checked ~ nav</li>
-                        <li>header input:checked ~ nav > ul > li</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h3 class="h3-styleguide">HTML Code for Nav</h3>
-                    <code>
-                        &lt;header&gt;<br />&lt;!-- beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb--&gt;<br />&lt;h1 class="nav-name"&gt;&lt;a href="index.html"&gt;Lizzie Lo&lt;/a&gt;&lt;/h1&gt;<br />&lt;input id="burger" type="checkbox" /&gt;<br />&lt;label for="burger" class="burger-icon"&gt;<br />&lt;span&gt;&lt;/span&gt;<br />&lt;span&gt;&lt;/span&gt;<br />&lt;span&gt;&lt;/span&gt;<br />&lt;/label&gt;
-                        &lt;nav&gt; <br />&lt;ul&gt;<br />&lt;li&gt;&lt;a href="aboutMe.html" class="nav-item"&gt;About Me&lt;/a&gt;&lt;/li&gt;<br />&lt;li&gt;&lt;a href="contact.html" class="nav-item"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br />&lt;/ul&gt; <br />&lt;/nav&gt;<br />&lt;!-- end of credit--&gt;<br />&lt;/header&gt;
-                    </code>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="home-pg">
-            <h2 class="h2-styleguide">Home page elements</h2>
-            <section class="case-study">
-                <h2 class="cs-collapsed-title">Case Study 01</h2>
-
-                <div class="col-15">
-                    <h2 class="cs-expanded-title">Case Study</h2>
-                </div>
-
-                <div class="col-70 project">
-                    <a href="lamps.html">
-                        <div id="project-lamps" class="project-lamps-overlay">
-                            <div class="project-lamps-category-block">
-                                <p>UX<br>UI</p>
-                            </div>
-                            <div class="overlay-caption">
-                                <h4>User experience &amp; interface</h4>
-                                <h2>01</h2>
-                                <h4>Web Development &amp; design</h4>
-                                <h4>Visualizer &amp; Developer</h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-15">
-                    <h2 class="cs-expanded-title-number">01</h2>
-                </div>
-            </section>
-
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3 class="h3-styleguide">CSS selectors</h3>
-                    <ul>
-                        <li>.case-study</li>
-                        <li>.cs-collapsed-title</li>
-                        <li>.col-15 .cs-expanded-title-number</li>
-                        <li>.project</li>
-                        <li>
-                            .project:active,<br>
-                            .project:hover,<br>
-                            .project:focus
-                        </li>
-                        <li>#project-lamps</li>
-                        <li>.project-lamps-overlay, .project-android-overlay</li>
-                        <li>.col-70 .project-lamps-category-block</li>
-                        <li>.project-lamps-overlay > .project-lamps-category-block > p</li>
-                        <li>.overlay-caption</li>
-                        <li>.overlay-caption > h4</li>
-                        <li>.overlay-caption > h2</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h3 class="h3-styleguide">HTML Code for home element</h3>
-                    <code>
-                        &lt;section class="case-study"&gt;<br />&lt;h2 class="cs-collapsed-title"&gt;Case Study 01&lt;/h2&gt;<br>
-                        &lt;div class="col-15"&gt;<br />&lt;h2 class="cs-expanded-title"&gt;Case Study&lt;/h2&gt;<br />&lt;/div&gt;<br>
-                        &lt;div class="col-70 project"&gt;<br />&lt;a href="lamps.html"&gt;<br />&lt;div id="project-lamps" class="project-lamps-overlay"&gt;<br />&lt;div class="project-lamps-category-block"&gt;<br />&lt;p&gt;UX&lt;br&gt;UI&lt;/p&gt;<br />&lt;/div&gt;<br />&lt;div class="overlay-caption"&gt;<br />&lt;h4&gt;User experience &amp;amp; interface&lt;/h4&gt;<br />&lt;h2&gt;01&lt;/h2&gt;<br />&lt;h4&gt;Web Development &amp;amp; design&lt;/h4&gt;<br />&lt;h4&gt;Visualizer &amp;amp; Developer&lt;/h4&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/a&gt;<br />&lt;/div&gt;<br>
-                        &lt;div class="col-15"&gt;<br />&lt;h2 class="cs-expanded-title-number"&gt;01&lt;/h2&gt;<br />&lt;/div&gt;<br />&lt;/section&gt;
-                    </code>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="work-element-title">
-            <h2 class="h2-styleguide">Work: titles and cols</h2>
-            <section class="grid-row">
-                <div class="grid-row-twos">
-                    <div class="col project-lamps-title">
-                        <h2 class="project-title">Lamps</h2>
-                        <h5><a href="http://www.sfu.ca/~eylo/IAT339_05_Feb8/" target="_blank">visit the website.</a> a web design &amp; development project.</h5>
-                    </div>
-                    <div class="col project-lamps-img">
-                        <div id="project-lamps"></div>
-                    </div>
-                </div>
-            </section>
-            <section class="role role-lamps grid-row">
-                <div class="grid-row-twos">
-                    <div class="col">
-                        <h3>Role<br />
-                            <span>-</span>
-                        </h3>
-                    </div>
-                    <div class="col">
-                        <ul>
-                            <li><strong>1</strong> identity design</li>
-                            <li><strong>2</strong> HTML &sol; CSS &sol; JS</li>
-                            <li><strong>3</strong> home, cart, about, rating page</li>
+                    <h3 class="styleguide-h3">primary colour</h3>
+                    <div class="colour primary-colour">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--primary-colour)</li>
                         </ul>
                     </div>
+                    <code>
+                        rgb(255, 82, 82)
+                    </code>
                 </div>
-            </section>
-            <section class="grid-row">
-                <div class="grid-row-twos">
-                    <div class="col">
-                        <h3>Context<br />
-                            <span>-</span></h3>
-                        <h5>February 2018</h5>
-                        <p>
-                            This is my first time coding a website that implements design and functionality together. Within <em>4 weeks,</em> my partner and I were able to go through an initial style guide, a site map, and an additive process of iteration to completion.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <figure>
-                            <img src="img/339_cart_desktop4.png" srcset="img/339_cart_desktop4.png 2x, img/339_cart_desktop4.png 3x" alt="Check out page" class="img-responsive">
-                            <figcaption>
-                                Cart page grid structure
-                            </figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </section>
-
-            <div class="grid-row-twos">
                 <div class="col">
-                    <h3 class="h3-styleguide">CSS Selectors</h3>
+                    <h3 class="styleguide-h3">secondary colour</h3>
+                    <div class="colour secondary-colour">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--secondary-colour)</li>
+                        </ul>
+                    </div>
+                    <code>
+                        rgba(255, 82, 82, 0.3)
+                    </code>
+                </div>
+                <div class="col">
+                    <h3 class="styleguide-h3">font colour</h3>
+                    <div class="colour">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--font-colour)</li>
+                        </ul>
+                    </div>
+                    <code>
+                        rgba(255, 82, 82, 0.3)
+                    </code>
+                </div>
+            </div>
+            <div class="grid-row-threes">
+                <div class="col">
+                    <h3 class="styleguide-h3">lamps primary</h3>
+                    <div class="colour lamps-colour">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--lamp-colour)</li>
+                        </ul>
+                    </div>
+                    <code>
+                        rgb(61, 41, 163
+                    </code>
+                </div>
+                <div class="col">
+                    <h3 class="styleguide-h3">lamps secondary</h3>
+                    <div class="colour lamps-colour-secondary">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--lamp-colour-secondary)</li>
+                        </ul>
+                    </div>
+                    <code>
+                        rgba(61, 41, 163, 0.7)
+                    </code>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="grid-row-threes">
+                <div class="col">
+                    <h3 class="styleguide-h3">android primary</h3>
+                    <div class="colour android-colour">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--android-colour)</li>
+                        </ul>
+                    </div>
+                    <code>
+                        rgb(0, 105, 92)
+                    </code>
+                </div>
+                <div class="col">
+                    <h3 class="styleguide-h3">android secondary</h3>
+                    <div class="colour android-colour-secondary">
+                        <ul>css selectors
+                            <li>.colour</li>
+                            <li>var(--android-colour-secondary)</li>
+                        </ul>
+                    </div>
+                    <code>
+                        rgba(0, 105, 92, 0.7)
+                    </code>
+                </div>
+                <div class="col"></div>
+            </div>
+        </section>
+        
+        <section class="styleguide-section">
+            <h2>Interactive elements<br><span>-</span></h2>
+            <div class="grid-row-threes">
+                <div class="col">
+                    <h3 class="styleguide-h3">in-text-links</h3>
+                    <p>This is an <em><a href="#">in-text link</a></em></p>
+                </div>
+                <div class="col list-black">
+                    <h3 class="styleguide-h3">css selectors</h3>
                     <ul>
-                        <li>.project-lamps-title</li>
-                        <li>.project-lamps-title a</li>
-                        <li>.project-lamps-img</li>
-                        <li>.role-lamps span</li>
-                        <li>.role-lamps strong</li>
-                        <li>.role ul</li>
-                        <li>figcaption</li>
                         <li>em</li>
-                        <li>.img-responsive</li>
+                        <li>a</li>
+                        <li>var(--primary-colour)</li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h3 class="h3-styleguide">HTML Code for a project</h3>
+                    <h3 class="styleguide-h3">html code</h3>
                     <code>
-                        &lt;section class="grid-row"&gt;<br />&lt;div class="grid-row-twos"&gt;<br />&lt;div class="col project-lamps-title"&gt;<br />&lt;h2 class="project-title"&gt;Lamps&lt;/h2&gt;<br />&lt;h5&gt;&lt;a href="http://www.sfu.ca/~eylo/IAT339_05_Feb8/" target="_blank"&gt;visit the website.&lt;/a&gt; a web design &amp;amp; development project.&lt;/h5&gt;<br />&lt;/div&gt;<br />&lt;div class="col project-lamps-img"&gt;<br />&lt;div id="project-lamps"&gt;&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/section&gt;<br />&lt;section class="role role-lamps grid-row"&gt;<br />&lt;div class="grid-row-twos"&gt;<br />&lt;div class="col"&gt;<br />&lt;h3&gt;Role&lt;br /&gt;<br />&lt;span&gt;-&lt;/span&gt;<br />&lt;/h3&gt;<br />&lt;/div&gt;<br />&lt;div class="col"&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;strong&gt;1&lt;/strong&gt; identity design&lt;/li&gt;<br />&lt;li&gt;&lt;strong&gt;2&lt;/strong&gt; HTML &amp;sol; CSS &amp;sol; JS&lt;/li&gt;<br />&lt;li&gt;&lt;strong&gt;3&lt;/strong&gt; home, cart, about, rating page&lt;/li&gt;<br />&lt;/ul&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/section&gt;<br />&lt;section class="grid-row"&gt;<br />&lt;div class="grid-row-twos"&gt;<br />&lt;div class="col"&gt;<br />&lt;h3&gt;Context&lt;br /&gt;<br />&lt;span&gt;-&lt;/span&gt;&lt;/h3&gt;<br />&lt;h5&gt;February 2018&lt;/h5&gt;<br />&lt;p&gt;<br />This is my first time coding a website that implements design and functionality together. Within &lt;em&gt;4 weeks,&lt;/em&gt; my partner and I were able to go through an initial style guide, a site map, and an additive process of iteration to completion.<br />&lt;/p&gt;<br />&lt;/div&gt;<br />&lt;div class="col"&gt;<br />&lt;figure&gt;<br />&lt;img src="img/339_cart_desktop4.png" srcset="img/339_cart_desktop4.png 2x, img/339_cart_desktop4.png 3x" alt="Check out page" class="img-responsive"&gt;<br />&lt;figcaption&gt;<br />Cart page grid structure<br />&lt;/figcaption&gt;<br />&lt;/figure&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/section&gt;
+                        &lt;p&gt;This is an &lt;em&gt;&lt;a href="#"&gt;in-text link&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
                     </code>
                 </div>
             </div>
-        </section>
-
-
-        <section id="about-me-page">
-            <h2 class="h2-styleguide">About Me page</h2>
-            <section class="grid-row">
-                <div class="grid-row-twos">
-                    <div class="col">
-                        <h2>About Me</h2>
-                        <p>
-                            Lizzie, or, <em>Elizabeth</em> if you prefer. I'm a Vancouver-based UX/UI <em>graphic designer</em> for web and app. Currently studying at Simon Fraser University.
-                        </p>
-
-                        <h4>Lifestyle</h4>
-                        <p>You can probably find me at a cafe on my days off. I'm a big fan of lattes (matcha, especially), and I live to eat... At home, I like to spend time with my family, play video games with my friends, or idie-pixel games</p>
-
-                        <h4>Career-oriented</h4>
-                        <p>
-                            I specialize in creating digital graphics for promotional purposes, but I find that working with the web is a lot more fun. Mainly because it's an iterative process
-                        </p>
-                        <p>
-                            Short term plans include practicing use cases of JavaScript, and hopefully getting to <em>learn ReactJS</em> by the end of Summer 2018.
-                        </p>
-                    </div>
-                    <div class="col">
-                        <img src="img/Yr4_Mar16.png" srcset="img/Yr4_Mar16.png x2, img/Yr4_Mar16.png x3" alt="A photo of me" class="img-responsive about-me">
-                    </div>
-                </div>
-            </section>
-
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h2 class="h2-styleguide">CSS Selectors</h2>
-                    <ul>
-                        <li>.grid-row</li>
-                        <li>.grid-row-twos</li>
-                        <li>.grid-row-twos .col</li>
-                        <li>h4</li>
-                        <li>p</li>
-                    </ul>
-                </div>
-                <div class="col">
-
-                    <code>
-                        &lt;section class="grid-row"&gt;<br />&lt;div class="grid-row-twos"&gt;<br />&lt;div class="col"&gt;<br />&lt;h2&gt;About Me&lt;/h2&gt;<br />&lt;p&gt;<br />Lizzie, or, &lt;em&gt;Elizabeth&lt;/em&gt; if you prefer. I'm a Vancouver-based UX/UI &lt;em&gt;graphic designer&lt;/em&gt; for web and app. Currently studying at Simon Fraser University.<br />&lt;/p&gt;<br /><br />&lt;h4&gt;Lifestyle&lt;/h4&gt;<br />&lt;p&gt;You can probably find me at a cafe on my days off. I'm a big fan of lattes (matcha, especially), and I live to eat... At home, I like to spend time with my family, play video games with my friends, or idie-pixel games&lt;/p&gt;<br /><br />&lt;h4&gt;Career-oriented&lt;/h4&gt;<br />&lt;p&gt;<br />I specialize in creating digital graphics for promotional purposes, but I find that working with the web is a lot more fun. Mainly because it's an iterative process<br />&lt;/p&gt;<br />&lt;p&gt;<br />Short term plans include practicing use cases of JavaScript, and hopefully getting to &lt;em&gt;learn ReactJS&lt;/em&gt; by the end of Summer 2018.<br />&lt;/p&gt;<br />&lt;/div&gt;<br />&lt;div class="col"&gt;<br />&lt;img src="img/Yr4_Mar16.png" srcset="img/Yr4_Mar16.png x2, img/Yr4_Mar16.png x3" alt="A photo of me" class="img-responsive about-me"&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;<br />&lt;/section&gt;
-                    </code>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact-page">
-            <h2 class="h2-styleguide">Contact Page</h2>
-            <section class="grid-row contact-me-spacing">
-                <h2>Contact Me</h2>
-                <p>Give about 2-3 business days for a response at<br><em>eylo@sfu.ca</em></p>
-                <p>If you're interested in the process of this website, check out my <em><a href="https://github.com/elizabethlo2946">GitHub</a></em></p>
-                <p>My <em><a href="styleguide.html">styleguide</a></em> for this website is also available</p>
-                <div class="contact-me-spacing"></div>
-            </section>
             
-            <div class="grid-row-twos">
+            <div class="grid-row-threes">
                 <div class="col">
-                    <h3 class="h3-styleguide">CSS Selectors</h3>
+                    <h3 class="styleguide-h3">buttons</h3>
+                    <p>
+                        <br><a href="#" class="button">This button leads to nowhere</a>
+                    </p>
+                </div>
+                <div class="col list-black">
+                    <h3 class="styleguide-h3">css selectors</h3>
                     <ul>
-                        <li>.contact-me-spacing</li>
-                        <li>.contact-me-spacing > h2</li>
-                        <li>h2</li>
-                        <li>p</li>
-                        <li>em</li>
-                        <li>em a</li>
+                        <li>.button</li>
+                        <li>var(--primary-colour)</li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h3 class="h3-styleguide">HTML Code for contact page</h3>
+                    <h3 class="styleguide-h3">html code</h3>
                     <code>
-                        &lt;section class="grid-row contact-me-spacing"&gt;<br />&lt;h2&gt;Contact Me&lt;/h2&gt;<br />&lt;p&gt;Give about 2-3 business days for a response at&lt;br&gt;&lt;em&gt;eylo@sfu.ca&lt;/em&gt;&lt;/p&gt;<br />&lt;p&gt;If you're interested in the process of this website, check out my &lt;em&gt;&lt;a href="https://github.com/elizabethlo2946"&gt;GitHub&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;<br />&lt;p&gt;My &lt;em&gt;&lt;a href="styleguide.html"&gt;styleguide&lt;/a&gt;&lt;/em&gt; for this website is also available&lt;/p&gt;<br />&lt;div class="contact-me-spacing"&gt;&lt;/div&gt;<br />&lt;/section&gt;
+                        &lt;p&gt;&lt;a href="#" class="button"&gt;Button Name&lt;/a&gt;&lt;/p&gt;
                     </code>
                 </div>
             </div>
         </section>
         
-        
-        <section>
-            <h2 class="h2-styleguide">Colours</h2>
-            <div class="grid-row-threes">
-                <div class="col colour primary-colour">rgb(255, 82, 82);</div>
-                <div class="col colour lamps-colour">rgb(61, 41, 163);</div>
-                <div class="col colour android-colour">rgb(0, 105, 92);</div>
+        <section class="styleguide-section">
+            <h2>Grid Structure<br><span>-</span></h2>
+            <div class="colour secondary-colour">
+                <ul>.grid-row
+                    <li>
+                        <code>
+                            &lt;div class="grid-row"&gt;&lt;/div&gt;
+                        </code>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-row-twos">
+                <div class="col colour secondary-colour">
+                    <ul>.grid-row-twos .col
+                        <li>
+                            <code>
+                                &lt;div class="grid-row-twos"&gt;&lt;/div&gt;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col colour secondary-colour">
+                    <ul>.grid-row-twos .col
+                        <li>
+                            <code>
+                                &lt;div class="grid-row-twos"&gt;&lt;/div&gt;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="grid-row-threes">
-                <div class="col colour secondary-colour">rgba(255, 82, 82, 0.3);</div>
-                <div class="col colour lamps-colour-secondary">rgba(61, 41, 163, 0.7);</div>
-                <div class="col colour android-colour-secondary">rgba(0, 105, 92, 0.7);</div>
+                <div class="col colour secondary-colour">
+                    <ul>.grid-row-threes .col
+                        <li>
+                            <code>
+                                &lt;div class="grid-row-threes"&gt;&lt;/div&gt;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col colour secondary-colour">
+                    <ul>.grid-row-threes .col
+                        <li>
+                            <code>
+                                &lt;div class="grid-row-threes"&gt;&lt;/div&gt;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col colour secondary-colour">
+                    <ul>.grid-row-threes .col
+                        <li>
+                            <code>
+                                &lt;div class="grid-row-threes"&gt;&lt;/div&gt;
+                            </code>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-        
-        <div class="space-between-items"></div>
     </body>
 </html>
