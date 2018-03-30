@@ -314,7 +314,7 @@ HOME PAGE
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    margin: 5rem 0;
+    margin: 8rem 0;
     width: 100%;
 }
 .cs-collapsed-title {
@@ -456,19 +456,45 @@ END OF CREDIT
 }
 
 
-.overlay-caption {
-    display: inline-block;
-    position: relative;
-    width: 50%;
-    top: 0.65rem;
-    left: 35%;
 
-    text-align: left;
-    font-weight: bolder;
-    color: white;
-    letter-spacing: 0.1rem;
-    z-index: 9;
+
+.cs-height-title-lamps, .cs-height-title-android {
+   display: flex;
+   margin: 2rem 0;
 }
+.cs-height-title-lamps h4 {
+   padding-left: 1rem;
+   color: var(--lamp-colour);
+}
+.cs-height-title-android h4 {
+   padding-left: 1rem;
+   color: var(--android-colour);
+}
+.overlay-caption {
+   display: none;
+}
+@media(min-height:583px) {
+   .cs-height-title-lamps {
+      display: none;
+   }
+   .overlay-caption {
+       display: inline-block;
+       position: relative;
+       width: 50%;
+       top: 0.65rem;
+       left: 35%;
+
+       text-align: left;
+       font-weight: bolder;
+       color: white;
+       letter-spacing: 0.1rem;
+       z-index: 9;
+   }
+}
+
+
+
+
 .overlay-caption > h4 {
     display: inline-block;
     margin: 0.5rem 0;
@@ -484,13 +510,6 @@ END OF CREDIT
     font-weight: bold;
     margin-bottom: 0;
 }
-@media(min-height:583px) {
-   .overlay-caption {
-   }
-}
-
-
-
 @media (min-width: 891px) {
     .cs-collapsed-title {
         display: none;
