@@ -163,7 +163,7 @@ body input ~ nav > ul > li {
     transition: 0.5s;
     transition-delay: 0s;
 }
-header input ~ nav .nav-item { 
+header input ~ nav .nav-item {
     display: block;
     padding: 2rem;
     text-decoration: none;
@@ -215,9 +215,13 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }
-h2, h3 {
+h2 {
     font-size: 1.5rem;
     text-transform: uppercase;
+}
+h3 {
+   font-size: 1rem;
+   text-transform: lowercase;
 }
 h4 {
     margin: 0;
@@ -279,7 +283,7 @@ em, em a {
     border: 0.1rem solid var(--primary-colour);
     padding: 0.75rem;
     border-radius: 2rem;
-    
+
     transition: all ease 0.3s;
 }
 .button:active,
@@ -480,6 +484,10 @@ END OF CREDIT
     font-weight: bold;
     margin-bottom: 0;
 }
+@media(min-height:583px) {
+   .overlay-caption {
+   }
+}
 
 
 
@@ -580,7 +588,7 @@ PROJECT PAGE
 @media(min-width:675px) {
     .project-lamps-title, .project-android-title {
         padding: 10rem 2rem;
-/*        
+/*
         mozilla ignores percents if it's displayed on flex. discovered Mar28 :"( cries
         https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox
 */
@@ -689,10 +697,6 @@ ul > li > code {
 .styleguide-section {
     border-bottom: 1px solid #bbb;
     padding: 2rem 0;
-}
-.styleguide-h3 {
-    font-size: 1rem;
-    text-transform: lowercase;
 }
 .colour {
     width: 100%;
