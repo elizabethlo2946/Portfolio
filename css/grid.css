@@ -33,7 +33,7 @@
 }
 @media (min-width: 891px) {
     .space-between-items {
-        margin: 8rem;
+        margin: 6rem;
     }
     .col-15 {
         width: 15%;
@@ -89,8 +89,8 @@
 }
 .grid-row-threes .col {
     width: 100%;
-} 
- @media(min-width:891px) { 
+}
+ @media(min-width:891px) {
     .grid-row-threes {
         display: flex;
         justify-content: space-between;
@@ -98,7 +98,7 @@
     .grid-row-threes .col {
         width: 33%;
     }
-} 
+}
 
 
 
@@ -146,10 +146,10 @@ other general grid rules
     max-width: 100%;
     /* margin-bottom: 1.5rem; */
     display: block;
-    vertical-align: top;
+    vertical-align: center;
 }
 .img-gifs {
-    margin-left: 22%;
+    /* margin-left: 22%; */
 }
 .about-me {
     height: 50vh;

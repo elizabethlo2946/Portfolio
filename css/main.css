@@ -10,7 +10,7 @@
     --font-colour: #444;
 
     --lamp-colour: rgb(61, 41, 163);
-    --lamp-colour-secondary: rgba(61, 41, 163, 0.7);
+    --lamp-colour-secondary: rgba(61, 41, 163, 0.8);
 
     --android-colour: rgb(0, 105, 92);
     --android-colour-secondary: rgba(0, 105, 92, 0.7);
@@ -215,6 +215,17 @@ h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: normal;
 }
+.about-me-home {
+   display: block;
+   margin-left: 5%;
+   text-transform: lowercase;
+   font-size: 1.5rem;
+}
+@media (min-width:891px) {
+   .about-me-home {
+      margin-left: 15%;
+   }
+}
 h2 {
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -240,11 +251,15 @@ h6 {
 p {
     font-size: 0.9rem;
 }
+/* figure {
+   margin: 0;
+   padding: 0;
+} */
 figcaption {
     font-size: 0.9rem;
     text-align: center;
     color: #888;
-    padding:1rem;
+    padding: 1rem;
 }
 ul {
     font-weight: bolder;
@@ -314,7 +329,8 @@ HOME PAGE
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-    margin: 8rem 0;
+    margin: 3rem 0;
+    margin-bottom: 8rem;
     width: 100%;
 }
 .cs-collapsed-title {
@@ -340,7 +356,7 @@ HOME PAGE
 }
 .project {
     background-color: white;
-    box-shadow: 0 0.3rem 1rem #888;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
@@ -349,7 +365,7 @@ HOME PAGE
 .project:active,
 .project:hover,
 .project:focus {
-    box-shadow: 0 0.5rem 2rem #444;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
 
@@ -460,21 +476,28 @@ END OF CREDIT
 
 .cs-height-title-lamps, .cs-height-title-android {
    display: flex;
-   margin: 2rem 0;
+   margin: 5rem 0;
 }
 .cs-height-title-lamps h4 {
    padding-left: 1rem;
    color: var(--lamp-colour);
+   text-transform: uppercase;
+   font-weight: normal;
 }
 .cs-height-title-android h4 {
    padding-left: 1rem;
    color: var(--android-colour);
+   text-transform: uppercase;
+   font-weight: normal;
 }
 .overlay-caption {
    display: none;
 }
 @media(min-height:583px) {
    .cs-height-title-lamps {
+      display: none;
+   }
+   .cs-height-title-android {
       display: none;
    }
    .overlay-caption {
