@@ -8,12 +8,11 @@
 .space-between-items {
     margin-top: 5rem;
 }
-.col-15 {
+.col-margin-15of100 {
     width: 5%;
 }
 .col-70 {
     width: 90%;
-/*    height: 35vh;*/
     height:45vh;
 }
 #project-lamps, #project-android {
@@ -28,14 +27,14 @@
 
 @media(min-width:478px) {
     .col-70 {
-        height: 80;
+        height: 80vh;
     }
 }
 @media (min-width: 891px) {
     .space-between-items {
         margin: 6rem;
     }
-    .col-15 {
+    .col-margin-15of100 {
         width: 15%;
     }
     .col-70 {

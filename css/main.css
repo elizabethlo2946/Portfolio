@@ -41,162 +41,104 @@ body {
 
 /*
 ---------------------------------------------------
-NAV
+NAV */
+header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
 
-beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb
+  width: 100%;
+  height: 4rem;
 
-changed units of general block elements to use rems. Pixel units are kept as original for the purpose of the menu animation
-*/
-.nav-name {
-    position: fixed;
-    top: 0.75rem;
-    left: 3.5rem;
-    z-index: 6;
+  background-color: white;
+  z-index: 16;
+}
+.nav-name a {
+  position: fixed;
+  top: 1.5rem;
+  left: 3.5rem;
+  z-index: 16;
 
-    font-size: 1rem;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-}
-.nav-name > a {
-    font-family: 'Playfair Display', serif;
-    text-decoration: none;
-    letter-spacing: 0.1rem;
-    color: #444;
-    color: var(--font-colour);
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
 
-    -webkit-transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
-.nav-name > a:active,
-.nav-name > a:hover,
-.nav-name > a:focus {
-    color: rgb(255, 82, 82);
-    color: var(--primary-colour);
+.nav-name a:hover,
+.nav-name a:focus,
+.nav-name a:active {
+  color: pink;
 }
-.nav-name > span {
-    /*    selecting all spans where .nav-name is a parent*/
-    opacity: 0.5;
-    font-weight: lighter;
-    font-size: 0.7rem;
+
+.nav-icon {
+  position: fixed;
+  top: 1rem;
+  right: 3rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+
+  border: none;
+  background-color: rgba(255,255,255,0);
+  cursor: pointer;
 }
-.burger-icon {
-    position: fixed;
-    top: 1.5rem;
-    right: 3rem;
-    height: 1.25rem;
-    width: 1rem;
-    z-index: 5;
-}
-.burger-icon > span {
-    /*    one line of the burger menu; the middle */
-    position: absolute;
+
+.nav-overlay {
+    height: 0;
     width: 100%;
-    height: 0.1rem;
-    top: 50%;
-    left: 0;
-    display: block;
-    background-color: #444;
-    background-color: var(--font-colour);
-
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-}
-header input + label span:first-child {
-    /*    + operator: selects all label elements immediately after input elements*/
-    top: 4px;
-}
-header input + label span:last-child {
-    top: 16px;
-}
-header label:hover {
-    cursor: pointer;
-}
-header input:checked + label span {
-    opacity: 0;
-    top: 50%;
-}
-header input:checked + label span:first-child {
-    /*    TopLeft to BottomRight line. Should not be renamed*/
-    opacity: 1;
-    transform: rotate(405deg);
-}
-header input:checked + label span:last-child {
-    /*    BottomLeft to TopRight line*/
-    opacity: 1;
-    transform: rotate(-405deg);
-}
-header input ~ nav {
-    /*    selects every <input> preceded by a <nav>*/
-    /*    this, otherwise, shows as the default html checkbox. Selector should not be renamed*/
-    background-color: white;
     position: fixed;
+    z-index: 15;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 4rem;
-    z-index: 3;
-
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-    transition-delay: 0.5s;
-    overflow: hidden;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 1);
+    overflow-x: hidden;
+    transition: all ease 0.3s;
 }
-header input ~ nav > ul {
-    text-align: center;
+
+.nav-overlay-content {
     position: absolute;
-    top: 35%;
-    left: 20%;
-    right: 20%;
-
-    list-style: none;
-    padding: 0;
+    top: 35vh;
+    width: 100%;
+    text-align: center;
+    z-index: 15;
 }
-body input ~ nav > ul > li {
-    display: none; /*my addition*/
-    opacity: 0;
 
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-    transition-delay: 0s;
-}
-header input ~ nav .nav-item {
-    display: block;
-    padding: 2rem;
+.nav-overlay a {
+    padding: 1.5rem 0;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-family: 'Assistant', sans-serif;
-    letter-spacing: 0.15rem;
-    color: #444;
-    color: var(--font-colour);
+    font-size: 1.5rem;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
 
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.5s; /*my addition*/
+.nav-overlay a:hover, .nav-overlay a:focus {
+    color: pink;
 }
-/*my addition*/
-.nav-item:active,
-.nav-item:hover,
-.nav-item:focus {
-    color: var(--primary-colour);
-}
-header input:checked ~ nav {
-    height: 100%;
-    transition-delay: 0s;
-}
-header input:checked ~ nav > ul > li {
-    display: block; /*my addition*/
-    opacity: 1;
-    transition-delay: 0.5s;
-}
-/*
-end of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb
 
-NAV END
+.nav-overlay .nav-closebtn {
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+@media screen and (max-height: 450px) {
+  .nav-overlay a {font-size: 20px}
+  .nav-overlay .nav-closebtn {
+    font-size: 2rem;
+    right: 1.5rem;
+  }
+}
+/* NAV END
 ---------------------------------------------------
 */
 
@@ -351,7 +293,7 @@ HOME PAGE
 .cs-expanded-title {
     display: none;
 }
-.col-15 .cs-expanded-title-number {
+.col-margin-15of100 .cs-expanded-title-number {
     display: none;
 }
 .project {
@@ -555,7 +497,7 @@ END OF CREDIT
         transform: rotate(270deg);
         transform-origin: right top;
     }
-    .col-15 > .cs-expanded-title-number {
+    .col-margin-15of100 > .cs-expanded-title-number {
         display: block;
         position: relative;
         text-align: center;
