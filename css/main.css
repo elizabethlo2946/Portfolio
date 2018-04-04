@@ -225,9 +225,15 @@ ul li {
    font-weight: normal;
 }
 /*for styleguide*/
-.secondary-colour > ul li, .list-black > ul > li {
-   border-left: 1px solid var(--font-colour);
+.secondary-colour > ul li, .list-black > ul > li {border-left: 1px solid var(--font-colour);}
+.list-lamps, .list-android {
+   list-style-type: none;
+   margin: 0;
+   padding: 0.5rem;
 }
+.list-lamps h4 {border-left: 1px solid var(--lamp-colour);}
+.list-android h4 {border-left: 1px solid var(--android-colour);}
+.list-lamps li, .list-lamps h4, .list-android li, .list-android h4 {display: inline;}
 em, em a {
    font-style: normal;
    color: var(--primary-colour);
@@ -298,12 +304,9 @@ HOME PAGE
    font-size: 0.9rem;
    color: #666;
 }
-.title-expanded {
-   display: none;
-}
-.col-margin-15of100 .title-expanded-number {
-   display: none;
-}
+.title-expanded {display: none;}
+.col-margin-15of100 .title-expanded-number {display: none;}
+
 .project {
    background-color: white;
    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
@@ -312,11 +315,7 @@ HOME PAGE
    -moz-transition: all ease 0.5s;
    transition: all ease 0.3s;
 }
-.project:active,
-.project:hover,
-.project:focus {
-   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-}
+.project:active, .project:hover, .project:focus {box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);}
 
 
 
@@ -426,7 +425,7 @@ END OF CREDIT
 
 .title-collapsed-height-lamps, .title-collapsed-height-android {
    display: flex;
-   margin: 4rem 0;
+   margin: 3.5rem 0;
 }
 .title-collapsed-height-lamps h4 {
    padding-left: 1rem;
@@ -443,7 +442,7 @@ END OF CREDIT
 .overlay-caption {
    display: none;
 }
-@media(min-height:583px) {
+@media(min-height:600px) {
    .title-collapsed-height-lamps {
       display: none;
    }

@@ -1,23 +1,17 @@
 /*managing the display of a case-study row*/
 .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: top;
+   width: 100%;
 }
-.spacer {
-    margin-top: 5rem;
-}
-.col-margin-15of100 {
-    width: 5%;
-}
+.spacer {margin-top: 6rem;}
+.col-margin-15of100 {width: 5%;}
 .col-center-70of100 {
-    width: 90%;
-    height:45vh;
+   width: 90%;
+   height:45vh;
 }
-#project-lamps, #project-android {
-    width: 100%;
-}
+#project-lamps, #project-android {width: 100%;}
 
 
 
@@ -25,16 +19,11 @@
 
 
 @media (min-width: 891px) {
-    .spacer {
-        margin: 6rem;
-    }
-    .col-margin-15of100 {
-        width: 15%;
-    }
-    .col-center-70of100 {
-        width: 70%;
-        height: 60vh;
-    }
+   .col-margin-15of100 {width: 15%;}
+   .col-center-70of100 {
+      width: 70%;
+      height: 60vh;
+   }
 }
 
 
@@ -42,8 +31,8 @@
 
 /*the old stuff.... ====================*/
 .grid-row {
-    width: 70%;
-    margin-left: 15%;
+   width: 70%;
+   margin-left: 15%;
 }
 
 
@@ -53,22 +42,20 @@
 ---------------------------------------------------
 */
 .grid-row-twos {
-    display: block;
-    margin: 2rem 0;
-    align-items: center;
+   display: block;
+   margin: 2rem 0;
+   align-items: center;
 }
-.grid-row-twos .col {
-    width: 100%;
-}
+.grid-row-twos .col {width: 100%;}
 @media (min-width: 675px) {
-    .grid-row-twos {
-        display: flex;
-        justify-content: space-between;
-    }
-    .grid-row-twos .col {
-        width: 48%;
-        justify-content: center;
-    }
+   .grid-row-twos {
+      display: flex;
+      justify-content: space-between;
+   }
+   .grid-row-twos .col {
+      width: 48%;
+      justify-content: center;
+   }
 }
 
 
@@ -77,52 +64,41 @@
 ---------------------------------------------------
 3 column
 */
- .grid-row-threes {
-    display: block;
-     margin: 2rem 0;
+.grid-row-threes {
+   display: block;
+   margin: 2rem 0;
 }
-.grid-row-threes .col {
-    width: 100%;
-}
- @media(min-width:891px) {
-    .grid-row-threes {
-        display: flex;
-        justify-content: space-between;
-    }
-    .grid-row-threes .col {
-        width: 33%;
-    }
+.grid-row-threes .col {width: 100%;}
+
+@media(min-width:891px) {
+   .grid-row-threes {
+      display: flex;
+      justify-content: space-between;
+   }
+   .grid-row-threes .col {width: 33%;}
 }
 
 
 
 /*
 ---------------------------------------------------
-4 column
-*/
+4 column*/
 .grid-row-fours {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
 }
-.grid-row-fours .col {
-    width: 100%;
-}
+.grid-row-fours .col {width: 100%;}
+
 @media(min-width:127px) {
-    .grid-row-fours .col {
-        width: 50%;
-    }
+   .grid-row-fours .col {width: 50%;}
 }
 @media(min-width:450px) {
-    .grid-row-fours .col {
-        width: 33%;
-    }
+   .grid-row-fours .col {width: 33%;}
 }
 @media(min-width:620px) {
-    .grid-row-fours .col {
-        width: 25%;
-    }
+   .grid-row-fours .col {width: 25%;}
 }
 
 
@@ -133,15 +109,13 @@
 other general grid rules
 ---------------------------------------------------
 */
-.grid-row-icon {
-    margin: 0.5rem 0;
-}
+.grid-row-icon {margin: 0.5rem 0;}
 .img-responsive {
-    max-width: 100%;
-    /* margin-bottom: 1.5rem; */
-    display: block;
-    vertical-align: center;
+   max-width: 100%;
+   /* margin-bottom: 1.5rem; */
+   display: block;
+   vertical-align: center;
+   margin-left: auto;
+   margin-right: auto;
 }
-.about-me {
-    height: 50vh;
-}
+.about-me {height: 50vh;}
