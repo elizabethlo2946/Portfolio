@@ -662,10 +662,11 @@ END OF 1 WORK
 
 
 footer {
-   margin-bottom: 3rem;
+   margin-bottom: 2rem;
    text-align: center;
 }
 .footer-contact {
+   margin: 2rem 0;
    display: block;
    color: #777;
 }

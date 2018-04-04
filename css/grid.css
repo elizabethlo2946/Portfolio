@@ -67,6 +67,7 @@
     }
     .grid-row-twos .col {
         width: 48%;
+        justify-content: center;
     }
 }
 
@@ -140,9 +141,6 @@ other general grid rules
     /* margin-bottom: 1.5rem; */
     display: block;
     vertical-align: center;
-}
-.img-gifs {
-    /* margin-left: 22%; */
 }
 .about-me {
     height: 50vh;
