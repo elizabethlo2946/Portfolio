@@ -1,62 +1,60 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Lamps - Elizabeth Lo</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+   <title>Lamps - Elizabeth Lo</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/grid.css" />
+   <link rel="stylesheet" href="css/normalize.css" />
+   <link rel="stylesheet" href="css/main.css" />
+   <link rel="stylesheet" href="css/grid.css" />
 
-        <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <!--            beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb-->
-            <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
-            <input id="burger" type="checkbox" />
-            <label for="burger" class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+   <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+</head>
+<body>
+   <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
+   <header>
+      <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
+      <nav id="nav-items" class="nav-overlay">
+         <!-- for more info on the href tag for the "x" button: https://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean -->
+         <a href="javascript:void(0)" class="nav-closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav-overlay-content">
+            <a href="aboutMe.html">About</a>
+            <a href="contact.html">Contact</a>
+         </div>
+      </nav>
 
-            <nav>    
-                <ul>
-                    <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
-                    <li><a href="contact.html" class="nav-item">Contact</a></li>
-                </ul>  
-            </nav>
-            <!--            end of credit-->
-        </header>
+      <button id="nav-toggle" class="nav-icon" onclick="openNav()" aria-hidden="false"  aria-controls="myNav">&#9776;</button>
+   </header>
+   <!-- credit end -->
 
-        <div class="space-between-items"></div>
+   <div class="spacer"></div>
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h2>About Me</h2>
-                <p>
-                    Lizzie, or, <em>Elizabeth</em> if you prefer. I'm a Vancouver-based UX/UI <em>graphic designer</em> for web and app. Currently studying at Simon Fraser University.
-                </p>
-                
-                <h4>Lifestyle</h4>
-                <p>You can probably find me at a cafe on my days off. I'm a big fan of lattes (matcha, especially), and I live to eat... At home, I like to spend time with my family, play video games with my friends, or idie-pixel games</p>
-                
-                <h4>Career-oriented</h4>
-                <p>
-                    I specialize in creating digital graphics for promotional purposes, but I find that working with the web is a lot more fun. Mainly because it's an iterative process
-                </p>
-                <p>
-                    Short term plans include practicing use cases of JavaScript, and hopefully getting to <em>learn ReactJS</em> by the end of Summer 2018.
-                </p>
-                </div>
-                <div class="col">
-                    <img src="img/Yr4_Mar16.png" srcset="img/Yr4_Mar16.png x2, img/Yr4_Mar16.png x3" alt="A photo of me" class="img-responsive about-me">
-                </div>
-            </div>
-        </section>
-    </body>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>About Me</h2>
+            <p>
+               Lizzie, or, <em>Elizabeth</em> if you prefer. I'm a Vancouver-based UX/UI <em>graphic designer</em> for web and app. Currently studying at Simon Fraser University.
+            </p>
+
+            <h4>Lifestyle</h4>
+            <p>You can probably find me at a cafe on my days off. I'm a big fan of lattes (matcha, especially), and I live to eat ^^ At home, I like to spend time with my family, play video games with my friends, or idie-pixel games</p>
+
+            <h4>Career-oriented</h4>
+            <p>
+               I specialize in creating digital graphics for promotional purposes, but I find that working with the web is a lot more fun. Mainly because I can immediately see the results of my changes
+            </p>
+            <p>
+               Short term plans include practicing use cases of JavaScript, and hopefully getting to <em>learn ReactJS basics</em> by the end of Summer 2018.
+            </p>
+         </div>
+         <div class="col">
+            <img src="img/Yr4_Mar16.png" alt="A photo of me" class="img-responsive about-me">
+         </div>
+      </div>
+   </section>
+</body>
+<script src="js/navTest2.js"></script>
 </html>

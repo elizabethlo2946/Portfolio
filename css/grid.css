@@ -5,13 +5,13 @@
     align-items: top;
     width: 100%;
 }
-.space-between-items {
+.spacer {
     margin-top: 5rem;
 }
 .col-margin-15of100 {
     width: 5%;
 }
-.col-70 {
+.col-center-70of100 {
     width: 90%;
     height:45vh;
 }
@@ -24,20 +24,14 @@
 
 
 
-
-@media(min-width:478px) {
-    .col-70 {
-        height: 80vh;
-    }
-}
 @media (min-width: 891px) {
-    .space-between-items {
+    .spacer {
         margin: 6rem;
     }
     .col-margin-15of100 {
         width: 15%;
     }
-    .col-70 {
+    .col-center-70of100 {
         width: 70%;
         height: 60vh;
     }

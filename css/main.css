@@ -1,35 +1,35 @@
 :root {
-    /*
-    note to self: refer to
-    https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
-    add the colour and real value before submitting the final file in order to support older browsers (just in case)
+   /*
+   note to self: refer to
+   https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
+   add the colour and real value before submitting the final file in order to support older browsers (just in case)
 
-    alternatively, create a .scss (SASS) file to solve these variable shenanigans
-    */
-    --background-colour: #f8f8f8;
-    --font-colour: #444;
+   alternatively, create a .scss (SASS) file to solve these variable shenanigans
+   */
+   --background-colour: #f8f8f8;
+   --font-colour: #444;
 
-    --lamp-colour: rgb(61, 41, 163);
-    --lamp-colour-secondary: rgba(61, 41, 163, 0.8);
+   --lamp-colour: rgb(61, 41, 163);
+   --lamp-colour-secondary: rgba(61, 41, 163, 0.8);
 
-    --android-colour: rgb(0, 105, 92);
-    --android-colour-secondary: rgba(0, 105, 92, 0.7);
+   --android-colour: rgb(0, 105, 92);
+   --android-colour-secondary: rgba(0, 105, 92, 0.7);
 
-    --primary-colour: rgb(255, 82, 82);
-    --secondary-colour: rgba(255, 82, 82, 0.5);
+   --primary-colour: rgb(255, 82, 82);
+   --secondary-colour: rgba(255, 82, 82, 0.5);
 }
 *, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
 body {
-    font-family: 'Assistant', 'Roboto', sans-serif;
-    background-color: var(--background-colour);
-    color: var(--font-colour);
+   font-family: 'Assistant', 'Roboto', sans-serif;
+   background-color: var(--background-colour);
+   color: var(--font-colour);
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -43,100 +43,108 @@ body {
 ---------------------------------------------------
 NAV */
 header {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   margin: 0;
+   padding: 0;
 
-  width: 100%;
-  height: 4rem;
+   width: 100%;
+   height: 4rem;
 
-  background-color: white;
-  z-index: 16;
+   background-color: white;
+   z-index: 16;
 }
 .nav-name a {
-  position: fixed;
-  top: 1.5rem;
-  left: 3.5rem;
-  z-index: 16;
+   position: fixed;
+   top: 1.5rem;
+   left: 3.5rem;
+   z-index: 16;
 
-  font-family: 'Playfair Display', serif;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: black;
+   font-family: 'Playfair Display', serif;
+   font-size: 1rem;
+   letter-spacing: 0.1rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: var(--font-colour);
 
-  transition: all ease 0.3s;
+   -webkit-transition: all ease 0.3s;
+   -moz-transition: all ease 0.3s;
+   transition: all ease 0.3s;
 }
 .nav-name a:hover,
 .nav-name a:focus,
 .nav-name a:active {
-  color: pink;
+   color: var(--primary-colour);
 }
 
 .nav-icon {
-  position: fixed;
-  top: 1rem;
-  right: 3rem;
-  font-size: 1.5rem;
-  font-weight: normal;
+   position: fixed;
+   top: 1rem;
+   right: 3rem;
+   font-size: 1.5rem;
+   font-weight: normal;
 
-  border: none;
-  background-color: rgba(255,255,255,0);
-  cursor: pointer;
+   border: none;
+   background-color: rgba(255,255,255,0);
+   cursor: pointer;
+
+   -webkit-transition: all ease 0.5s;
+   -moz-transition: all ease 0.5s;
+   transition: all ease 0.5s;
 }
+.nav-icon:hover, .nav-icon:focus, .nav-icon:active {color: var(--primary-colour);}
 
 .nav-overlay {
-    height: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 15;
-    top: 0;
-    left: 0;
-    background-color: rgb(255,255,255);
-    background-color: rgba(255,255,255, 1);
-    overflow-x: hidden;
-    transition: all ease 0.3s;
+   height: 0;
+   width: 100%;
+   position: fixed;
+   z-index: 15;
+   top: 0;
+   left: 0;
+   background-color: rgb(255,255,255);
+   background-color: rgba(255,255,255, 1);
+   overflow-x: hidden;
+   transition: all ease 0.5s;
 }
 
 .nav-overlay-content {
-    position: absolute;
-    top: 35vh;
-    width: 100%;
-    text-align: center;
-    z-index: 15;
+   position: absolute;
+   top: 35vh;
+   width: 100%;
+   text-align: center;
+   z-index: 15;
 }
 
 .nav-overlay a {
-    padding: 1.5rem 0;
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    display: block;
-    transition: 0.3s;
+   padding: 1.5rem 0;
+   text-decoration: none;
+   text-transform: lowercase;
+   font-size: 1.5rem;
+   color: var(--font-colour);
+   display: block;
+   transition: 0.5s;
 }
 
 .nav-overlay a:hover, .nav-overlay a:focus {
-    color: pink;
+   color: var(--primary-colour);
 }
 
 .nav-overlay .nav-closebtn {
-    position: absolute;
-    top: 0;
-    right: 2.5rem;
-    font-size: 2rem;
-    padding: 1rem;
+   position: absolute;
+   top: 0;
+   right: 2.5rem;
+   font-size: 2rem;
+   padding: 1rem;
 }
 
 @media screen and (max-height: 450px) {
-  .nav-overlay a {font-size: 20px}
-  .nav-overlay .nav-closebtn {
-    font-size: 2rem;
-    right: 1.5rem;
-  }
+   .nav-overlay a {font-size: 20px}
+   .nav-overlay .nav-closebtn {
+      font-size: 2rem;
+      right: 1.5rem;
+   }
 }
 /* NAV END
 ---------------------------------------------------
@@ -154,8 +162,8 @@ header {
 GENERAL STYLING
 */
 h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: normal;
+   font-family: 'Playfair Display', serif;
+   font-weight: normal;
 }
 .about-me-home {
    display: block;
@@ -169,85 +177,85 @@ h1, h2, h3 {
    }
 }
 h2 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+   font-size: 1.5rem;
+   text-transform: uppercase;
 }
 h3 {
    font-size: 1rem;
    text-transform: lowercase;
 }
 h4 {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-}
-h5 {
-    margin: 0.5rem 0;
-    padding: 0;
-    font-weight: normal;
-}
-h6 {
-    font-weight: normal;
-}
-p {
-    font-size: 0.9rem;
-}
-/* figure {
    margin: 0;
    padding: 0;
+   font-size: 1rem;
+   letter-spacing: 0.1rem;
+}
+h5 {
+   margin: 0.5rem 0;
+   padding: 0;
+   font-weight: normal;
+}
+h6 {
+   font-weight: normal;
+}
+p {
+   font-size: 0.9rem;
+}
+/* figure {
+margin: 0;
+padding: 0;
 } */
 figcaption {
-    font-size: 0.9rem;
-    text-align: center;
-    color: #888;
-    padding: 1rem;
+   font-size: 0.9rem;
+   text-align: center;
+   color: #888;
+   padding: 1rem;
 }
 ul {
-    font-weight: bolder;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+   font-weight: bolder;
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 ul li {
-    border-left: 1px solid white;
-    padding: 0.25rem 0;
-    padding-left: 0.5rem;
-    margin: 0.5rem 0;
-    font-weight: normal;
+   border-left: 1px solid white;
+   padding: 0.25rem 0;
+   padding-left: 0.5rem;
+   margin: 0.5rem 0;
+   font-weight: normal;
 }
 /*for styleguide*/
 .secondary-colour > ul li, .list-black > ul > li {
-    border-left: 1px solid var(--font-colour);
+   border-left: 1px solid var(--font-colour);
 }
 em, em a {
-    font-style: normal;
-    color: var(--primary-colour);
+   font-style: normal;
+   color: var(--primary-colour);
 }
 .project-lamps-em {
-    font-style: normal;
-    color: var(--lamp-colour-secondary);
+   font-style: normal;
+   color: var(--lamp-colour-secondary);
 }
 .project-android-em {
-    font-style: normal;
-    color: var(--android-colour-secondary);
+   font-style: normal;
+   color: var(--android-colour-secondary);
 }
 
 .button {
-    margin: 1rem 0;
-    color: var(--primary-colour);
-    text-decoration: none;
-    border: 0.1rem solid var(--primary-colour);
-    padding: 0.75rem;
-    border-radius: 2rem;
+   margin: 1rem 0;
+   color: var(--primary-colour);
+   text-decoration: none;
+   border: 0.1rem solid var(--primary-colour);
+   padding: 0.75rem;
+   border-radius: 2rem;
 
-    transition: all ease 0.3s;
+   transition: all ease 0.3s;
 }
 .button:active,
 .button:hover,
 .button:focus {
-    color: var(--secondary-colour);
-    border: 0.1rem solid var(--secondary-colour);
+   color: var(--secondary-colour);
+   border: 0.1rem solid var(--secondary-colour);
 }
 /*
 GENERAL STYLING END
@@ -266,48 +274,48 @@ GENERAL STYLING END
 ---------------------------------------------------
 HOME PAGE
 */
-.case-study {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: center;
-    margin: 3rem 0;
-    margin-bottom: 8rem;
-    width: 100%;
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-content: center;
+   margin: 3rem 0;
+   margin-bottom: 7rem;
+   width: 100%;
 }
-.cs-collapsed-title {
-    display: block;
-    width: 100%;
-    margin: 1.5rem 0;
-    margin-left: 5%;
-    white-space: nowrap;
+.title-collapsed {
+   display: block;
+   width: 100%;
+   margin: 1.5rem 0;
+   margin-left: 5%;
+   white-space: nowrap;
 
-    text-transform: uppercase;
-    text-align: left;
-    letter-spacing: 0.1rem;
-    font-family: 'Assistant', sans-serif;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: #666;
+   text-transform: uppercase;
+   text-align: left;
+   letter-spacing: 0.1rem;
+   font-family: 'Assistant', sans-serif;
+   font-weight: bold;
+   font-size: 0.9rem;
+   color: #666;
 }
-.cs-expanded-title {
-    display: none;
+.title-expanded {
+   display: none;
 }
-.col-margin-15of100 .cs-expanded-title-number {
-    display: none;
+.col-margin-15of100 .title-expanded-number {
+   display: none;
 }
 .project {
-    background-color: white;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+   background-color: white;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    transition: all ease 0.3s;
+   -webkit-transition: all ease 0.5s;
+   -moz-transition: all ease 0.5s;
+   transition: all ease 0.3s;
 }
 .project:active,
 .project:hover,
 .project:focus {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
 
@@ -319,114 +327,114 @@ START OF CREDIT: adapted from
 jordanyep.com
 */
 #project-lamps {
-    background-image: url(../img/339_displays7.png);
-    background-size: contain;
-    /*    background-size: cover;*/
-    background-repeat: no-repeat;
-    background-position: center;
-    /*    background-attachment: fixed;*/
-    /*    width: 100%;*/
-    height: 35vh;
-    position: relative;
-    z-index: 0;
+   background-image: url(../img/339_displays7.png);
+   background-size: contain;
+   /*    background-size: cover;*/
+   background-repeat: no-repeat;
+   background-position: center;
+   /*    background-attachment: fixed;*/
+   /*    width: 100%;*/
+   height: 35vh;
+   position: relative;
+   z-index: 0;
 }
 /*
 END OF CREDIT
 ---------------------------------------------------
 */
-.project-lamps-overlay, .project-android-overlay {
-    position: relative;
-    display: inline-block;
-    background-color: white;
+.lamps-overlay, .android-overlay {
+   position: relative;
+   display: inline-block;
+   background-color: white;
 }
-.project-lamps-overlay:after {
-    position: absolute;
-    content: "";
-    display: block;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(61, 41, 163, 0.7);
-    background-color: var(--lamp-colour-secondary);
-    height: 45vh;
-    z-index: 1;
+.lamps-overlay:after {
+   position: absolute;
+   content: "";
+   display: block;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background-color: rgba(61, 41, 163, 0.7);
+   background-color: var(--lamp-colour-secondary);
+   height: 45vh;
+   z-index: 1;
 }
-.col-70 .project-lamps-category-block {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    top: 0; left: 0;
-    padding-left: 0.1rem;
-    background-color: rgb(61, 41, 163);
-    z-index: 10;
+.col-center-70of100 .lamps-overlay-category {
+   position: absolute;
+   width: 3rem;
+   height: 3rem;
+   top: 0; left: 0;
+   padding-left: 0.1rem;
+   background-color: rgb(61, 41, 163);
+   z-index: 10;
 }
-.project-lamps-overlay > .project-lamps-category-block > p {
-    display: flex;
-    justify-content: center;
+.lamps-overlay > .lamps-overlay-category > p {
+   display: flex;
+   justify-content: center;
 
-    color: white;
-    font-weight: bolder;
-    font-size: 0.7rem;
-    text-align: center;
-    letter-spacing: 0.4rem;
+   color: white;
+   font-weight: bolder;
+   font-size: 0.7rem;
+   text-align: center;
+   letter-spacing: 0.4rem;
 }
 
 
 
 #project-android {
-    background-image: url(../img/359_displays_4.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*    background-attachment: fixed;*/
-    /*    width: 100%;*/
-    height: 35vh;
-    position: relative;
-    z-index: 0;
+   background-image: url(../img/359_displays_4.png);
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   /*    background-attachment: fixed;*/
+   /*    width: 100%;*/
+   height: 35vh;
+   position: relative;
+   z-index: 0;
 }
-.project-android-overlay:after {
-    position: absolute;
-    content: "";
-    display: block;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 105, 92, 0.7);
-    background-color: var(--android-colour-secondary);
-    height: 45vh;
-    z-index: 1;
+.android-overlay:after {
+   position: absolute;
+   content: "";
+   display: block;
+   top: 0; left: 0; right: 0; bottom: 0;
+   background-color: rgba(0, 105, 92, 0.7);
+   background-color: var(--android-colour-secondary);
+   height: 45vh;
+   z-index: 1;
 }
-.col-70 .project-android-category-block {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    top: 0; left: 0;
-    padding-top: 0.4rem;
-    padding-left: 0.1rem;
-    background-color: rgb(0, 105, 92);
-    z-index: 10;
+.col-center-70of100 .android-overlay-category {
+   position: absolute;
+   width: 3rem;
+   height: 3rem;
+   top: 0; left: 0;
+   padding-top: 0.4rem;
+   padding-left: 0.1rem;
+   background-color: rgb(0, 105, 92);
+   z-index: 10;
 }
-.project-android-overlay > .project-android-category-block > p {
-    display: flex;
-    justify-content: center;
-
-    color: white;
-    font-weight: bolder;
-    font-size: 0.7rem;
-    text-align: center;
-    letter-spacing: 0.4rem;
-}
-
-
-
-
-.cs-height-title-lamps, .cs-height-title-android {
+.android-overlay > .android-overlay-category > p {
    display: flex;
-   margin: 5rem 0;
+   justify-content: center;
+
+   color: white;
+   font-weight: bolder;
+   font-size: 0.7rem;
+   text-align: center;
+   letter-spacing: 0.4rem;
 }
-.cs-height-title-lamps h4 {
+
+
+
+
+.title-collapsed-height-lamps, .title-collapsed-height-android {
+   display: flex;
+   margin: 4rem 0;
+}
+.title-collapsed-height-lamps h4 {
    padding-left: 1rem;
    color: var(--lamp-colour);
    text-transform: uppercase;
    font-weight: normal;
 }
-.cs-height-title-android h4 {
+.title-collapsed-height-android h4 {
    padding-left: 1rem;
    color: var(--android-colour);
    text-transform: uppercase;
@@ -436,24 +444,24 @@ END OF CREDIT
    display: none;
 }
 @media(min-height:583px) {
-   .cs-height-title-lamps {
+   .title-collapsed-height-lamps {
       display: none;
    }
-   .cs-height-title-android {
+   .title-collapsed-height-android {
       display: none;
    }
    .overlay-caption {
-       display: inline-block;
-       position: relative;
-       width: 50%;
-       top: 0.65rem;
-       left: 35%;
+      display: inline-block;
+      position: relative;
+      width: 50%;
+      top: 0.65rem;
+      left: 35%;
 
-       text-align: left;
-       font-weight: bolder;
-       color: white;
-       letter-spacing: 0.1rem;
-       z-index: 9;
+      text-align: left;
+      font-weight: bolder;
+      color: white;
+      letter-spacing: 0.1rem;
+      z-index: 9;
    }
 }
 
@@ -461,72 +469,72 @@ END OF CREDIT
 
 
 .overlay-caption > h4 {
-    display: inline-block;
-    margin: 0.5rem 0;
-    font-size: 0.7rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 60%;
-    line-height: 0.7rem;
+   display: inline-block;
+   margin: 0.5rem 0;
+   font-size: 0.7rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   width: 60%;
+   line-height: 0.7rem;
 }
 
 .overlay-caption > h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 0;
+   font-size: 3rem;
+   font-weight: bold;
+   margin-bottom: 0;
 }
 @media (min-width: 891px) {
-    .cs-collapsed-title {
-        display: none;
-    }
-    .cs-expanded-title {
-        display: block;
-        position: relative;
-        top: 0;
-        right: 40%;
-        white-space: nowrap;
+   .title-collapsed {
+      display: none;
+   }
+   .title-expanded {
+      display: block;
+      position: relative;
+      top: 0;
+      right: 40%;
+      white-space: nowrap;
 
-        text-align: right;
-        text-transform: uppercase;
-        font-family: 'Assistant', sans-serif;
-        font-weight: bold;
-        font-size: 0.9rem;
-        letter-spacing: 0.2rem;
-        color: #666;
+      text-align: right;
+      text-transform: uppercase;
+      font-family: 'Assistant', sans-serif;
+      font-weight: bold;
+      font-size: 0.9rem;
+      letter-spacing: 0.2rem;
+      color: #666;
 
-        transform: rotate(270deg);
-        transform-origin: right top;
-    }
-    .col-margin-15of100 > .cs-expanded-title-number {
-        display: block;
-        position: relative;
-        text-align: center;
+      transform: rotate(270deg);
+      transform-origin: right top;
+   }
+   .col-margin-15of100 > .title-expanded-number {
+      display: block;
+      position: relative;
+      text-align: center;
 
-        font-family: 'Assistant', sans-serif;
-        font-weight: bold;
-        font-size: 0.9rem;
-        letter-spacing: 0.2rem;
-        color: #666;
-    }
-    #project-lamps, #project-android {
-        height: 60vh;
-    }
-    .project-lamps-overlay:after, .project-android-overlay:after {
-        width: 50%;
-        height: 55vh;
-        bottom: 10%;
-    }
-    .overlay-caption {
-        left: 20%;
-        width: 30%;
-    }
-    .overlay-caption > h4 {
-        line-height: 1.5rem;
-    }
-    .overlay-caption > h2 {
-        margin-top: 15%;
-        font-size: 4rem;
-    }
+      font-family: 'Assistant', sans-serif;
+      font-weight: bold;
+      font-size: 0.9rem;
+      letter-spacing: 0.2rem;
+      color: #666;
+   }
+   #project-lamps, #project-android {
+      height: 60vh;
+   }
+   .lamps-overlay:after, .android-overlay:after {
+      width: 50%;
+      height: 55vh;
+      bottom: 10%;
+   }
+   .overlay-caption {
+      left: 20%;
+      width: 30%;
+   }
+   .overlay-caption > h4 {
+      line-height: 1.5rem;
+   }
+   .overlay-caption > h2 {
+      margin-top: 15%;
+      font-size: 4rem;
+   }
 }
 /*
 HOME PAGE END
@@ -541,100 +549,100 @@ HOME PAGE END
 PROJECT PAGE
 */
 .project-lamps-title {
-    padding: 2rem;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    background-color: var(--lamp-colour-secondary);
-    align-items: center;
+   padding: 2rem;
+   color: white;
+   text-align: center;
+   letter-spacing: 0.1rem;
+   background-color: var(--lamp-colour-secondary);
+   align-items: center;
 }
 .project-lamps-title a {
-    color: white;
+   color: white;
 }
 .project-lamps-img {
-    margin: 2rem 0;
-    background-color: white;
-    box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
+   margin: 2rem 0;
+   background-color: white;
+   box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
 }
 .project-lamps-span {
-    font-size: 3.5rem;
-    font-weight: lighter;
-    line-height: 1.3rem;
-    color: var(--lamp-colour-secondary);
+   font-size: 3.5rem;
+   font-weight: lighter;
+   line-height: 1.3rem;
+   color: var(--lamp-colour-secondary);
 }
 .project-android-title {
-    padding: 2rem;
-    color: white;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    background-color: var(--android-colour-secondary);
+   padding: 2rem;
+   color: white;
+   text-align: center;
+   letter-spacing: 0.1rem;
+   background-color: var(--android-colour-secondary);
 }
 @media(min-width:675px) {
-    .project-lamps-title, .project-android-title {
-        padding: 10rem 2rem;
-/*
-        mozilla ignores percents if it's displayed on flex. discovered Mar28 :"( cries
-        https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox
-*/
-/*        padding: 23% 3%;*/
-    }
+   .project-lamps-title, .project-android-title {
+      padding: 10rem 2rem;
+      /*
+      mozilla ignores percents if it's displayed on flex. discovered Mar28 :"( cries
+      https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox
+      */
+      /*        padding: 23% 3%;*/
+   }
 }
 .project-android-img {
-    margin: 2rem 0;
-    background-color: white;
-    box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
+   margin: 2rem 0;
+   background-color: white;
+   box-shadow: 0 0.1rem 0.5rem rgba(44, 44, 44, 0.1);
 }
 .project-android-span {
-    font-size: 3.5rem;
-    font-weight: lighter;
-    line-height: 1.3rem;
-    color: var(--android-colour-secondary);
+   font-size: 3.5rem;
+   font-weight: lighter;
+   line-height: 1.3rem;
+   color: var(--android-colour-secondary);
 }
 .role-lamps, .role-lamps > ul > li, .role-android, .role-android > ul > li {
-    margin: 2rem 0;
-    padding: 2rem;
-    text-align: center;
-    border: none;
+   margin: 2rem 0;
+   padding: 2rem;
+   text-align: center;
+   border: none;
 }
 .role-lamps span {
-    font-size: 3.5rem;
-    font-weight: lighter;
-    line-height: 1.3rem;
-    color: var(--lamp-colour-secondary);
+   font-size: 3.5rem;
+   font-weight: lighter;
+   line-height: 1.3rem;
+   color: var(--lamp-colour-secondary);
 }
 .role-lamps strong {
-    color: var(--lamp-colour-secondary);
+   color: var(--lamp-colour-secondary);
 }
 .role-android span {
-    font-size: 3.5rem;
-    font-weight: lighter;
-    line-height: 1.3rem;
-    color: var(--android-colour-secondary);
+   font-size: 3.5rem;
+   font-weight: lighter;
+   line-height: 1.3rem;
+   color: var(--android-colour-secondary);
 }
 .role-android strong {
-    color: var(--android-colour-secondary);
+   color: var(--android-colour-secondary);
 }
 @media (min-width: 675px) {
-    .role {
-        /*        text-align: left;*/
-    }
-    .role ul {
-        margin: 2rem 0;
-    }
+   .role {
+      /*        text-align: left;*/
+   }
+   .role ul {
+      margin: 2rem 0;
+   }
 }
 .icon-box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    margin: 0.1rem 0.1rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 0.5rem 1rem;
+   margin: 0.1rem 0.1rem;
 
-    font-size: 0.7rem;
-    text-align: center;
-    vertical-align: center;
-    color: var(--primary-colour);
-    background-color: rgba(0,0,0,0);
-    border: solid 0.05rem var(--primary-colour);
+   font-size: 0.7rem;
+   text-align: center;
+   vertical-align: center;
+   color: var(--primary-colour);
+   background-color: rgba(0,0,0,0);
+   border: solid 0.05rem var(--primary-colour);
 }
 /*
 END OF 1 WORK
@@ -643,20 +651,23 @@ END OF 1 WORK
 
 
 .contact-me-spacing {
-    margin-top: 15rem;
-    text-align: center;
+   display: block;
+   position: relative;
+   top: 20vh;
+   text-align: center;
 }
 .contact-me-spacing > h2 {
-    font-size: 1.2rem;
+   font-size: 1.2rem;
 }
 
 
 footer {
-    padding: 3rem 0;
-    text-align: center;
+   margin-bottom: 3rem;
+   text-align: center;
 }
-footer a {
-    padding: 1rem;
+.footer-contact {
+   display: block;
+   color: #777;
 }
 
 
@@ -667,60 +678,60 @@ STYLE GUIDE SPECIFIC
 ---------------------------------------------------
 */
 section code {
-    display: block;
-    padding: 1rem;
-    padding-right: 0;
-    color: var(--font-colour);
-/*    background-color: #eee;*/
-    border: 0.05rem solid #ddd;
-    border-radius: 0.2rem;
+   display: block;
+   padding: 1rem;
+   padding-right: 0;
+   color: var(--font-colour);
+   /*    background-color: #eee;*/
+   border: 0.05rem solid #ddd;
+   border-radius: 0.2rem;
 }
 ul > li > code {
-    border: none;
+   border: none;
 }
 .styleguide-section {
-    border-bottom: 1px solid #bbb;
-    padding: 2rem 0;
+   border-bottom: 1px solid #bbb;
+   padding: 2rem 0;
 }
 .colour {
-    width: 100%;
-    height: 8rem;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    color: white;
-    background-color: var(--font-colour);
+   width: 100%;
+   height: 8rem;
+   margin-bottom: 1rem;
+   padding: 1rem;
+   color: white;
+   background-color: var(--font-colour);
 }
 .primary-colour {
-    background-color: rgb(255, 82, 82);
+   background-color: rgb(255, 82, 82);
 }
 .secondary-colour {
-    color: var(--font-colour);
-    background-color: rgba(255, 82, 82, 0.3);
+   color: var(--font-colour);
+   background-color: rgba(255, 82, 82, 0.3);
 }
 .lamps-colour {
-    background-color: rgb(61, 41, 163);
+   background-color: rgb(61, 41, 163);
 }
 .lamps-colour-secondary {
-    background-color: rgba(61, 41, 163, 0.7);
+   background-color: rgba(61, 41, 163, 0.7);
 }
 .android-colour {
-    background-color: rgb(0, 105, 92);
+   background-color: rgb(0, 105, 92);
 }
 .android-colour-secondary {
-    background-color: rgba(0, 105, 92, 0.7);
+   background-color: rgba(0, 105, 92, 0.7);
 }
 
 /*
 --background-colour: #f8f8f8;
-    --font-colour: #444;
+--font-colour: #444;
 
-    --lamp-colour: rgb(61, 41, 163);
-    --lamp-colour-secondary: rgba(61, 41, 163, 0.7);
+--lamp-colour: rgb(61, 41, 163);
+--lamp-colour-secondary: rgba(61, 41, 163, 0.7);
 
-    --android-colour: rgb(0, 105, 92);
-    --android-colour-secondary: rgba(0, 105, 92, 0.7);
+--android-colour: rgb(0, 105, 92);
+--android-colour-secondary: rgba(0, 105, 92, 0.7);
 
-    --primary-colour: rgb(255, 82, 82);
+--primary-colour: rgb(255, 82, 82);
 */
 /*
 ---------------------------------------------------
