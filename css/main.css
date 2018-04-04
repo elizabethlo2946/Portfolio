@@ -557,6 +557,13 @@ PROJECT PAGE
 }
 .project-lamps-title a {
    color: white;
+
+   -webkit-transition: all ease 0.4s;
+   -moz-transition: all ease 0.4s;
+   transition: all ease 0.4s;
+}
+.project-lamps-title a:hover, .project-lamps-title a:focus, .project-lamps-title a:active {
+   color: rgb(199, 188, 255);
 }
 .project-lamps-img {
    margin: 2rem 0;
@@ -648,7 +655,13 @@ END OF 1 WORK
 ---------------------------------------------------
 */
 
-
+.gif-blur {
+   filter: blur(3px);
+	transition: filter 0.5s;
+}
+.gif-blur.lazyloaded {
+	filter: blur(0);
+}
 .contact-me-spacing {
    display: block;
    position: relative;
