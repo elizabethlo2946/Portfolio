@@ -1,38 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>Elizabeth Lo</title>
+   <title>Style Guide - Elizabeth Lo</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="css/normalize.css">
-   <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/grid.css">
-
-   <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/fonts.css" />
 </head>
 <body class="grid-row">
+   <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
    <header>
-      <!--            beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb-->
       <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
-      <input id="burger" type="checkbox" />
-      <label for="burger" class="burger-icon">
-         <span></span>
-         <span></span>
-         <span></span>
-      </label>
-
-      <nav>
-         <ul>
-            <li><a href="index.html" class="nav-item">Back to website</a></li>
-            <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
-            <li><a href="contact.html" class="nav-item">Contact</a></li>
-         </ul>
+      <nav id="nav-items" class="nav-overlay">
+         <!-- for more info on the href tag for the "x" button: https://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean -->
+         <a href="javascript:void(0)" class="nav-closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav-overlay-content">
+            <a href="index.html">Back to portfolio</a>
+            <a href="aboutMe.html">About</a>
+            <a href="contact.html">Contact</a>
+         </div>
       </nav>
-      <!--            end of credit-->
-   </header>
 
-   <div class="space-between-items"></div>
+      <button id="nav-toggle" class="nav-icon" onclick="openNav()" aria-hidden="false"  aria-controls="myNav">&#9776;</button>
+   </header>
+   <!-- credit end -->
+
+   <div class="spacer"></div>
 
    <section class="styleguide-section">
       <h2>Colour Palette<br /><span class="project-lamps-span">-</span></h2>

@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>Stanley Park - Elizabeth Lo</title>
+   <title>Android App - Elizabeth Lo</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="css/normalize.css">
-   <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/grid.css">
-
-   <link href="https://fonts.googleapis.com/css?family=Assistant" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/fonts.css" />
 </head>
 <body>
    <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
@@ -43,7 +41,6 @@
    </section>
 
    <section class="role role-android grid-row">
-      <!--            <div class="grid-row">-->
       <div class="grid-row-twos">
          <div class="col">
             <h2>Role<br />
@@ -57,7 +54,6 @@
             </ul>
          </div>
       </div>
-      <!--            </div>-->
    </section>
 
 
@@ -66,7 +62,7 @@
       <div class="grid-row-twos">
          <div class="col">
             <h2>Project Brief<br /><span class="project-android-span">-</span></h2>
-            <h5>November 2017</h5>
+            <h4>November 2017</h4>
             <p>
                An <em>informational app</em> on Stanley Park, designed for locals and tourists who want to know the <em>meanings behind particular landmarks</em> or art pieces from a First Nations perspective.
             </p>
@@ -97,7 +93,9 @@
          </div>
          <div class="col">
             <figure>
-               <img src="img/359_app_2.gif" srcset="img/359_app_2.gif 2x, img/359_app_2.gif 3x" alt="Entire app demo" class="img-responsive img-gifs">
+               <!-- <img src="img/359_app_2.gif" srcset="img/359_app_2.gif 2x, img/359_app_2.gif 3x" alt="Entire app demo" class="img-responsive img-gifs"> -->
+               <img src="img/359_4.png" data-src="img/359_app_2.gif" class="lazyload gif-blur img-responsive" alt="Entire app demo, showcasing the log-in screen">
+               <noscript><img src="img/339_about_2.gif" alt="Entire app demo, showcasing the log-in screen"></noscript>
                <figcaption>
                   Entire app demo (approx. 1min)
                </figcaption>
@@ -117,9 +115,10 @@
          </div>
          <div class="col">
             <figure>
-               <img src="img/359_4.png" srcset="img/359_4.png 2x, img/359_4.png 3x" alt="User log in details" class="img-responsive">
+               <img src="img/359_site_map.png" srcset="img/359_site_map.png 2x, img/359_site_map.png 3x" alt="Site map showing relationship of screens and activities" class="img-responsive img-dropshadow">
                <figcaption>
-                  Supporting shared preferences (saving username and password)
+                  <!-- Supporting shared preferences (saving username and password) -->
+                  Site map relationships between screens and buttons
                </figcaption>
             </figure>
          </div>
@@ -148,7 +147,7 @@
 
 
    <section class="grid-row">
-      <div class="grid-row-twos">
+      <div class="grid-row-twos-description">
          <div class="col">
             <h2>Difficulties<br /><span class="project-android-span">-</span></h2>
             <p>
@@ -158,7 +157,15 @@
                After a few weeks, I decided to relocate my image folder and remove some images. My app still worked, but <em>no images would show.</em> I ended up redoing the entire project, by using a Card View tutorial online and salvaging code from my previous file. Unfortunately, I did not have GitHub at this time.
             </p>
          </div>
-         <div class="col"></div>
+         <div class="col">
+            <h2>Technical difficulties<br /><span class="project-android-span">-</span></h2>
+            <p>
+               Understanding how the concept of <em>shared preferences</em> work in relation to how it is executed in the code. This problem also occurred for understanding how to implement <em>SQLite databases</em> because it needed many extra folders and reference variables.
+            </p>
+            <p>
+               The <em>card view</em> feature was a bonus, but its relationship to the <em>recycler view</em> and the database is still not quite clear after the many attempts of linking them all together.
+            </p>
+         </div>
       </div>
    </section>
 
@@ -172,4 +179,5 @@
    </footer>
 </body>
 <script src="js/navTest2.js"></script>
+<script src="js/lazysizes.min.js"></script>
 </html>
