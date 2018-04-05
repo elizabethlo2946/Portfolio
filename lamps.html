@@ -1,136 +1,163 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Lamps - Elizabeth Lo</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+   <title>Lamps Website - Elizabeth Lo</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/fonts.css" />
+</head>
+<body>
+   <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
+   <header>
+      <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
+      <nav id="nav-items" class="nav-overlay">
+         <!-- for more info on the href tag for the "x" button: https://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean -->
+         <a href="javascript:void(0)" class="nav-closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav-overlay-content">
+            <a href="aboutMe.html">About</a>
+            <a href="contact.html">Contact</a>
+         </div>
+      </nav>
 
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/grid.css" />
+      <button id="nav-toggle" class="nav-icon" onclick="openNav()" aria-hidden="false"  aria-controls="myNav">&#9776;</button>
+   </header>
+   <!-- credit end -->
 
-        <link href="https://fonts.googleapis.com/css?family=Assistant|Playfair+Display" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <!--            beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb-->
-            <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
-            <input id="burger" type="checkbox" />
-            <label for="burger" class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+   <div class="spacer"></div>
 
-            <nav>    
-                <ul>
-                    <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
-                    <li><a href="aboutMe.html" class="nav-item">Contact</a></li>
-                </ul>  
-            </nav>
-            <!--            end of credit-->
-        </header>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col project-lamps-title">
+            <h2>Lamps</h2>
+            <h5><a href="http://www.sfu.ca/~eylo/IAT339_05_Feb8/" target="_blank">visit the website.</a> a web design &amp; development project.</h5>
+         </div>
+         <div class="col project-lamps-img">
+            <div id="project-lamps"></div>
+         </div>
+      </div>
+   </section>
 
-        <div class="space-between-items"></div>
+   <section class="grid-row role role-lamps">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Role<br />
+               <span>-</span>
+            </h2>
+         </div>
+         <div class="col">
+            <ul>
+               <li><strong>1</strong> identity design</li>
+               <li><strong>2</strong> HTML &sol; CSS &sol; JS</li>
+               <li><strong>3</strong> home, cart, about, rating page</li>
+            </ul>
+         </div>
+      </div>
+   </section>
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col project-lamps-title">
-                    <h2 class="project-title">Lamps</h2>
-                    <h5><a href="http://www.sfu.ca/~eylo/IAT339_05_Feb8/" target="_blank">visit the website.</a> a web design &amp; development project.</h5>
-                </div>
-                <div class="col project-lamps-img">
-                    <div id="project-lamps"></div>
-                </div>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Context<br />
+               <span class="project-lamps-span">-</span></h2>
+               <h4>February 2018</h4>
+               <p>
+                  This is my first time coding a website designed for a wide variety of users. Within <em>4 weeks,</em> my partner and I were able to establish an initial style guide, a site map, and proceed through an additive process of iteration.
+               </p>
             </div>
-        </section>
-
-        <section class="role grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Role<br />
-                        <span>-</span>
-                    </h3>
-                </div>
-                <div class="col">
-                    <ul>
-                        <li><strong>1</strong> identity design</li>
-                        <li><strong>2</strong> HTML &sol; CSS &sol; JS</li>
-                        <li><strong>3</strong> home, cart, about, rating page</li>
-                    </ul>
-                </div>
+            <div class="col">
+               <figure>
+                  <img src="http://www.sfu.ca/~abela/IAT339-P02/img/sitemap.jpg" alt="Initial Site map for lamps, by Abel A" class="img-responsive">
+                  <figcaption>Site map created by Abel Abraham</figcaption>
+               </figure>
             </div>
-        </section>
+         </div>
+      </section>
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Context<br />
-                        <span>-</span></h3>
-                    <h5>February 2018</h5>
-                    <p>
-                        This is my first time coding a website that implements design and functionality together. Within <em>4 weeks,</em> my partner and I were able to go through an initial style guide, a site map, and an additive process of iteration to completion.
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="img/339_cart_desktop4.png" srcset="img/339_cart_desktop4.png 2x, img/339_cart_desktop4.png 3x" alt="Check out page" class="img-responsive">
-                        <figcaption>
-                            Cart page grid structure
-                        </figcaption>
-                    </figure>
-                </div>
+
+      <section class="grid-row">
+         <div class="grid-row-twos">
+            <div class="col">
+               <h2>Role<br />
+                  <span class="project-lamps-span">-</span></h2>
+                  <p>
+                     I created the <em>visual identity</em> of the website, starting with the home page,  menu, then the <em>grid structure</em>. I also designed the cart, about, rating pages and the footer, which includes responsiveness and functionality of all buttons, hover states, and <em>JavaScript</em> of the collapsible menu.
+                  </p>
+                  <p>
+                     I also created a <em>style guide</em> for branding guidelines and a citations page. You can check the <em><a href="https://github.com/elizabethlo2946/IAT339_P02_Part2" target="_blank">Github</a></em> for more specific details on contributions.
+                  </p>
+                  <p><br><a href="https://github.com/elizabethlo2946/IAT339_P02_Part2" target="_blank" class="button">GitHub</a></p>
+               </div>
+               <div class="col">
+                  <figure>
+                     <img src="img/339_footer_mobile.png" data-src="img/339_about_2.gif" class="lazyload gif-blur img-responsive" alt="The about page, showcasing the footer">
+                     <noscript><img src="img/339_about_2.gif" alt="The about page, showcasing the footer"></noscript>
+                     <figcaption>
+                        About page and footer
+                     </figcaption>
+                  </figure>
+               </div>
             </div>
-        </section>
+         </section>
 
 
-        <section class="grid-row">
+         <section class="grid-row">
             <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Role<br />
-                        <span>-</span></h3>
-                    <p>
-                        I created the <em>visual identity</em> of the website, starting with the home page menu, then the <em>grid structure</em> for the rest of the page. I also designed the cart, about, rating pages and the footer, which follow grid structures that can be found on the home page. This includes responsiveness and functionality of all buttons, hover states, and <em>JavaScript</em> of the collapsible menu.
-                    </p>
-                    <p>
-                        I also did the <em>style guide</em> to hold all of the visual elements for the website and a quick citations page. You can check the <a href="https://github.com/elizabethlo2946/IAT339_P02_Part2" target="_blank"><em>Github</em></a> for more specific details on contributions.
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="img/339_about.gif" srcset="img/339_about.gif 2x, img/339_about.gif 3x" alt="About page and footer" class="img-responsive img-gifs">
-                        <figcaption>
-                            About page and footer
-                        </figcaption>
-                    </figure>
-                </div>
+               <div class="col">
+                  <h2>Audience<br /><span class="project-lamps-span">-</span></h2>
+                  <p>
+                     A broad range of users from renovators to business owners pushed forward a visual language that increases the <em>trustworthiness</em> of the site itself. The high-end lighting photos shown on the website should compliment the aesthetic structure of the website, which is accomplished through a <em>clear grid structure, pale colours, and clear type.</em>
+                  </p>
+               </div>
+               <div class="col">
+
+                  <figure>
+                     <img src="img/339_cart_desktop4.png" srcset="img/339_cart_desktop4.png 2x, img/339_cart_desktop4.png 3x" alt="Check out page" class="img-responsive">
+                     <figcaption>
+                        Cart page grid structure
+                     </figcaption>
+                  </figure>
+
+               </div>
             </div>
-        </section>
+         </section>
 
 
-        <section class="grid-row">
+         <section class="grid-row">
             <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Take-aways<br />
-                        <span>-</span></h3>
-                    <p>
-                        <em>Naming conventions</em> are useful for those who did not create the document. Although I created most of the class and ID names, they could have been named more clearly for my partner to iterate and work with as he started his pages after me and had to follow my naming conventions. I did not receive any complaints about naming, but I think that it would have been a much quicker process for my partner if it was more intuitive.
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
+               <div class="col">
+                  <h2>Take-aways<br />
+                     <span class="project-lamps-span">-</span></h2>
+                     <p>
+                        <em>Naming conventions</em> used in this project should have been  more intuitive for my partner to  work with. This resulted in many of his own classes being created, as he was unable to understand many functions of the existing code.
+                     </p>
+                     <p>
+                        Thinking about <em>how the html is structured</em> is an area that I struggled to organize my thoughts in. I overcame this by sketching and creating the grid structure first.
+                     </p>
+                  </div>
+                  <div class="col">
+                     <figure>
                         <img src="img/339_singleProduct3.png" srcset="img/339_singleProduct3.png 2x, img/339_singleProduct3.png 3x" alt="Single product page by Abel Abraham" class="img-responsive">
                         <figcaption>
-                            Single product page by Abel Abraham
+                           Single product page by Abel Abraham
                         </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-        
-        
-        
-        
-        <footer></footer>
-    </body>
-</html>
+                     </figure>
+                  </div>
+               </div>
+            </section>
+
+
+
+
+            <footer>
+               <p><a href="stanleyPark.html" class="button">Next Project</a></p>
+               <p class="footer-contact">
+                  eylo@sfu.ca
+               </p>
+            </footer>
+         </body>
+         <script src="js/navTest2.js"></script>
+         <script src="js/lazysizes.min.js"></script>
+         </html>

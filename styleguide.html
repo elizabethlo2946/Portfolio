@@ -1,226 +1,286 @@
 <!doctype html>
 <html lang="en">
 <head>
-   <title>eylo styleguide</title>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-   <link rel="stylesheet" href="css/normalize.css" />
-   <link rel="stylesheet" href="css/main.css" />
-   <link rel="stylesheet" href="css/grid.css" />
-
-   <!-- loading fonts -->
-   <link href="https://fonts.googleapis.com/css?family=Assistant|Roboto|Playfair+Display" rel="stylesheet">
+   <title>Style Guide - Elizabeth Lo</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/fonts.css" />
 </head>
-
 <body class="grid-row">
+   <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
    <header>
-      <nav>
-         <a href="#" class="nav-left hvr-sweep-to-bottom">Lizzie Lo</a>
-         <div class="nav-right">
-            <a href="#text-styling" class="hvr-sweep-to-bottom">Text Styling</a>
-            <a href="#content" class="hvr-sweep-to-bottom">Content</a>
-            <a href="#" class="hvr-sweep-to-bottom">Contact</a>
+      <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
+      <nav id="nav-items" class="nav-overlay">
+         <!-- for more info on the href tag for the "x" button: https://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean -->
+         <a href="javascript:void(0)" class="nav-closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav-overlay-content">
+            <a href="index.html">Back to portfolio</a>
+            <a href="aboutMe.html">About</a>
+            <a href="contact.html">Contact</a>
          </div>
       </nav>
+
+      <button id="nav-toggle" class="nav-icon" onclick="openNav()" aria-hidden="false"  aria-controls="myNav">&#9776;</button>
    </header>
+   <!-- credit end -->
 
-   <section id="text-styling">
-      <h2 class="h2-styleguide">Text Styling</h1>
-      <h1 class="name">Lizzie Lo</h1>
-      <div class="grid-row-twos-static">
-         <div class="col"></div>
+   <div class="spacer"></div>
+
+   <section class="styleguide-section">
+      <h2>Colour Palette<br /><span class="project-lamps-span">-</span></h2>
+      <div class="grid-row-threes">
          <div class="col">
-            <p>
-               Or, Elizabeth if you prefer.<br />UX/UI designer for web and apps
-            </p>
-            <p>
-               I'm still a complete beginner at HTML and CSS, but you're looking at the result of my work over a course of 4 months: I can make responsive websites designed for device accessibility, though I'd like more time with Javascript and other life activities... like gaming
-            </p>
-         </div>
-      </div>
-      <h2>Heading 2: Project names</h2>
-      <h3>Heading 3: Sections in projects</h3>
-      <div class="grid-row-twos">
-         <div class="col">
-            <p>
-               Taken from <a href="http://www.catipsum.com/index.php">http://www.catipsum.com/index.php</a><br />
-               Russian blue Gate keepers of hell hate dog, for small kitty warm kitty little balls of fur yet the dog smells bad so sleep on dog bed, force dog to sleep on floor cats making all the muffins. Purr stare at the wall, play with food and get confused by dust pet my belly, you know you want to; seize the hand and shred it!. Roll over and sun my belly fooled again thinking the dog likes me kitty power relentlessly pursues moth for make meme, make cute face.
-            </p>
-            <ul>
-               <li>My unordered list</li>
-               <li>Item 2</li>
-               <li>Item 3</li>
-            </ul>
-            <ol>
-               <li>My ordered list</li>
-               <li>Item 2</li>
-               <li>Item 3</li>
-            </ol>
-         </div>
-         <div class="col">
-            <h3 class="h3-styleguide">CSS Selectors for Headers</h3>
-            <ul>
-               <li>h1</li>
-               <li>.name</li>
-               <li>h2</li>
-               <li>h3</li>
-               <li>p</li>
-               <li>ul</li>
-               <li>ol</li>
-            </ul>
-         </div>
-      </div>
-      <h3 class="h3-styleguide">HTML code for text styling</h3>
-      <code>
-         &lt;h1&gt;Lizzie Lo&lt;/h1&gt;<br />&lt;p&gt;<br />Or, Elizabeth if you prefer.&lt;br /&gt;UX/UI designer for web and apps.<br />&lt;/p&gt;<br />&lt;h2&gt;Heading 2: Project names&lt;/h2&gt;<br />&lt;h3&gt;Heading 3: Sections in projects&lt;/h3&gt;<br />&lt;p&gt;&lt;/p&gt;&lt;ul&gt;<br />&lt;li&gt;My unordered list&lt;/li&gt;<br />&lt;li&gt;Item 2&lt;/li&gt;<br />&lt;li&gt;Item 3&lt;/li&gt;<br />&lt;/ul&gt;<br />&lt;ol&gt;<br />&lt;li&gt;My ordered list&lt;/li&gt;<br />&lt;li&gt;Item 2&lt;/li&gt;<br />&lt;li&gt;Item 3&lt;/li&gt;<br />&lt;/ol&gt;
-      </code>
-   </section>
-
-
-   <section id="content">
-      <h2 class="h2-styleguide">Content</h2>
-      <h2>Project 1: LAMPS</h2>
-      <h3>Responsive web design</h3>
-      <h4>Team</h4>
-      <ul>
-         <li>
-            Abel Abraham
-         </li>
-      </ul>
-      <p>
-         A fictional lighting company’s website, created to help solidify concepts of building an accessible website across multiple devices and browsers.
-      </p>
-      <h3>Context</h3>
-      <p>
-         This is my first time coding a website that implements design and functionality together. Within 4 weeks, my partner and I were able to go through an initial style guide, a site map, and an additive process of iteration to completion.
-      </p>
-      <h3>Role</h3>
-      <p>
-         I created the visual style of the website, starting with the home page menu, then the grid structure for the rest of the page. I also designed the cart, about, rating pages and the footer, which follow grid structures that can be found on the home page. This includes responsiveness and functionality of all buttons, hover states, and JavaScript of the collapsible menu.
-      </p>
-      <p>
-         I also did the style guide to hold all of the visual elements for the website and a quick citations page. You can check the Github for more specific details on contributions.
-      </p>
-      <h3>take-aways</h3>
-      <p>
-         Naming conventions are useful for those who did not create the document. Although I created most of the class and ID names, they could have been named more clearly for my partner to iterate and work with as he started his pages after me and had to follow my naming conventions. I did not receive any complaints about naming, but I think that it would have been a much quicker process for my partner if it was more intuitive.
-      </p>
-
-
-      <h2>Project 2: Android application development</h2>
-      <h3>Project brief</h3>
-      <p>
-         An informational app on Stanley Park, designed for locals and tourists who want to know the meanings behind particular landmarks or art pieces from a First Nations perspective.
-      </p>
-      <p>
-         The current City of Vancouver Website (as of Fall 2017) only explains what each landmark and art piece is, but does not explain why it is important to First Nations People.
-      </p>
-      <h3>context</h3>
-      <p>
-         Over the semester, we explored use cases of Android Studio such as intents, sensor access, saving user information, and implementation of Google Maps. As this was an individual project, I was able to create my app in a month.
-      </p>
-      <h3>role</h3>
-      <p>
-         Most of my planning was done through site maps and listing out the concepts in order to carry out the functionality to link to other events.<br />
-         I planned out my UI through Illustrator to help visualize the basic user experience of how people are taken through the app
-      </p>
-      <h3>take-aways</h3>
-      <p>
-         I was able to learn basic Android functionality of an app and how to interact with different screens and other apps. The theoretical part of Android is quite simple, but the actual implementation is quite difficult using Android Studio (for me, anyways).
-      </p>
-      <h3>difficulties</h3>
-      <ul>
-         <li>
-            Learning Android Studio’s syntax was difficult as a beginner, even with previous Java experience. Because it has so many built in strings that perform legitimate tasks, I had to resort to searching a lot of basic questions online. Without the help of existing code from class, it would have taken me much longer to implement all functionality such as the Recycler and Card View, and the user log-in details.
-         </li>
-         <li>
-            After the 2nd milestone of implementing all functionality of the app, I decided to relocate my image folder and remove some previous images. My app still worked, but no images would show. I ended up redoing the entire process, by using a Card View tutorial online and salvaging code from my 2nd milestone. That was not a delightful experience.
-         </li>
-      </ul>
-
-
-   <section>
-      <h2 class="h2-styleguide">Combined elements</h2>
-      <h3 class="h3-styleguide">Typeface and colours: to be coded before the end of the project</h3>
-      <div class="grid-row-twos">
-         <div class="col">
-            <figure>
-               <a href="#"><img src="img/typeface_dark.png" srcset="img/typeface_dark.png 2x, img/typeface_dark.png 3x" alt="Primary typeface on a black background." class="responsive-image"/></a>
-               <figcaption>
-                  <p>
-                     Primary type face
-                  </p>
-               </figcaption>
-            </figure>
-         </div>
-         <div class="col">
-            <figure>
-               <a href="#"><img src="img/typeface_light.png" srcset="img/typeface_light.png 2x, img/typeface_light.png 3x" alt="Secondary typeface on a white background." class="responsive-image"/></a>
-               <figcaption>
-                  <p>
-                     Secondary type face
-                  </p>
-               </figcaption>
-            </figure>
-         </div>
-      </div>
-   </section>
-
-
-   <section>
-      <div class="grid-row-twos">
-         <div class="col">
-            <h3 class="h3-styleguide">CSS Nav seleciton</h3>
-            <ul>
-               <li>nav</li>
-               <li>nav a</li>
-               <li>nav a:actve, nav a:hover, nav a:focus</li>
-               <li>nav-left</li>
-               <li>nav-right</li>
-            </ul>
-         </div>
-         <div class="col">
-            <h3 class="h3-styleguide">HTML code for Nav</h3>
+            <h3>primary colour</h3>
+            <div class="colour primary-colour">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--primary-colour)</li>
+               </ul>
+            </div>
             <code>
-               &lt;header&gt;<br />&lt;nav&gt;<br />&lt;a href="#" class="nav-left hvr-sweep-to-bottom"&gt;Lizzie Lo&lt;/a&gt;<br />&lt;div class="nav-right"&gt;<br />&lt;a href="#text-styling" class="hvr-sweep-to-bottom"&gt;Text Styling&lt;/a&gt;<br />&lt;a href="#" class="hvr-sweep-to-bottom"&gt;About&lt;/a&gt;<br />&lt;a href="#" class="hvr-sweep-to-bottom"&gt;Contact&lt;/a&gt;<br />&lt;/div&gt;<br />&lt;/nav&gt;<br />&lt;/header&gt;
+               rgb(255, 82, 82)
+            </code>
+         </div>
+         <div class="col">
+            <h3>secondary colour</h3>
+            <div class="colour secondary-colour">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--secondary-colour)</li>
+               </ul>
+            </div>
+            <code>
+               rgba(255, 82, 82, 0.3)
+            </code>
+         </div>
+         <div class="col">
+            <h3>font colour</h3>
+            <div class="colour">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--font-colour)</li>
+               </ul>
+            </div>
+            <code>
+               rgba(255, 82, 82, 0.3)
+            </code>
+         </div>
+      </div>
+      <div class="grid-row-threes">
+         <div class="col">
+            <h3>lamps primary</h3>
+            <div class="colour lamps-colour">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--lamp-colour)</li>
+               </ul>
+            </div>
+            <code>
+               rgb(61, 41, 163)
+            </code>
+         </div>
+         <div class="col">
+            <h3>lamps secondary</h3>
+            <div class="colour lamps-colour-secondary">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--lamp-colour-secondary)</li>
+               </ul>
+            </div>
+            <code>
+               rgba(61, 41, 163, 0.9)
+            </code>
+         </div>
+         <div class="col"></div>
+      </div>
+      <div class="grid-row-threes">
+         <div class="col">
+            <h3>android primary</h3>
+            <div class="colour android-colour">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--android-colour)</li>
+               </ul>
+            </div>
+            <code>
+               rgb(0, 105, 92)
+            </code>
+         </div>
+         <div class="col">
+            <h3>android secondary</h3>
+            <div class="colour android-colour-secondary">
+               <ul>css selectors
+                  <li>.colour</li>
+                  <li>var(--android-colour-secondary)</li>
+               </ul>
+            </div>
+            <code>
+               rgba(0, 105, 92, 0.7)
+            </code>
+         </div>
+         <div class="col"></div>
+      </div>
+   </section>
+
+   <section class="styleguide-section">
+      <h2>Interactive elements<br /><span class="project-lamps-span">-</span></h2>
+      <div class="grid-row-threes">
+         <div class="col">
+            <h3>in-text-links</h3>
+            <p>This is an <em><a href="#">in-text link</a></em></p>
+         </div>
+         <div class="col list-black">
+            <h3>css selectors</h3>
+            <ul>
+               <li>em</li>
+               <li>a</li>
+               <li>var(--primary-colour)</li>
+            </ul>
+         </div>
+         <div class="col">
+            <h3>html code</h3>
+            <code>
+               &lt;p&gt;This is an &lt;em&gt;&lt;a href="#"&gt;in-text link&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+            </code>
+         </div>
+      </div>
+
+      <div class="grid-row-threes">
+         <div class="col">
+            <h3>buttons</h3>
+            <p>
+               <br><a href="#" class="button">This button leads to nowhere</a>
+            </p>
+         </div>
+         <div class="col list-black">
+            <h3>css selectors</h3>
+            <ul>
+               <li>.button</li>
+               <li>var(--primary-colour)</li>
+            </ul>
+         </div>
+         <div class="col">
+            <h3>html code</h3>
+            <code>
+               &lt;p&gt;&lt;a href="#" class="button"&gt;Button Name&lt;/a&gt;&lt;/p&gt;
             </code>
          </div>
       </div>
    </section>
 
-   <section>
-      <h2 class="h2-styleguide">Tools icons: preview</h2>
-      <div class="grid-row-fours">
-         <div class="col">
-            <img src="img/icon_androidStudio.png" srcset="img/icon_androidStudio.png 2x, img/icon_androidStudio.png 3x" alt="Android Studio custom icon." class="responsive-image"/>
+   <section class="styleguide-section">
+      <h2>Grid Structure<br /><span class="project-lamps-span">-</span></h2>
+      <div class="colour secondary-colour">
+         <ul>.grid-row
+            <li>
+               <code>
+                  &lt;div class="grid-row"&gt;&lt;/div&gt;
+               </code>
+            </li>
+         </ul>
+      </div>
+      <div class="grid-row-twos">
+         <div class="col colour secondary-colour">
+            <ul>.grid-row-twos .col
+               <li>
+                  <code>
+                     &lt;div class="grid-row-twos"&gt;&lt;/div&gt;
+                  </code>
+               </li>
+            </ul>
          </div>
-         <div class="col">
-            <img src="img/icon_htmlcss.png" srcset="img/icon_htmlcss.png 2x, img/icon_htmlcss.png 3x" alt="HTML, CSS custom icon." class="responsive-image"/>
-         </div>
-         <div class="col">
-            <img src="img/icon_js.png" srcset="img/icon_js.png 2x, img/icon_js.png 3x" alt="Javascript custom icon." class="responsive-image"/>
-         </div>
-         <div class="col">
-            <img src="img/icon_pr.png" srcset="img/icon_pr.png 2x, img/icon_pr.png 3x" alt="Premiere Pro custom icon." class="responsive-image"/>
+         <div class="col colour secondary-colour">
+            <ul>.grid-row-twos .col
+               <li>
+                  <code>
+                     &lt;div class="grid-row-twos"&gt;&lt;/div&gt;
+                  </code>
+               </li>
+            </ul>
          </div>
       </div>
-      <div class="grid-row-fours">
+      <div class="grid-row-threes">
+         <div class="col colour secondary-colour">
+            <ul>.grid-row-threes .col
+               <li>
+                  <code>
+                     &lt;div class="grid-row-threes"&gt;&lt;/div&gt;
+                  </code>
+               </li>
+            </ul>
+         </div>
+         <div class="col colour secondary-colour">
+            <ul>.grid-row-threes .col
+               <li>
+                  <code>
+                     &lt;div class="grid-row-threes"&gt;&lt;/div&gt;
+                  </code>
+               </li>
+            </ul>
+         </div>
+         <div class="col colour secondary-colour">
+            <ul>.grid-row-threes .col
+               <li>
+                  <code>
+                     &lt;div class="grid-row-threes"&gt;&lt;/div&gt;
+                  </code>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </section>
+
+   <section class="styleguide-section">
+      <h2>Text Styling<br /><span class="project-lamps-span">-</span></h2>
+      <div class="grid-row-threes">
          <div class="col">
-            <img src="img/icon_ai.png" srcset="img/icon_ai.png 2x, img/icon_ai.png 3x" alt="Adobe Illustrator custom icon." class="responsive-image"/>
+            <h3>Headings</h3>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+         </div>
+         <div class="col list-black">
+            <h3>css selectors</h3>
+            <ul>
+               <li>.nav-name</li>
+               <li>h2</li>
+               <li>h3</li>
+               <li>h4</li>
+            </ul>
          </div>
          <div class="col">
-            <img src="img/icon_ps.png" srcset="img/icon_ps.png 2x, img/icon_ps.png 3x" alt="Photoshop custom icon." class="responsive-image"/>
+            <h3>html code</h3>
+            <code>
+               &lt;h1 class=".nav-name"&gt;Lizzie Lo&lt;/h1&gt;<br />&lt;h2&gt;Heading 2 &amp;amp; 3&lt;/h2&gt;<br />&lt;h3&gt;Heading 3 for Styleguide&lt;/h3&gt;<br />&lt;h4&gt;Heading 4&lt;/h4&gt;
+            </code>
+         </div>
+      </div>
+
+      <div class="grid-row-threes">
+         <div class="col list-black">
+            <h3>unordered lists</h3>
+            <ul>
+               <li>item 1</li>
+               <li>item 2</li>
+            </ul>
+         </div>
+         <div class="col list-black">
+            <h3>css selectors</h3>
+            <ul>
+               <li>div &gt; .col &gt; .list-black</li>
+               <li>ul</li>
+               <li>li</li>
+            </ul>
          </div>
          <div class="col">
-            <img src="img/icon_id.png" srcset="img/icon_id.png 2x, img/icon_id.png 3x" alt="In Design custom icon." class="responsive-image"/>
-         </div>
-         <div class="col">
-            <div class="circle">
-               <p>
-                  Ai
-               </p>
-            </div>
+            <h3>html code</h3>
+            <code>
+               &lt;div class="col list-black"&gt;<br />&lt;h3&gt;unordered lists&lt;/h3&gt;<br />&lt;ul&gt;<br />&lt;li&gt;item 1&lt;/li&gt;<br />&lt;li&gt;item 2&lt;/li&gt;<br />&lt;/ul&gt;<br />&lt;/div&gt;
+            </code>
          </div>
       </div>
    </section>

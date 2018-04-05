@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Assistant';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/Assistant-Regular.eot');
+	src: url('../fonts/Assistant-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Assistant-Regular.woff2') format('woff2'),
+		 url('../fonts/Assistant-Regular.woff') format('woff'),
+		 url('../fonts/Assistant-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Assistant';
+	font-weight: bold;
+	font-style: normal;
+	src: url('../fonts/Assistant-Bold.eot');
+	src: url('../fonts/Assistant-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/Assistant-Bold.woff2') format('woff2'),
+		 url('../fonts/Assistant-Bold.woff') format('woff'),
+		 url('../fonts/Assistant-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/PlayfairDisplay-Regular.eot');
+	src: url('../fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+		 url('../fonts/PlayfairDisplay-Regular.woff') format('woff'),
+		 url('../fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Playfair Display';
+	font-weight: bold;
+	font-style: normal;
+	src: url('../fonts/PlayfairDisplay-Bold.eot');
+	src: url('../fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+		 url('../fonts/PlayfairDisplay-Bold.woff') format('woff'),
+		 url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+}

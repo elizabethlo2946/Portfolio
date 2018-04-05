@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Contact - Elizabeth Lo</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/fonts.css" />
+</head>
+<body>
+   <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
+   <header>
+      <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
+      <nav id="nav-items" class="nav-overlay">
+         <!-- for more info on the href tag for the "x" button: https://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean -->
+         <a href="javascript:void(0)" class="nav-closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav-overlay-content">
+            <a href="aboutMe.html">About</a>
+            <a href="contact.html">Contact</a>
+         </div>
+      </nav>
+
+      <button id="nav-toggle" class="nav-icon" onclick="openNav()" aria-hidden="false"  aria-controls="myNav">&#9776;</button>
+   </header>
+   <!-- credit end -->
+
+   <div class="spacer"></div>
+
+   <section class="grid-row contact-me-spacing">
+      <h2>Contact Me</h2>
+      <p>Give about 2-3 business days for a response at<br><em>eylo@sfu.ca</em></p>
+      <p>If you're interested in the process of this website, check out my <em><a href="https://github.com/elizabethlo2946">GitHub</a></em></p>
+      <p>My <em><a href="styleguide.html">styleguide</a></em> for this website is also available</p>
+   </section>
+</body>
+<script src="js/navTest2.js"></script>
+</html>

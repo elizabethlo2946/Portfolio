@@ -1,165 +1,183 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Elizabeth Lo</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/grid.css">
+<head>
+   <title>Android App - Elizabeth Lo</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/grid.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/fonts.css" />
+</head>
+<body>
+   <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
+   <header>
+      <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
+      <nav id="nav-items" class="nav-overlay">
+         <!-- for more info on the href tag for the "x" button: https://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean -->
+         <a href="javascript:void(0)" class="nav-closebtn" onclick="closeNav()">&times;</a>
+         <div class="nav-overlay-content">
+            <a href="aboutMe.html">About</a>
+            <a href="contact.html">Contact</a>
+         </div>
+      </nav>
 
-        <link href="https://fonts.googleapis.com/css?family=Assistant|Playfair+Display" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <!--            beginning of credit retrieved March17, 2018 adapted from https://codepen.io/jlnljn/pen/LkXoBb-->
-            <h1 class="nav-name"><a href="index.html">Lizzie Lo</a></h1>
-            <input id="burger" type="checkbox" />
-            <label for="burger" class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+      <button id="nav-toggle" class="nav-icon" onclick="openNav()" aria-hidden="false"  aria-controls="myNav">&#9776;</button>
+   </header>
+   <!-- credit end -->
 
-            <nav>    
-                <ul>
-                    <li><a href="aboutMe.html" class="nav-item">About Me</a></li>
-                    <li><a href="aboutMe.html" class="nav-item">Contact</a></li>
-                </ul>  
-            </nav>
-            <!--            end of credit-->
-        </header>
+   <div class="space-between-items"></div>
 
-        <div class="space-between-items"></div>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col project-android-title">
+            <h2 class="project-title">Stanley Park</h2>
+            <h5>a first nation's perspective. android application.</h5>
+         </div>
+         <div class="col project-android-img">
+            <div id="project-android"></div>
+         </div>
+      </div>
+   </section>
 
-        <section class="grid-row">
-            <h2 class="title-lamps">Stanley Park</h2>
-            <h5 class="title-lamps-visit">A First Nation's Perspective</h5>
-            <div id="img-stanleyPark"></div>
-        </section>
-
-        <section class="role grid-row-7of10">
-            <div class="grid-row">
-                <div class="grid-row-twos">
-                    <div class="col">
-                        <h3>Role<br />
-                            <span>-</span>
-                        </h3>
-                    </div>
-                    <div class="col">
-                        <ul>
-                            <li><strong>1</strong> Java</li>
-                            <li><strong>2</strong> app structure</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Project Brief</h3>
-                    <h5>November 2017</h5>
-                    <p>
-                        An <em>informational app</em> on Stanley Park, designed for locals and tourists who want to know the <em>meanings behind particular landmarks</em> or art pieces from a First Nations perspective.
-                    </p>
-                    <p>
-                        The current City of Vancouver Website (as of Fall 2017) only explains what each landmark and art piece is, but does not explain why it is important to First Nations People.
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="img/359_2.png" srcset="img/359_2.png 2x, img/359_2.png 3x" alt="First screen after home page" class="img-responsive">
-                        <figcaption>
-                            Screen after tapping a tile
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
+   <section class="role role-android grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Role<br />
+               <span class="role-android">-</span>
+            </h2>
+         </div>
+         <div class="col">
+            <ul>
+               <li><strong>1</strong> Java</li>
+               <li><strong>2</strong> app structure</li>
+            </ul>
+         </div>
+      </div>
+   </section>
 
 
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Context</h3>
-                    <p>
-                        Over the semester (4 months), we explored the basic functions of Android Studio such as intents, sensor access, saving user information, and implementation of Google Maps. As this was an individual project, I was able to create my app in <em>a month.</em>
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="img/359_app.gif" srcset="img/359_app.gif 2x, img/359_app.gif 3x" alt="Entire app demo" class="img-responsive img-gifs">
-                        <figcaption>
-                            Entire app demo (approx. 1min)
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Project Brief<br /><span class="project-android-span">-</span></h2>
+            <h4>November 2017</h4>
+            <p>
+               An <em>informational app</em> on Stanley Park, designed for locals and tourists who want to know the <em>meanings behind particular landmarks</em> or art pieces from a First Nations perspective.
+            </p>
+            <p>
+               The current City of Vancouver Website (as of Fall 2017) only explains what each landmark and art piece is, but does not explain why it is important to First Nations People.
+            </p>
+         </div>
+         <div class="col">
+            <figure>
+               <img src="img/359_2.png" srcset="img/359_2.png 2x, img/359_2.png 3x" alt="First screen after home page" class="img-responsive">
+               <figcaption>
+                  Screen after tapping a tile
+               </figcaption>
+            </figure>
+         </div>
+      </div>
+   </section>
 
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Role</h3>
-                    <p>
-                        Most of my planning was done through <em>site maps</em> and listing out the concepts in order to carry out the <em>functionality</em> to link to other events. I planned out my UI through Illustrator to help visualize the basic user experience of how people are taken through the app.
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="img/359_4.png" srcset="img/359_4.png 2x, img/359_4.png 3x" alt="User log in details" class="img-responsive">
-                        <figcaption>
-                            Supporting shared preferences (saving username and password)
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
+
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Context<br /><span class="project-android-span">-</span></h2>
+            <p>
+               Over the semester (4 months), we explored the basic functions of Android Studio such as intents, sensor access, saving user information, and implementation of Google Maps. As this was an individual project, I was able to create my app in <em>a month.</em>
+            </p>
+         </div>
+         <div class="col">
+            <figure>
+               <!-- <img src="img/359_app_2.gif" srcset="img/359_app_2.gif 2x, img/359_app_2.gif 3x" alt="Entire app demo" class="img-responsive img-gifs"> -->
+               <img src="img/359_4.png" data-src="img/359_app_2.gif" class="lazyload gif-blur img-responsive" alt="Entire app demo, showcasing the log-in screen">
+               <noscript><img src="img/339_about_2.gif" alt="Entire app demo, showcasing the log-in screen"></noscript>
+               <figcaption>
+                  Entire app demo (approx. 1min)
+               </figcaption>
+            </figure>
+         </div>
+      </div>
+   </section>
 
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Take-aways</h3>
-                    <p>
-                        I was able to learn <em>basic Android functionality of an app</em> and how to interact with different screens and other apps. The theoretical part of Android is quite simple, but the actual implementation is quite difficult using Android Studio (as with most code).
-                    </p>
-                </div>
-                <div class="col">
-                    <figure>
-                        <img src="img/359_5.png" srcset="img/359_5.png 2x, img/359_5.png 3x" alt="Saving user information using a local SQLite Database" class="img-responsive">
-                        <figcaption>
-                            Supporting SQLite Database (user input is saved into a local database)
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Role<br /><span class="project-android-span">-</span></h2>
+            <p>
+               Most of my planning was done through <em>site maps</em> and listing out the concepts in order to carry out the <em>functionality</em> to link to other events. I planned out my UI through Illustrator to help visualize the basic user experience of how people are taken through the app.
+            </p>
+         </div>
+         <div class="col">
+            <figure>
+               <img src="img/359_site_map.png" srcset="img/359_site_map.png 2x, img/359_site_map.png 3x" alt="Site map showing relationship of screens and activities" class="img-responsive img-dropshadow">
+               <figcaption>
+                  <!-- Supporting shared preferences (saving username and password) -->
+                  Site map relationships between screens and buttons
+               </figcaption>
+            </figure>
+         </div>
+      </div>
+   </section>
 
 
-        <section class="grid-row">
-            <div class="grid-row-twos">
-                <div class="col">
-                    <h3>Difficulties</h3>
-                    <p>
-                        Learning Android Studio’s <em>syntax was difficult,</em> even with previous Java experience. Because it has so many built in strings that perform legitimate tasks, I had to resort to <em>searching online</em> for a lot of basic questions. Without the help of existing code from class, it would have taken me much longer to implement all functionality such as the Recycler and Card View, and the user log-in details.
-                    </p>
-                    <p>
-                        After the 2nd milestone of implementing all functionality of the app, I decided to relocate my image folder and remove some previous images. My app still worked, but <em>no images would show.</em> I ended up redoing the entire process, by using a Card View tutorial online and salvaging code from my 2nd milestone. That was not a delightful experience.
-                    </p>
-                </div>
-                <div class="col"></div>
-            </div>
-        </section>
+   <section class="grid-row">
+      <div class="grid-row-twos">
+         <div class="col">
+            <h2>Take-aways<br /><span class="project-android-span">-</span></h2>
+            <p>
+               I was able to learn <em>basic Android functionality of an app</em> and how to interact with different screens and other apps. The theoretical part of Android is quite simple, but the actual implementation is quite difficult using Android Studio (as with most code).
+            </p>
+         </div>
+         <div class="col">
+            <figure>
+               <img src="img/359_5.png" srcset="img/359_5.png 2x, img/359_5.png 3x" alt="Saving user information using a local SQLite Database" class="img-responsive">
+               <figcaption>
+                  Supporting SQLite Database (user input is saved into a local database)
+               </figcaption>
+            </figure>
+         </div>
+      </div>
+   </section>
 
-        
-        
-        <footer></footer>
-    </body>
+
+   <section class="grid-row">
+      <div class="grid-row-twos-description">
+         <div class="col">
+            <h2>Difficulties<br /><span class="project-android-span">-</span></h2>
+            <p>
+               Learning Android Studio’s <em>syntax</em> even with previous Java experience. For basic tasks, <em>researching on the web</em> were needed. In-class resources were not sufficient enough as concepts were well explained, but execution was not taught.
+            </p>
+            <p>
+               After a few weeks, I decided to relocate my image folder and remove some images. My app still worked, but <em>no images would show.</em> I ended up redoing the entire project, by using a Card View tutorial online and salvaging code from my previous file. Unfortunately, I did not have GitHub at this time.
+            </p>
+         </div>
+         <div class="col">
+            <h2>Technical difficulties<br /><span class="project-android-span">-</span></h2>
+            <p>
+               Understanding how the concept of <em>shared preferences</em> work in relation to how it is executed in the code. This problem also occurred for understanding how to implement <em>SQLite databases</em> because it needed many extra folders and reference variables.
+            </p>
+            <p>
+               The <em>card view</em> feature was a bonus, but its relationship to the <em>recycler view</em> and the database is still not quite clear after the many attempts of linking them all together.
+            </p>
+         </div>
+      </div>
+   </section>
+
+
+
+   <footer>
+      <p><a href="lamps.html" class="button">Next Project</a></p>
+      <p class="footer-contact">
+         eylo@sfu.ca
+      </p>
+   </footer>
+</body>
+<script src="js/navTest2.js"></script>
+<script src="js/lazysizes.min.js"></script>
 </html>
