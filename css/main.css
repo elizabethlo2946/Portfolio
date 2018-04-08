@@ -137,8 +137,9 @@ header {
    padding: 1rem;
 }
 
-@media screen and (max-height: 450px) {
-   .nav-overlay a {font-size: 20px}
+/* @media screen and (max-height: 450px) { */
+@media screen and (max-height: 28.125em) {
+   .nav-overlay a {font-size: 1.5rem}
    .nav-overlay .nav-closebtn {
       font-size: 2rem;
       right: 1.5rem;
@@ -155,10 +156,8 @@ header {
 
 
 
-/*
----------------------------------------------------
-GENERAL STYLING
-*/
+/* ---------------------------------------------------
+GENERAL STYLING */
 h1, h2, h3 {
    font-family: 'Playfair Display', serif;
    font-weight: normal;
@@ -169,7 +168,8 @@ h1, h2, h3 {
    text-transform: lowercase;
    font-size: 2rem;
 }
-@media (min-width:891px) {
+/* @media (min-width:891px) { */
+@media (min-width:55.6875em) {
    .about-me-home {
       margin-left: 15%;
    }
@@ -199,10 +199,6 @@ h6 {
 p {
    font-size: 0.9rem;
 }
-/* figure {
-margin: 0;
-padding: 0;
-} */
 figcaption {
    font-size: 0.9rem;
    text-align: center;
@@ -222,6 +218,7 @@ ul li {
    margin: 0.5rem 0;
    font-weight: normal;
 }
+
 /*for styleguide*/
 .secondary-colour > ul li, .list-black > ul > li {border-left: 1px solid var(--font-colour);}
 
@@ -231,6 +228,9 @@ ul li {
 .list-android li {
    border-left: 0.2rem solid var(--android-colour-secondary);
 }
+
+
+
 
 em, em a {
    font-style: normal;
@@ -268,8 +268,7 @@ em a:hover, em a:focus, em a:active {
    color: var(--secondary-colour);
    border: 0.1rem solid var(--secondary-colour);
 }
-/*
-GENERAL STYLING END
+/* GENERAL STYLING END
 ---------------------------------------------------
 */
 
@@ -456,18 +455,21 @@ END OF CREDIT
    font-weight: bold;
    text-transform: uppercase;
 }
-@media(min-width:320px) {
+/* @media(min-width:320px) { */
+@media(min-width:20em) {
    .title-collapsed-height-lamps ul, .title-collapsed-height-android ul{
       top: 3rem;
       left: 5rem;
    }
 }
-@media(min-width:400px) and (min-height:400px) {
+/* @media(min-width:400px) and (min-height:400px) { */
+@media(min-width:25em) and (min-height:25em) {
    .title-collapsed-height-lamps ul, .title-collapsed-height-android ul{
       left: 5rem;
    }
 }
-@media(min-width:400px) and (min-height:531px){
+/* @media(min-width:400px) and (min-height:531px){ */
+@media(min-width:25em) and (min-height:33.1875em){
    .title-collapsed-height-lamps ul, .title-collapsed-height-android ul{
       top: 5rem;
       left: 5rem;
@@ -477,7 +479,8 @@ END OF CREDIT
       font-size: 1rem;
    }
 }
-@media(min-width:900px) {
+/* @media(min-width:900px) { */
+@media(min-width:56.25em) {
    /* .list-lamps h4, .list-android h4 { */
    .title-collapsed-height-list h4 {
       font-size: 0.8rem;
@@ -489,7 +492,8 @@ END OF CREDIT
 .overlay-caption {
    display: none;
 }
-@media(min-height:610px) {
+/* @media(min-height:610px) { */
+@media(min-height:38.125em) {
    .title-collapsed-height-lamps {
       display: none;
    }
@@ -531,7 +535,8 @@ END OF CREDIT
 
 
 
-@media (min-width: 891px) {
+/* @media (min-width: 891px) { */
+@media (min-width: 55.6875em) {
    .title-collapsed {
       display: none;
    }
@@ -633,7 +638,8 @@ PROJECT PAGE
    letter-spacing: 0.1rem;
    background-color: var(--android-colour-secondary);
 }
-@media(min-width:675px) {
+/* @media(min-width:675px) { */
+@media(min-width:42.1875em) {
    .project-lamps-title, .project-android-title {
       padding: 10rem 2rem;
       /*
@@ -680,7 +686,8 @@ PROJECT PAGE
 .role-android strong {
    color: var(--android-colour-secondary);
 }
-@media (min-width: 675px) {
+/* @media (min-width: 675px) { */
+@media (min-width: 42.1875em) {
    .role ul {
       margin: 2rem 0;
    }
