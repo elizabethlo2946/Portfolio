@@ -5,9 +5,21 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="css/normalize.css">
+   <!-- <link rel="stylesheet" href="css/fonts.css" /> -->
+   <link rel="preload" href="css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+   <!--
+   as: preload it as a stylesheet
+
+   onload: once it is loaded, we want to do some JS. Will eliminate the function from running in a loop.
+
+   this.rel='stylesheet' lets users without the 'as' support load it as a stylesheet
+   -->
+   <noscript>
+      <!-- can render things that have java script, if the user's browser does not have it or is not available -->
+      <link rel="stylesheet" href="css/fonts.css" />
+   </noscript>
    <link rel="stylesheet" href="css/grid.css">
    <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/fonts.css" />
 </head>
 <body>
    <!-- credit begin: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay -->
