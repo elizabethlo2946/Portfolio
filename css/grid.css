@@ -2,7 +2,6 @@
 .row {
    display: flex;
    justify-content: space-between;
-   align-items: top;
    width: 100%;
 }
 .spacer {margin-top: 6rem;}

@@ -1,5 +1,7 @@
 :root {
    /*
+   Hello I acknowledge there are many CSS errors for this section. CanIUse.com states that using var is supported by most browsers (aside from IE).
+
    note to self: refer to
    https://www.w3.org/TR/2015/CR-css-variables-1-20151203/
    add the colour and real value before submitting the final file in order to support older browsers (just in case)
@@ -430,7 +432,7 @@ END OF CREDIT
 
 
 .title-collapsed-height-lamps ul, .title-collapsed-height-android ul{
-   display: relative;
+   /* display: relative; */
    top: 4rem;
    left: 0.5rem;
 }
